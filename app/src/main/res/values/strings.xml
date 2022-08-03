@@ -3,10 +3,11 @@
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
 
-    <string-array name="font_size">
-        <item>12sp</item>
-        <item>14sp</item>
-        <item>16sp</item>
-    </string-array>
+    <dimen name="font_size_tab">9sp</dimen>
+    <dimen name="font_size_content">12sp</dimen>
+    <dimen name="font_size_header">14sp</dimen>
+    <dimen name="font_size_title">16sp</dimen>
+
+    <dimen name="guide_top">56dp</dimen>
 
 </resources>

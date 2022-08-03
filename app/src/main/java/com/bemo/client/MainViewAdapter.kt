@@ -7,7 +7,8 @@ import com.bemo.client.fragment.HomeFragment
 import com.bemo.client.fragment.MyFragment
 import com.bemo.client.fragment.ResultFragment
 
-class MainViewAdapter(fm: FragmentManager?) : FragmentPagerAdapter(fm){
+class MainViewAdapter(fm: FragmentManager?) : FragmentPagerAdapter(fm!!,
+    BEHAVIOR_RESUME_ONLY_CURRENT_FRAGMENT){
     private val fragList = ArrayList<Fragment>()
 
     init {
