@@ -154,14 +154,17 @@
                         android:id="@+id/editLocate"
                         android:layout_width="228dp"
                         android:layout_height="@dimen/height_32"
+                        android:paddingLeft="@dimen/margin_left_12"
+                        android:textSize="@dimen/font_size_body"
                         android:background="@drawable/shapeedit"/>
 
                     <Button
                         android:id="@+id/btnLocate"
                         android:layout_width="@dimen/height_32"
                         android:layout_height="@dimen/height_32"
-                        android:background="@mipmap/imglocate"
+                        android:background="@drawable/shapelocatebtn"
                         android:layout_marginLeft="@dimen/margin_left_12"/>
+
                 </LinearLayout>
 
                 <TextView
@@ -177,6 +180,8 @@
                     android:layout_width="272dp"
                     android:layout_height="@dimen/height_32"
                     android:layout_marginTop="@dimen/margin_top_11"
+                    android:paddingLeft="@dimen/margin_left_12"
+                    android:textSize="@dimen/font_size_body"
                     android:layout_gravity="center"
                     android:background="@drawable/shapeedit"/>
 
@@ -193,6 +198,8 @@
                     android:layout_width="272dp"
                     android:layout_height="@dimen/height_32"
                     android:layout_marginTop="@dimen/margin_top_11"
+                    android:paddingLeft="@dimen/margin_left_12"
+                    android:textSize="@dimen/font_size_body"
                     android:layout_gravity="center"
                     android:background="@drawable/shapeedit"/>
 

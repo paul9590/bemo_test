@@ -14,8 +14,11 @@
     <dimen name="margin_left_12">12dp</dimen>
     <dimen name="margin_left_24">24dp</dimen>
     <dimen name="margin_left_20">20dp</dimen>
+    <dimen name="margin_left_31">31dp</dimen>
+
 
     <dimen name="margin_top_11">11dp</dimen>
+    <dimen name="margin_top_12">12dp</dimen>
     <dimen name="margin_top_24">24dp</dimen>
 
     <dimen name="height_32">32dp</dimen>

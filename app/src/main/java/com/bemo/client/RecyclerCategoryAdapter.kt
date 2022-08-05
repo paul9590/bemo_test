@@ -12,10 +12,13 @@ class RecyclerCategoryAdapter(data: ArrayList<HomeCategory>) :
     RecyclerView.Adapter<RecyclerCategoryAdapter.CategoryViewHolder>() {
     private val mData: ArrayList<HomeCategory>
 
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): CategoryViewHolder {
-        val context = parent.context
-        val inflater = context.getSystemService(Context.LAYOUT_INFLATER_SERVICE) as LayoutInflater
-        val view: View = inflater.inflate(R.layout.list_category, parent, false)
+    override fun onCreateViewHolder(parent: ViewGroup,
+                                    viewType: Int):
+            RecyclerCategoryAdapter.CategoryViewHolder {
+        // create a new view
+        val view = LayoutInflater.from(parent.context)
+            .inflate(R.layout.list_category, parent, false)
+
         return CategoryViewHolder(view)
     }
 
