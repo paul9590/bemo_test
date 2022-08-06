@@ -5,7 +5,12 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import com.bemo.client.R
+import android.widget.LinearLayout
+import androidx.recyclerview.widget.GridLayoutManager
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
+import com.bemo.client.*
+import com.bemo.client.databinding.FragmentResultBinding
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -35,7 +40,17 @@ class ResultFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_result, container, false)
+        val mBinding = FragmentResultBinding.inflate(inflater, container, false)
+
+        val mList = ArrayList<Company>()
+        repeat(9) {
+            mList.add(Company(R.mipmap.imgcategory1))
+        }
+        val mAdapter = RecyclerCompanyAdapter(mList)
+        mBinding.viewCompany.adapter = mAdapter
+        mBinding.viewCompany.layoutManager = LinearLayoutManager(activity, RecyclerView.VERTICAL, false)
+
+        return mBinding.root
     }
 
     companion object {

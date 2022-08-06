@@ -62,7 +62,7 @@
                     android:id="@+id/editSearch"
                     android:layout_width="252dp"
                     android:layout_height="@dimen/height_32"
-                    android:textSize="@dimen/font_size_body"
+                    android:textSize="@dimen/font_size_12"
                     android:hint="카테고리 또는 업체명을 입력해 주세요"
                     android:background="@drawable/shaperound"
                     android:drawableStart="@mipmap/imgsearch"
@@ -74,7 +74,7 @@
                     android:layout_width="52dp"
                     android:layout_height="@dimen/height_32"
                     android:layout_marginLeft="8dp"
-                    android:textSize="@dimen/font_size_body"
+                    android:textSize="@dimen/font_size_12"
                     android:background="@drawable/shapebtn"
                     android:textColor="@color/white"
                     android:text="검색"/>
@@ -97,7 +97,7 @@
                     android:textColor="@color/blue"
                     android:drawableRight="@mipmap/imgexit"
                     android:paddingRight="8dp"
-                    android:textSize="@dimen/font_size_min"
+                    android:textSize="@dimen/font_size_10"
                     android:text="업체"/>
 
                 <Button
@@ -108,7 +108,7 @@
                     android:textColor="@color/blue"
                     android:drawableRight="@mipmap/imgexit"
                     android:paddingRight="8dp"
-                    android:textSize="@dimen/font_size_min"
+                    android:textSize="@dimen/font_size_10"
                     android:layout_marginLeft="8dp"
                     android:text="업체"/>
 
@@ -120,7 +120,7 @@
                     android:textColor="@color/blue"
                     android:drawableRight="@mipmap/imgexit"
                     android:paddingRight="8dp"
-                    android:textSize="@dimen/font_size_min"
+                    android:textSize="@dimen/font_size_10"
                     android:layout_marginLeft="8dp"
                     android:text="업체"/>
 
@@ -138,7 +138,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:textSize="@dimen/font_size_body"
+                    android:textSize="@dimen/font_size_12"
                     android:text="내 위치"
                     android:layout_marginLeft="@dimen/margin_left_20"
                     android:layout_marginTop="@dimen/margin_top_24"/>
@@ -155,7 +155,7 @@
                         android:layout_width="228dp"
                         android:layout_height="@dimen/height_32"
                         android:paddingLeft="@dimen/margin_left_12"
-                        android:textSize="@dimen/font_size_body"
+                        android:textSize="@dimen/font_size_12"
                         android:background="@drawable/shapeedit"/>
 
                     <Button
@@ -170,7 +170,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:textSize="@dimen/font_size_body"
+                    android:textSize="@dimen/font_size_12"
                     android:text="지역"
                     android:layout_marginLeft="@dimen/margin_left_20"
                     android:layout_marginTop="@dimen/margin_top_24"/>
@@ -181,14 +181,14 @@
                     android:layout_height="@dimen/height_32"
                     android:layout_marginTop="@dimen/margin_top_11"
                     android:paddingLeft="@dimen/margin_left_12"
-                    android:textSize="@dimen/font_size_body"
+                    android:textSize="@dimen/font_size_12"
                     android:layout_gravity="center"
                     android:background="@drawable/shapeedit"/>
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:textSize="@dimen/font_size_body"
+                    android:textSize="@dimen/font_size_12"
                     android:text="나이"
                     android:layout_marginLeft="@dimen/margin_left_20"
                     android:layout_marginTop="@dimen/margin_top_24"/>
@@ -199,7 +199,7 @@
                     android:layout_height="@dimen/height_32"
                     android:layout_marginTop="@dimen/margin_top_11"
                     android:paddingLeft="@dimen/margin_left_12"
-                    android:textSize="@dimen/font_size_body"
+                    android:textSize="@dimen/font_size_12"
                     android:layout_gravity="center"
                     android:background="@drawable/shapeedit"/>
 
