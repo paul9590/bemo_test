@@ -91,38 +91,17 @@
 
                 <Button
                     android:id="@+id/btnPeek1"
-                    android:layout_width="53dp"
-                    android:layout_height="26dp"
-                    android:background="@drawable/shapebtn2"
-                    android:textColor="@color/blue"
-                    android:drawableRight="@mipmap/imgexit"
-                    android:paddingRight="8dp"
-                    android:textSize="@dimen/font_size_10"
-                    android:text="업체"/>
+                    style="@style/btn_peek"/>
 
                 <Button
                     android:id="@+id/btnPeek2"
-                    android:layout_width="53dp"
-                    android:layout_height="26dp"
-                    android:background="@drawable/shapebtn2"
-                    android:textColor="@color/blue"
-                    android:drawableRight="@mipmap/imgexit"
-                    android:paddingRight="8dp"
-                    android:textSize="@dimen/font_size_10"
                     android:layout_marginLeft="8dp"
-                    android:text="업체"/>
+                    style="@style/btn_peek"/>
 
                 <Button
                     android:id="@+id/btnPeek3"
-                    android:layout_width="53dp"
-                    android:layout_height="26dp"
-                    android:background="@drawable/shapebtn2"
-                    android:textColor="@color/blue"
-                    android:drawableRight="@mipmap/imgexit"
-                    android:paddingRight="8dp"
-                    android:textSize="@dimen/font_size_10"
                     android:layout_marginLeft="8dp"
-                    android:text="업체"/>
+                    style="@style/btn_peek"/>
 
             </LinearLayout>
 
@@ -136,12 +115,10 @@
                 android:background="@drawable/shaperound">
 
                 <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:textSize="@dimen/font_size_12"
                     android:text="내 위치"
                     android:layout_marginLeft="@dimen/margin_left_20"
-                    android:layout_marginTop="@dimen/margin_top_24"/>
+                    android:layout_marginTop="@dimen/margin_top_24"
+                    style="@style/text_black_12"/>
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -168,12 +145,10 @@
                 </LinearLayout>
 
                 <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:textSize="@dimen/font_size_12"
                     android:text="지역"
                     android:layout_marginLeft="@dimen/margin_left_20"
-                    android:layout_marginTop="@dimen/margin_top_24"/>
+                    android:layout_marginTop="@dimen/margin_top_24"
+                    style="@style/text_black_12" />
 
                 <EditText
                     android:id="@+id/editArea"
@@ -186,12 +161,10 @@
                     android:background="@drawable/shapeedit"/>
 
                 <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:textSize="@dimen/font_size_12"
                     android:text="나이"
                     android:layout_marginLeft="@dimen/margin_left_20"
-                    android:layout_marginTop="@dimen/margin_top_24"/>
+                    android:layout_marginTop="@dimen/margin_top_24"
+                    style="@style/text_black_12"/>
 
                 <EditText
                     android:id="@+id/editAge"

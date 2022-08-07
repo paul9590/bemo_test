@@ -1,5 +1,6 @@
 package com.bemo.client
 
+import android.content.Context
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -10,6 +11,7 @@ import java.util.*
 class RecyclerCompanyAdapter(data: ArrayList<Company>) :
     RecyclerView.Adapter<RecyclerCompanyAdapter.CompanyViewHolder>(){
     private val mData: ArrayList<Company>
+    private lateinit var context : Context
 
     init {
         mData = data
@@ -18,9 +20,10 @@ class RecyclerCompanyAdapter(data: ArrayList<Company>) :
     override fun onCreateViewHolder(parent: ViewGroup,
                                     viewType: Int):
             RecyclerCompanyAdapter.CompanyViewHolder {
+
+        context = parent.context
         // create a new view
-            val view: View =
-                LayoutInflater.from(parent.context).inflate(R.layout.list_company, parent, false)
+        val view: View = LayoutInflater.from(context).inflate(R.layout.list_company, parent, false)
 
         return CompanyViewHolder(view)
     }
@@ -34,9 +37,15 @@ class RecyclerCompanyAdapter(data: ArrayList<Company>) :
             item.farvorite = !holder.chkFavortie.isChecked
         }
         holder.imgCompany.setImageResource(item.img)
+        holder.name.text = item.name
         holder.address.text = item.address
         holder.target.text = item.target
         holder.distance.text = item.distance
+
+        // 업체 상세 페이지로 이동
+        holder.itemView.setOnClickListener {
+            Toast.makeText(context, "안녕?", Toast.LENGTH_SHORT).show()
+        }
     }
 
     // getItemCount : 전체 데이터의 개수를 리턴
@@ -47,6 +56,7 @@ class RecyclerCompanyAdapter(data: ArrayList<Company>) :
     // 아이템 뷰를 저장하는 뷰홀더 클래스
     inner class CompanyViewHolder internal constructor(itemView: View) :
         RecyclerView.ViewHolder(itemView) {
+        var name : TextView
         var imgCompany : ImageView
         var chkFavortie : CheckBox
         var address : TextView
@@ -54,6 +64,7 @@ class RecyclerCompanyAdapter(data: ArrayList<Company>) :
         var distance : TextView
 
         init {
+            name = itemView.findViewById(R.id.txtCompanyName)
             imgCompany = itemView.findViewById(R.id.imgCompany)
             address = itemView.findViewById(R.id.txtCompanyAddress)
             target = itemView.findViewById(R.id.txtCompanyTarget)
@@ -63,5 +74,5 @@ class RecyclerCompanyAdapter(data: ArrayList<Company>) :
     }
 }
 
-data class Company(val img : Int = R.drawable.imgdefaultcompany, var farvorite : Boolean = false
+data class Company(val name : String = "-", val img : Int = R.drawable.imgdefaultcompany, var farvorite : Boolean = false
                    , var address : String = "-", var target : String = "-", var distance : String = "-")

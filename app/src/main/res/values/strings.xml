@@ -27,6 +27,7 @@
     <dimen name="margin_top_24">24dp</dimen>
 
     <dimen name="height_32">32dp</dimen>
+    <dimen name="height_44">44dp</dimen>
     <dimen name="height_90">90dp</dimen>
 
 </resources>

@@ -7,11 +7,118 @@
     android:background="@color/white"
     tools:context=".fragment.MyFragment">
 
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/guideTop"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        app:layout_constraintGuide_begin= "@dimen/guide_top"/>
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/viewMyPage"
+        android:layout_width="match_parent"
+        android:layout_height="244dp"
+        android:background="@color/blue"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent">
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideTop"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_begin= "@dimen/guide_top"/>
+
+        <TextView
+            android:text="마이 페이지"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/guideTop"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            android:textColor="@color/white"
+            style="@style/text_black_16"/>
+
+        <ImageView
+            android:id="@+id/imgBack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/imgback"
+            android:tintMode="src_in"
+            app:tint="@color/white"
+            android:layout_marginLeft="@dimen/margin_left_31"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/guideTop"
+            app:layout_constraintLeft_toLeftOf="parent" />
+
+        <ImageView
+            android:id="@+id/imgMy"
+            android:layout_width="@dimen/height_44"
+            android:layout_height="@dimen/height_44"
+            android:src="@drawable/imgdefaultmy"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/guideTop"
+            android:layout_marginTop="@dimen/margin_top_24"
+            android:layout_marginLeft="@dimen/margin_left_20"/>
+
+        <TextView
+            android:id="@+id/txtMy"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/margin_left_12"
+            app:layout_constraintTop_toTopOf="@id/imgMy"
+            app:layout_constraintBottom_toBottomOf="@id/imgMy"
+            app:layout_constraintLeft_toRightOf="@id/imgMy"
+            style="@style/text_black_14"
+            android:textColor="@color/white"/>
+
+        <ImageView
+            android:id="@+id/imgSetting"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="@id/imgMy"
+            app:layout_constraintBottom_toBottomOf="@id/imgMy"
+            app:layout_constraintRight_toRightOf="parent"
+            android:src="@mipmap/imgback"
+            android:tintMode="src_in"
+            app:tint="@color/white"
+            android:scaleX="-1"
+            android:layout_marginRight="@dimen/margin_left_24"/>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="320dp"
+            android:layout_height="72dp"
+            android:background="@drawable/shapebtn2"
+            android:layout_marginTop="@dimen/margin_top_24"
+            app:layout_constraintTop_toBottomOf="@id/imgMy"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent">
+
+            <TextView
+                android:id="@+id/txtPoint"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                android:layout_marginLeft="@dimen/margin_left_24"
+                style="@style/text_black_12"/>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/tabMy"
+        android:layout_width="0dp"
+        android:layout_height="38dp"
+        app:tabTextAppearance="@style/myTabTextSize"
+        app:tabIndicatorHeight="0dp"
+        app:tabSelectedTextColor="@color/blue"
+        app:tabTextColor="@color/gray"
+        app:tabRippleColor="@android:color/transparent"
+        app:layout_constraintTop_toBottomOf="@id/viewMyPage"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"/>
+
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/pagerMy"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toBottomOf="@id/tabMy"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

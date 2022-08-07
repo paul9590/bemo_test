@@ -11,7 +11,7 @@
         android:id="@+id/tabMain"
         android:layout_width="0dp"
         android:layout_height="60dp"
-        app:tabTextAppearance="@style/tabTextSize"
+        app:tabTextAppearance="@style/homeTabTextSize"
         app:tabIndicatorHeight="0dp"
         app:tabSelectedTextColor="@color/blue"
         app:tabTextColor="@color/gray"

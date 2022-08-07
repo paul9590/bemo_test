@@ -15,14 +15,12 @@
         app:layout_constraintGuide_begin= "@dimen/guide_top"/>
 
     <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
         android:text="검색 결과"
-        android:textSize="@dimen/font_size_16"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintBottom_toTopOf="@id/guideTop"
         app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"/>
+        app:layout_constraintRight_toRightOf="parent"
+        style="@style/text_black_16"/>
 
     <ImageView
         android:id="@+id/imgBack"
@@ -36,48 +34,27 @@
 
     <Button
         android:id="@+id/btnPeek1"
-        android:layout_width="53dp"
-        android:layout_height="26dp"
-        android:background="@drawable/shapebtn2"
-        android:textColor="@color/blue"
-        android:drawableRight="@mipmap/imgexit"
-        android:paddingRight="8dp"
-        android:textSize="@dimen/font_size_10"
-        android:text="업체"
         android:layout_marginTop="@dimen/margin_top_12"
         android:layout_marginLeft="@dimen/margin_left_24"
         app:layout_constraintTop_toBottomOf="@id/guideTop"
-        app:layout_constraintLeft_toLeftOf="parent" />
+        app:layout_constraintLeft_toLeftOf="parent"
+        style="@style/btn_peek"/>
 
     <Button
         android:id="@+id/btnPeek2"
-        android:layout_width="53dp"
-        android:layout_height="26dp"
-        android:background="@drawable/shapebtn2"
-        android:textColor="@color/blue"
-        android:drawableRight="@mipmap/imgexit"
-        android:paddingRight="8dp"
-        android:textSize="@dimen/font_size_10"
         android:layout_marginLeft="8dp"
-        android:text="업체"
         app:layout_constraintTop_toTopOf="@id/btnPeek1"
         app:layout_constraintBottom_toBottomOf="@id/btnPeek1"
-        app:layout_constraintLeft_toRightOf="@id/btnPeek1" />
+        app:layout_constraintLeft_toRightOf="@id/btnPeek1"
+        style="@style/btn_peek"/>
 
     <Button
         android:id="@+id/btnPeek3"
-        android:layout_width="53dp"
-        android:layout_height="26dp"
-        android:background="@drawable/shapebtn2"
-        android:textColor="@color/blue"
-        android:drawableRight="@mipmap/imgexit"
-        android:paddingRight="8dp"
-        android:textSize="@dimen/font_size_10"
         android:layout_marginLeft="8dp"
-        android:text="업체"
         app:layout_constraintTop_toTopOf="@id/btnPeek1"
         app:layout_constraintBottom_toBottomOf="@id/btnPeek1"
-        app:layout_constraintLeft_toRightOf="@id/btnPeek2"/>
+        app:layout_constraintLeft_toRightOf="@id/btnPeek2"
+        style="@style/btn_peek"/>
 
     <Button
         android:id="@+id/btnLocate"

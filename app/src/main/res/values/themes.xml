@@ -13,8 +13,52 @@
 
     </style>
 
-    <style name="tabTextSize" parent="TextAppearance.Design.Tab">
+    <style name="homeTabTextSize" parent="TextAppearance.Design.Tab">
         <item name="android:textSize">@dimen/font_size_tab</item>
+    </style>
+
+    <style name="myTabTextSize" parent="TextAppearance.Design.Tab">
+        <item name="android:textSize">@dimen/font_size_12</item>
+    </style>
+
+
+    <style name="btn_peek" parent="@android:style/Widget.Button">
+        <item name="android:layout_width">53dp</item>
+        <item name="android:layout_height">26dp</item>
+        <item name="android:background">@drawable/shapebtn2</item>
+        <item name="android:textColor">@color/blue</item>
+        <item name="android:drawableRight">@mipmap/imgexit</item>
+        <item name="android:paddingRight">8dp</item>
+        <item name="android:textSize">@dimen/font_size_10</item>
+        <item name="android:text">업체</item>
+    </style>
+
+    <style name="text_black_12"  parent="@android:style/Widget.TextView">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textSize">@dimen/font_size_12</item>
+    </style>
+
+    <style name="text_black_14"  parent="@android:style/Widget.TextView">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textSize">@dimen/font_size_14</item>
+    </style>
+
+    <style name="text_black_16"  parent="@android:style/Widget.TextView">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textSize">@dimen/font_size_16</item>
+    </style>
+
+    <style name="text_gray2_12"  parent="@android:style/Widget.TextView">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/gray2</item>
+        <item name="android:textSize">@dimen/font_size_12</item>
     </style>
 
 </resources>
