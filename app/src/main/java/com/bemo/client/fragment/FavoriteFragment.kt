@@ -5,7 +5,12 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
+import com.bemo.client.Company
 import com.bemo.client.R
+import com.bemo.client.RecyclerCompanyAdapter
+import com.bemo.client.databinding.FragmentFavoriteBinding
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -35,7 +40,17 @@ class FavoriteFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_favorite, container, false)
+        val mBinding = FragmentFavoriteBinding.inflate(inflater, container, false)
+
+        val mList = ArrayList<Company>()
+        repeat(9) {
+            mList.add(Company("업체 이름", R.mipmap.imgcategory1, true, "경기도 남양주시 도농동", "10대", "1km"))
+        }
+        mList.add(Company())
+        val mAdapter = RecyclerCompanyAdapter(mList)
+        mBinding.viewFavoriteCompany.adapter = mAdapter
+        mBinding.viewFavoriteCompany.layoutManager = LinearLayoutManager(activity, RecyclerView.VERTICAL, false)
+        return mBinding.root
     }
 
     companion object {

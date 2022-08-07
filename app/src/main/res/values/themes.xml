@@ -33,6 +33,15 @@
         <item name="android:text">업체</item>
     </style>
 
+    <style name="btn_category" parent="@android:style/Widget.Button">
+        <item name="android:layout_width">46dp</item>
+        <item name="android:layout_height">28dp</item>
+        <item name="android:background">@drawable/shapebtn</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">@dimen/font_size_12</item>
+        <item name="android:text">업체</item>
+    </style>
+
     <style name="text_black_12"  parent="@android:style/Widget.TextView">
         <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">wrap_content</item>

@@ -12,7 +12,6 @@ class MyViewAdapter(fm: FragmentManager?) : FragmentPagerAdapter(fm!!,
     init {
         fragList.add(LatestFragment())
         fragList.add(FavoriteFragment())
-        fragList.add(ReviewFragment())
     }
 
     override fun getCount(): Int {

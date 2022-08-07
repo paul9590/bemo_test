@@ -1,0 +1,277 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/white"
+    tools:context=".fragment.CompanyDefaultFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/viewCompanyDetail"
+        android:layout_width="0dp"
+        android:layout_height="158dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/imgCompany"
+                android:layout_width="@dimen/height_90"
+                android:layout_height="@dimen/height_90"
+                android:layout_marginLeft="@dimen/margin_left_20"
+                android:layout_marginTop="@dimen/margin_top_20"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:background="@drawable/shaperound"/>
+
+            <TextView
+                android:id="@+id/txtCompany1"
+                android:text="@string/company_name"
+                android:layout_marginLeft="@dimen/margin_left_16"
+                app:layout_constraintTop_toTopOf="@id/imgCompany"
+                app:layout_constraintBottom_toTopOf="@id/txtCompany2"
+                app:layout_constraintLeft_toRightOf="@id/imgCompany"
+                style="@style/text_gray2_12"/>
+
+            <TextView
+                android:id="@+id/txtCompany2"
+                android:text="@string/company_detail_address"
+                app:layout_constraintTop_toBottomOf="@id/txtCompany1"
+                app:layout_constraintBottom_toTopOf="@id/txtCompany3"
+                app:layout_constraintLeft_toLeftOf="@id/txtCompany1"
+                style="@style/text_gray2_12"/>
+
+            <TextView
+                android:id="@+id/txtCompany3"
+                android:text="@string/company_target"
+                app:layout_constraintTop_toBottomOf="@id/txtCompany2"
+                app:layout_constraintBottom_toTopOf="@id/txtCompany4"
+                app:layout_constraintLeft_toLeftOf="@id/txtCompany1"
+                style="@style/text_gray2_12"/>
+
+            <TextView
+                android:id="@+id/txtCompany4"
+                android:text="@string/company_distance"
+                app:layout_constraintTop_toBottomOf="@id/txtCompany3"
+                app:layout_constraintBottom_toBottomOf="@id/imgCompany"
+                app:layout_constraintLeft_toLeftOf="@id/txtCompany1"
+                style="@style/text_gray2_12"/>
+
+
+            <TextView
+                android:id="@+id/txtCompanyName"
+                app:layout_constraintTop_toTopOf="@id/txtCompany1"
+                app:layout_constraintBottom_toBottomOf="@id/txtCompany1"
+                app:layout_constraintLeft_toLeftOf="@id/txtCompanyAddress"
+                style="@style/text_black_12"/>
+
+            <TextView
+                android:id="@+id/txtCompanyAddress"
+                android:layout_marginLeft="@dimen/margin_left_16"
+                app:layout_constraintTop_toTopOf="@id/txtCompany2"
+                app:layout_constraintBottom_toBottomOf="@id/txtCompany2"
+                app:layout_constraintLeft_toRightOf="@id/txtCompany2"
+                style="@style/text_black_12"/>
+
+            <TextView
+                android:id="@+id/txtCompanyTarget"
+                app:layout_constraintTop_toTopOf="@id/txtCompany3"
+                app:layout_constraintBottom_toBottomOf="@id/txtCompany3"
+                app:layout_constraintLeft_toLeftOf="@id/txtCompanyAddress"
+                style="@style/text_black_12"/>
+
+            <TextView
+                android:id="@+id/txtCompanyDistance"
+                app:layout_constraintTop_toTopOf="@id/txtCompany4"
+                app:layout_constraintBottom_toBottomOf="@id/txtCompany4"
+                app:layout_constraintLeft_toLeftOf="@id/txtCompanyAddress"
+                style="@style/text_black_12"/>
+
+            <TextView
+                android:id="@+id/txtCompanyShuttle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/font_size_12"
+                android:paddingTop="4dp"
+                android:paddingBottom="4dp"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:layout_marginTop="@dimen/margin_top_13"
+                app:layout_constraintTop_toBottomOf="@id/txtCompanyDistance"
+                android:background="@drawable/shaperound"
+                app:layout_constraintLeft_toLeftOf="@id/txtCompany1"/>
+
+
+            <Button
+                android:id="@+id/btnCompanyMsg"
+                android:layout_width="@dimen/height_33"
+                android:layout_height="@dimen/height_33"
+                android:background="@drawable/imgmsg"
+                android:layout_marginBottom="@dimen/margin_top_12"
+                android:layout_marginRight="@dimen/margin_left_19"
+                app:layout_constraintTop_toBottomOf="@id/txtCompanyAddress"
+                app:layout_constraintRight_toRightOf="parent"/>
+
+            <Button
+                android:id="@+id/btnCompanyPhone"
+                android:layout_width="@dimen/height_33"
+                android:layout_height="@dimen/height_33"
+                android:background="@drawable/imgphone"
+                android:layout_marginTop="@dimen/margin_top_7"
+                app:layout_constraintTop_toBottomOf="@id/btnCompanyMsg"
+                app:layout_constraintRight_toRightOf="@id/btnCompanyMsg"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/viewCompanyCategory"
+        android:layout_width="0dp"
+        android:layout_height="88dp"
+        android:layout_marginTop="@dimen/margin_bottom_2"
+        app:layout_constraintTop_toBottomOf="@id/viewCompanyDetail"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/txtCompany5"
+                android:text="카테고리"
+                android:layout_marginTop="@dimen/margin_top_16"
+                android:layout_marginLeft="@dimen/margin_left_20"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                style="@style/text_black_12"/>
+
+            <Button
+                android:id="@+id/btnCategory1"
+                android:layout_marginBottom="@dimen/margin_top_16"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="@id/txtCompany5"
+                android:clickable="false"
+                style="@style/btn_category"/>
+
+            <Button
+                android:id="@+id/btnCategory2"
+                android:layout_marginLeft="@dimen/margin_left_4"
+                app:layout_constraintTop_toTopOf="@id/btnCategory1"
+                app:layout_constraintBottom_toBottomOf="@id/btnCategory1"
+                app:layout_constraintLeft_toRightOf="@id/btnCategory1"
+                android:clickable="false"
+                style="@style/btn_category"/>
+
+            <Button
+                android:id="@+id/btnCategory3"
+                android:layout_marginLeft="@dimen/margin_left_4"
+                app:layout_constraintTop_toTopOf="@id/btnCategory2"
+                app:layout_constraintBottom_toBottomOf="@id/btnCategory2"
+                app:layout_constraintLeft_toRightOf="@id/btnCategory2"
+                android:clickable="false"
+                style="@style/btn_category"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/viewCompanyDescribe"
+        android:layout_width="0dp"
+        android:layout_height="233dp"
+        android:layout_marginTop="@dimen/margin_bottom_2"
+        app:layout_constraintTop_toBottomOf="@id/viewCompanyCategory"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/txtCompany6"
+                android:text="상세설명"
+                android:layout_marginTop="@dimen/margin_top_16"
+                android:layout_marginLeft="@dimen/margin_left_20"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                style="@style/text_black_12"/>
+
+            <androidx.core.widget.NestedScrollView
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:background="@drawable/shaperound2"
+                android:layout_marginTop="@dimen/margin_top_15"
+                android:layout_marginBottom="@dimen/margin_top_20"
+                android:layout_marginLeft="@dimen/margin_left_20"
+                android:layout_marginRight="@dimen/margin_left_20"
+                android:paddingTop="@dimen/margin_top_12"
+                android:paddingBottom="@dimen/margin_top_12"
+                android:paddingLeft="@dimen/margin_left_16"
+                android:paddingRight="@dimen/margin_left_16"
+                app:layout_constraintTop_toBottomOf="@id/txtCompany6"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent">
+
+                <TextView
+                    android:id="@+id/txtCompanyDescribe"
+                    style="@style/text_black_12"/>
+
+            </androidx.core.widget.NestedScrollView>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/viewCompanyLocate"
+        android:layout_width="0dp"
+        android:layout_height="286dp"
+        android:layout_marginTop="@dimen/margin_bottom_2"
+        app:layout_constraintTop_toBottomOf="@id/viewCompanyDescribe"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/txtCompany7"
+                android:text="위치"
+                android:layout_marginTop="@dimen/margin_top_16"
+                android:layout_marginLeft="@dimen/margin_left_20"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                style="@style/text_black_12"/>
+
+            <ImageView
+                android:id="@+id/imgCompanyLocate"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:scrollbars="vertical"
+                android:background="@drawable/shaperound2"
+                android:layout_marginTop="@dimen/margin_top_15"
+                android:layout_marginBottom="@dimen/margin_top_20"
+                android:layout_marginLeft="@dimen/margin_left_20"
+                android:layout_marginRight="@dimen/margin_left_20"
+                app:layout_constraintTop_toBottomOf="@id/txtCompany7"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.core.widget.NestedScrollView>

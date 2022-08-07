@@ -1,11 +1,14 @@
 package com.bemo.client
 
 import android.content.Context
+import android.content.Intent
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.*
 import androidx.recyclerview.widget.RecyclerView
+import com.bemo.client.activity.CompanyActivity
+import java.io.Serializable
 import java.util.*
 
 class RecyclerCompanyAdapter(data: ArrayList<Company>) :
@@ -22,7 +25,7 @@ class RecyclerCompanyAdapter(data: ArrayList<Company>) :
             RecyclerCompanyAdapter.CompanyViewHolder {
 
         context = parent.context
-        // create a new view
+        // create a new view-
         val view: View = LayoutInflater.from(context).inflate(R.layout.list_company, parent, false)
 
         return CompanyViewHolder(view)
@@ -44,7 +47,9 @@ class RecyclerCompanyAdapter(data: ArrayList<Company>) :
 
         // 업체 상세 페이지로 이동
         holder.itemView.setOnClickListener {
-            Toast.makeText(context, "안녕?", Toast.LENGTH_SHORT).show()
+            val intent = Intent(context, CompanyActivity::class.java)
+            intent.putExtra("company", item)
+            context.startActivity(intent)
         }
     }
 
@@ -64,7 +69,7 @@ class RecyclerCompanyAdapter(data: ArrayList<Company>) :
         var distance : TextView
 
         init {
-            name = itemView.findViewById(R.id.txtCompanyName)
+            name = itemView.findViewById(R.id.txtCompany1)
             imgCompany = itemView.findViewById(R.id.imgCompany)
             address = itemView.findViewById(R.id.txtCompanyAddress)
             target = itemView.findViewById(R.id.txtCompanyTarget)
@@ -73,6 +78,3 @@ class RecyclerCompanyAdapter(data: ArrayList<Company>) :
         }
     }
 }
-
-data class Company(val name : String = "-", val img : Int = R.drawable.imgdefaultcompany, var farvorite : Boolean = false
-                   , var address : String = "-", var target : String = "-", var distance : String = "-")

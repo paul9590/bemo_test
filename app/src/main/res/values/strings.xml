@@ -2,6 +2,8 @@
     <string name="app_name">배모</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string name="company_name">업체명</string>
     <string name="company_detail_address">상세주소</string>
     <string name="company_target">교육대상</string>
     <string name="company_distance">거리</string>
@@ -14,19 +16,28 @@
 
     <dimen name="guide_top">56dp</dimen>
 
+    <dimen name="margin_left_4">4dp</dimen>
     <dimen name="margin_left_12">12dp</dimen>
     <dimen name="margin_left_16">16dp</dimen>
+    <dimen name="margin_left_19">19dp</dimen>
     <dimen name="margin_left_24">24dp</dimen>
     <dimen name="margin_left_20">20dp</dimen>
     <dimen name="margin_left_31">31dp</dimen>
 
-
+    <dimen name="margin_top_7">7dp</dimen>
     <dimen name="margin_top_10">10dp</dimen>
     <dimen name="margin_top_11">11dp</dimen>
     <dimen name="margin_top_12">12dp</dimen>
+    <dimen name="margin_top_13">13dp</dimen>
+    <dimen name="margin_top_15">15dp</dimen>
+    <dimen name="margin_top_16">16dp</dimen>
+    <dimen name="margin_top_20">20dp</dimen>
     <dimen name="margin_top_24">24dp</dimen>
 
+    <dimen name="margin_bottom_2">2dp</dimen>
+
     <dimen name="height_32">32dp</dimen>
+    <dimen name="height_33">33dp</dimen>
     <dimen name="height_44">44dp</dimen>
     <dimen name="height_90">90dp</dimen>
 

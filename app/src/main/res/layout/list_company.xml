@@ -2,7 +2,7 @@
 <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="130dp"
-    android:layout_marginBottom="2dp"
+    android:layout_marginBottom="@dimen/margin_bottom_2"
     xmlns:app="http://schemas.android.com/apk/res-auto">
     
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -20,56 +20,56 @@
             android:background="@drawable/shaperound"/>
 
         <TextView
-            android:id="@+id/txtCompanyName"
+            android:id="@+id/txtCompany1"
             android:layout_marginLeft="@dimen/margin_left_16"
             app:layout_constraintTop_toTopOf="@id/imgCompany"
-            app:layout_constraintBottom_toTopOf="@id/txtCompany1"
+            app:layout_constraintBottom_toTopOf="@id/txtCompany2"
             app:layout_constraintLeft_toRightOf="@id/imgCompany"
             style="@style/text_black_14"/>
 
         <TextView
-            android:id="@+id/txtCompany1"
-            android:text="@string/company_detail_address"
-            app:layout_constraintTop_toBottomOf="@id/txtCompanyName"
-            app:layout_constraintBottom_toTopOf="@id/txtCompany2"
-            app:layout_constraintLeft_toLeftOf="@id/txtCompanyName"
-            style="@style/text_gray2_12"/>
-
-        <TextView
             android:id="@+id/txtCompany2"
-            android:text="@string/company_target"
+            android:text="@string/company_detail_address"
             app:layout_constraintTop_toBottomOf="@id/txtCompany1"
             app:layout_constraintBottom_toTopOf="@id/txtCompany3"
-            app:layout_constraintLeft_toLeftOf="@id/txtCompanyName"
+            app:layout_constraintLeft_toLeftOf="@id/txtCompany1"
             style="@style/text_gray2_12"/>
 
         <TextView
             android:id="@+id/txtCompany3"
-            android:text="@string/company_distance"
+            android:text="@string/company_target"
             app:layout_constraintTop_toBottomOf="@id/txtCompany2"
+            app:layout_constraintBottom_toTopOf="@id/txtCompany4"
+            app:layout_constraintLeft_toLeftOf="@id/txtCompany1"
+            style="@style/text_gray2_12"/>
+
+        <TextView
+            android:id="@+id/txtCompany4"
+            android:text="@string/company_distance"
+            app:layout_constraintTop_toBottomOf="@id/txtCompany3"
             app:layout_constraintBottom_toBottomOf="@id/imgCompany"
-            app:layout_constraintLeft_toLeftOf="@id/txtCompanyName"
+            app:layout_constraintLeft_toLeftOf="@id/txtCompany1"
             style="@style/text_gray2_12"/>
 
         <TextView
             android:id="@+id/txtCompanyAddress"
             android:layout_marginLeft="@dimen/margin_left_16"
-            app:layout_constraintTop_toTopOf="@id/txtCompany1"
-            app:layout_constraintBottom_toBottomOf="@id/txtCompany1"
-            app:layout_constraintLeft_toRightOf="@id/txtCompany1"
+            app:layout_constraintTop_toTopOf="@id/txtCompany2"
+            app:layout_constraintBottom_toBottomOf="@id/txtCompany2"
+            app:layout_constraintLeft_toRightOf="@id/txtCompany2"
             style="@style/text_black_12"/>
 
         <TextView
             android:id="@+id/txtCompanyTarget"
-            app:layout_constraintTop_toTopOf="@id/txtCompany2"
-            app:layout_constraintBottom_toBottomOf="@id/txtCompany2"
+            app:layout_constraintTop_toTopOf="@id/txtCompany3"
+            app:layout_constraintBottom_toBottomOf="@id/txtCompany3"
             app:layout_constraintLeft_toLeftOf="@id/txtCompanyAddress"
             style="@style/text_black_12"/>
 
         <TextView
             android:id="@+id/txtCompanyDistance"
-            app:layout_constraintTop_toTopOf="@id/txtCompany3"
-            app:layout_constraintBottom_toBottomOf="@id/txtCompany3"
+            app:layout_constraintTop_toTopOf="@id/txtCompany4"
+            app:layout_constraintBottom_toBottomOf="@id/txtCompany4"
             app:layout_constraintLeft_toLeftOf="@id/txtCompanyAddress"
             style="@style/text_black_12"/>
 

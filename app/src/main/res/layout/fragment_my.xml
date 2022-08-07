@@ -104,13 +104,14 @@
         android:layout_width="0dp"
         android:layout_height="38dp"
         app:tabTextAppearance="@style/myTabTextSize"
-        app:tabIndicatorHeight="0dp"
+        app:tabIndicatorHeight="4dp"
         app:tabSelectedTextColor="@color/blue"
+        app:tabIndicatorColor="@color/blue"
         app:tabTextColor="@color/gray"
         app:tabRippleColor="@android:color/transparent"
         app:layout_constraintTop_toBottomOf="@id/viewMyPage"
         app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"/>
+        app:layout_constraintRight_toLeftOf="@id/btnReview"/>
 
     <androidx.viewpager.widget.ViewPager
         android:id="@+id/pagerMy"
@@ -120,5 +121,16 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"/>
+
+    <Button
+        android:id="@+id/btnReview"
+        android:layout_width="120dp"
+        android:layout_height="38dp"
+        android:background="@color/blue"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@id/tabMy"
+        android:textSize="@dimen/font_size_12"
+        android:textColor="@color/gray"
+        android:text="리뷰 작성 및 관리"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

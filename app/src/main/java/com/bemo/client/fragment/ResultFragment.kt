@@ -46,7 +46,7 @@ class ResultFragment : Fragment() {
 
         val mList = ArrayList<Company>()
         repeat(9) {
-            mList.add(Company("업체 이름", R.mipmap.imgcategory1, true, "경기도 남양주시 도농동", "10대", "1km"))
+            mList.add(Company("업체 이름", R.mipmap.imgcategory1, true, "경기도 남양주시 도농동", "10대", "1km", true))
         }
         mList.add(Company())
         val mAdapter = RecyclerCompanyAdapter(mList)

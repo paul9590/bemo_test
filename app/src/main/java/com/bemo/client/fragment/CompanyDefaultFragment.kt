@@ -5,12 +5,9 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.recyclerview.widget.LinearLayoutManager
-import androidx.recyclerview.widget.RecyclerView
 import com.bemo.client.Company
 import com.bemo.client.R
-import com.bemo.client.RecyclerCompanyAdapter
-import com.bemo.client.databinding.FragmentLatestBinding
+import com.bemo.client.databinding.FragmentCompanyDefaultBinding
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -19,10 +16,10 @@ private const val ARG_PARAM2 = "param2"
 
 /**
  * A simple [Fragment] subclass.
- * Use the [LatestFragment.newInstance] factory method to
+ * Use the [CompanyDefaultFragment.newInstance] factory method to
  * create an instance of this fragment.
  */
-class LatestFragment : Fragment() {
+class CompanyDefaultFragment : Fragment() {
     // TODO: Rename and change types of parameters
     private var param1: String? = null
     private var param2: String? = null
@@ -38,18 +35,14 @@ class LatestFragment : Fragment() {
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
         // Inflate the layout for this fragment
-        val mBinding = FragmentLatestBinding.inflate(inflater, container, false)
+        val mBinding = FragmentCompanyDefaultBinding.inflate(inflater, container, false)
 
-        val mList = ArrayList<Company>()
-        repeat(9) {
-            mList.add(Company("업체 이름", R.mipmap.imgcategory1, true, "경기도 남양주시 도농동", "10대", "1km"))
-        }
-        mList.add(Company())
-        val mAdapter = RecyclerCompanyAdapter(mList)
-        mBinding.viewLatestCompany.adapter = mAdapter
-        mBinding.viewLatestCompany.layoutManager = LinearLayoutManager(activity, RecyclerView.VERTICAL, false)
+        val company = arguments?.getSerializable("company") as Company
+
+        setCompanyInfo(company, mBinding)
+
         return mBinding.root
     }
 
@@ -60,16 +53,38 @@ class LatestFragment : Fragment() {
          *
          * @param param1 Parameter 1.
          * @param param2 Parameter 2.
-         * @return A new instance of fragment LatestFragment.
+         * @return A new instance of fragment CompanyDefaultFragment.
          */
         // TODO: Rename and change types and number of parameters
         @JvmStatic
         fun newInstance(param1: String, param2: String) =
-            LatestFragment().apply {
+            CompanyDefaultFragment().apply {
                 arguments = Bundle().apply {
                     putString(ARG_PARAM1, param1)
                     putString(ARG_PARAM2, param2)
                 }
             }
+    }
+
+    private fun setCompanyInfo(company : Company, mBinding : FragmentCompanyDefaultBinding) {
+        mBinding.imgCompany.setImageResource(company.img)
+        mBinding.txtCompanyName.text = company.name
+        mBinding.txtCompanyAddress.text = company.address
+        mBinding.txtCompanyTarget.text = company.target
+        mBinding.txtCompanyDistance.text = company.distance
+
+        if(company.shuttle) {
+            mBinding.txtCompanyShuttle.text = "셔틀버스 있음"
+            mBinding.txtCompanyShuttle.setTextColor(resources.getColor(R.color.blue))
+        }else {
+            mBinding.txtCompanyShuttle.text = "셔틀버스 없음"
+            mBinding.txtCompanyShuttle.setTextColor(resources.getColor(R.color.red))
+        }
+        val sb = StringBuilder()
+        for(i in 0 .. 100) {
+            sb.append("가나다라마바사아자차카타파하")
+        }
+
+        mBinding.txtCompanyDescribe.text = sb.toString()
     }
 }

@@ -37,6 +37,7 @@ class MyFragment : Fragment() {
     ): View {
         // Inflate the layout for this fragment
         val mBinding = FragmentMyBinding.inflate(inflater, container, false)
+        mBinding.txtMy.text = "김종민님,\n안녕하세요!!"
         val adapter = MyViewAdapter(childFragmentManager)
         mBinding.pagerMy.adapter = adapter
         mBinding.tabMy.setupWithViewPager(mBinding.pagerMy)
@@ -67,7 +68,7 @@ class MyFragment : Fragment() {
     }
 
     private fun setTab(mBinding : FragmentMyBinding) {
-        val texts = arrayOf("최근 본", "찜", "리뷰 작성 및 관리")
+        val texts = arrayOf("최근 본", "찜")
 
         for(i in texts.indices) {
             val tab = mBinding.tabMy.getTabAt(i)!!
