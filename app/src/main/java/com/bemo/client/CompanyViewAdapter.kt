@@ -4,7 +4,7 @@ import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
 import androidx.fragment.app.FragmentPagerAdapter
 import com.bemo.client.fragment.CompanyDefaultFragment
-import com.bemo.client.fragment.CompanyDetailFragment
+import com.bemo.client.fragment.CompanyInfoFragment
 import com.bemo.client.fragment.CompanyReviewFragment
 
 class CompanyViewAdapter(fm: FragmentManager?) : FragmentPagerAdapter(fm!!,
@@ -14,9 +14,9 @@ class CompanyViewAdapter(fm: FragmentManager?) : FragmentPagerAdapter(fm!!,
 
     init {
         fragList.add(CompanyDefaultFragment())
-        fragList.add(CompanyDetailFragment())
-        fragList.add(CompanyDetailFragment())
-        fragList.add(CompanyDetailFragment())
+        fragList.add(CompanyInfoFragment())
+        fragList.add(CompanyInfoFragment())
+        fragList.add(CompanyInfoFragment())
         fragList.add(CompanyReviewFragment())
     }
 

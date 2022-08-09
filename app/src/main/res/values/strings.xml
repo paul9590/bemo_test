@@ -8,6 +8,10 @@
     <string name="company_target">교육대상</string>
     <string name="company_distance">거리</string>
 
+    <string name="company_career_name">성함</string>
+    <string name="company_career_rank">직급</string>
+    <string name="company_career_career">커리어</string>
+
     <dimen name="font_size_tab">9sp</dimen>
     <dimen name="font_size_10">10sp</dimen>
     <dimen name="font_size_12">12sp</dimen>
@@ -23,8 +27,10 @@
     <dimen name="margin_left_24">24dp</dimen>
     <dimen name="margin_left_20">20dp</dimen>
     <dimen name="margin_left_31">31dp</dimen>
+    <dimen name="margin_left_38">38dp</dimen>
 
     <dimen name="margin_top_7">7dp</dimen>
+    <dimen name="margin_top_8">8dp</dimen>
     <dimen name="margin_top_10">10dp</dimen>
     <dimen name="margin_top_11">11dp</dimen>
     <dimen name="margin_top_12">12dp</dimen>
@@ -40,5 +46,7 @@
     <dimen name="height_33">33dp</dimen>
     <dimen name="height_44">44dp</dimen>
     <dimen name="height_90">90dp</dimen>
+    <dimen name="height_115">115dp</dimen>
+    <dimen name="height_143">143dp</dimen>
 
 </resources>

@@ -85,6 +85,7 @@ class CompanyDefaultFragment : Fragment() {
             sb.append("가나다라마바사아자차카타파하")
         }
 
-        mBinding.txtCompanyDescribe.text = sb.toString()
+        mBinding.viewCompanyDescribe.txtCompanyInfoTxt.text = "상세 설명"
+        mBinding.viewCompanyDescribe.txtCompanyInfo.text = sb.toString()
     }
 }

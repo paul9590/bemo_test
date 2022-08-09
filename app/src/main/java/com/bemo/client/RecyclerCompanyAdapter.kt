@@ -8,7 +8,6 @@ import android.view.ViewGroup
 import android.widget.*
 import androidx.recyclerview.widget.RecyclerView
 import com.bemo.client.activity.CompanyActivity
-import java.io.Serializable
 import java.util.*
 
 class RecyclerCompanyAdapter(data: ArrayList<Company>) :
@@ -34,10 +33,10 @@ class RecyclerCompanyAdapter(data: ArrayList<Company>) :
     // onBindViewHolder : position에 해당하는 데이터를 뷰홀더의 아이템뷰에 표시
     override fun onBindViewHolder(holder: CompanyViewHolder, position: Int) {
         val item: Company = mData[position]
-        holder.chkFavortie.isChecked = item.farvorite
-        holder.chkFavortie.setOnClickListener {
+        holder.chkFavorite.isChecked = item.farvorite
+        holder.chkFavorite.setOnClickListener {
             // 찜 목록 클릭 시 서버 통신
-            item.farvorite = !holder.chkFavortie.isChecked
+            item.farvorite = !holder.chkFavorite.isChecked
         }
         holder.imgCompany.setImageResource(item.img)
         holder.name.text = item.name
@@ -54,16 +53,14 @@ class RecyclerCompanyAdapter(data: ArrayList<Company>) :
     }
 
     // getItemCount : 전체 데이터의 개수를 리턴
-    override fun getItemCount(): Int {
-        return mData.size
-    }
+    override fun getItemCount(): Int = mData.size
 
     // 아이템 뷰를 저장하는 뷰홀더 클래스
     inner class CompanyViewHolder internal constructor(itemView: View) :
         RecyclerView.ViewHolder(itemView) {
         var name : TextView
         var imgCompany : ImageView
-        var chkFavortie : CheckBox
+        var chkFavorite : CheckBox
         var address : TextView
         var target : TextView
         var distance : TextView
@@ -74,7 +71,7 @@ class RecyclerCompanyAdapter(data: ArrayList<Company>) :
             address = itemView.findViewById(R.id.txtCompanyAddress)
             target = itemView.findViewById(R.id.txtCompanyTarget)
             distance = itemView.findViewById(R.id.txtCompanyDistance)
-            chkFavortie = itemView.findViewById(R.id.chkFavorite)
+            chkFavorite = itemView.findViewById(R.id.chkFavorite)
         }
     }
 }

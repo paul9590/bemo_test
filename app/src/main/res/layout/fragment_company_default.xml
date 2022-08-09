@@ -12,9 +12,10 @@
         android:layout_height="match_parent">
 
     <androidx.cardview.widget.CardView
-        android:id="@+id/viewCompanyDetail"
+        android:id="@+id/viewCompanyInfo"
         android:layout_width="0dp"
         android:layout_height="158dp"
+        android:layout_marginTop="@dimen/margin_bottom_2"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent">
@@ -138,7 +139,7 @@
         android:layout_width="0dp"
         android:layout_height="88dp"
         android:layout_marginTop="@dimen/margin_bottom_2"
-        app:layout_constraintTop_toBottomOf="@id/viewCompanyDetail"
+        app:layout_constraintTop_toBottomOf="@id/viewCompanyInfo"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent">
 
@@ -184,54 +185,15 @@
         </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.cardview.widget.CardView>
 
-
-    <androidx.cardview.widget.CardView
+    <include
         android:id="@+id/viewCompanyDescribe"
+        app:layout_constraintTop_toBottomOf="@id/viewCompanyCategory"
         android:layout_width="0dp"
         android:layout_height="233dp"
         android:layout_marginTop="@dimen/margin_bottom_2"
-        app:layout_constraintTop_toBottomOf="@id/viewCompanyCategory"
         app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent">
-
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
-
-            <TextView
-                android:id="@+id/txtCompany6"
-                android:text="상세설명"
-                android:layout_marginTop="@dimen/margin_top_16"
-                android:layout_marginLeft="@dimen/margin_left_20"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintLeft_toLeftOf="parent"
-                style="@style/text_black_12"/>
-
-            <androidx.core.widget.NestedScrollView
-                android:layout_width="0dp"
-                android:layout_height="0dp"
-                android:background="@drawable/shaperound2"
-                android:layout_marginTop="@dimen/margin_top_15"
-                android:layout_marginBottom="@dimen/margin_top_20"
-                android:layout_marginLeft="@dimen/margin_left_20"
-                android:layout_marginRight="@dimen/margin_left_20"
-                android:paddingTop="@dimen/margin_top_12"
-                android:paddingBottom="@dimen/margin_top_12"
-                android:paddingLeft="@dimen/margin_left_16"
-                android:paddingRight="@dimen/margin_left_16"
-                app:layout_constraintTop_toBottomOf="@id/txtCompany6"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintLeft_toLeftOf="parent"
-                app:layout_constraintRight_toRightOf="parent">
-
-                <TextView
-                    android:id="@+id/txtCompanyDescribe"
-                    style="@style/text_black_12"/>
-
-            </androidx.core.widget.NestedScrollView>
-
-        </androidx.constraintlayout.widget.ConstraintLayout>
-    </androidx.cardview.widget.CardView>
+        app:layout_constraintRight_toRightOf="parent"
+        layout="@layout/list_company_info_text"/>
 
     <androidx.cardview.widget.CardView
         android:id="@+id/viewCompanyLocate"
