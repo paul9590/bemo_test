@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="135dp"
+    android:layout_marginTop="@dimen/margin_bottom_2">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+            <ImageView
+                android:id="@+id/imgReviewList"
+                android:layout_width="@dimen/height_36"
+                android:layout_height="@dimen/height_36"
+                android:src="@drawable/review_default"
+                android:layout_marginTop="@dimen/margin_top_14"
+                android:layout_marginLeft="@dimen/margin_left_24"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"/>
+
+        <TextView
+            android:id="@+id/txtListCompanyReview"
+            android:layout_marginLeft="@dimen/margin_left_12"
+            app:layout_constraintTop_toTopOf="@id/imgReviewList"
+            app:layout_constraintLeft_toRightOf="@id/imgReviewList"
+            style="@style/text_black_12"/>
+
+        <RatingBar
+            android:id="@+id/ratingCompanyReviewList"
+            android:layout_marginTop="@dimen/margin_top_4"
+            app:layout_constraintTop_toBottomOf="@id/txtListCompanyReview"
+            app:layout_constraintLeft_toLeftOf="@id/txtListCompanyReview"
+            android:layout_width="wrap_content"
+            style="?android:attr/ratingBarStyleSmall"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.cardview.widget.CardView>

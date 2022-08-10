@@ -9,18 +9,16 @@
 
     <ImageView
         android:id="@+id/imgCategory"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="@dimen/height_29"
+        android:layout_height="@dimen/height_29"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintBottom_toTopOf="@id/txtCategory"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        tools:srcCompat="@mipmap/imgcategory1" />
-
+        tools:srcCompat="@drawable/imgcategory1" />
 
     <TextView
         android:id="@+id/txtCategory"
-        android:gravity="center"
         android:text="유치원"
         app:layout_constraintTop_toBottomOf="@id/imgCategory"
         app:layout_constraintBottom_toBottomOf="parent"

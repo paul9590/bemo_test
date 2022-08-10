@@ -4,16 +4,48 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/white"
     tools:context=".fragment.CompanyReviewFragment">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideTop"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/hello_blank_fragment"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin= "115dp"/>
+
+    <TextView
+        android:id="@+id/txtReviewCnt"
+        android:layout_marginTop="@dimen/margin_top_19"
+        android:layout_marginLeft="@dimen/margin_left_24"
         app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        style="@style/text_black_16"/>
+
+    <TextView
+        android:id="@+id/txtReview1"
+        android:text="@string/company_review_desc"
+        app:layout_constraintTop_toBottomOf="@id/txtReviewCnt"
+        app:layout_constraintLeft_toLeftOf="@id/txtReviewCnt"
+        style="@style/text_gray2_10"/>
+
+    <RatingBar
+        android:id="@+id/ratingReview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/txtReview1"
+        app:layout_constraintBottom_toTopOf="@id/guideTop"
+        app:layout_constraintLeft_toLeftOf="@id/txtReviewCnt"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/viewCompanyReview"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="@dimen/margin_top_6"
+        app:layout_constraintTop_toBottomOf="@id/guideTop"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"/>
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

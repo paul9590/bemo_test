@@ -34,15 +34,12 @@
 
         <ImageView
             android:id="@+id/imgBack"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@mipmap/imgback"
             android:tintMode="src_in"
             app:tint="@color/white"
-            android:layout_marginLeft="@dimen/margin_left_31"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintBottom_toTopOf="@id/guideTop"
-            app:layout_constraintLeft_toLeftOf="parent" />
+            app:layout_constraintLeft_toLeftOf="parent"
+            style="@style/btn_back"/>
 
         <ImageView
             android:id="@+id/imgMy"
@@ -67,12 +64,12 @@
 
         <ImageView
             android:id="@+id/imgSetting"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="@dimen/height_7"
+            android:layout_height="@dimen/height_14"
             app:layout_constraintTop_toTopOf="@id/imgMy"
             app:layout_constraintBottom_toBottomOf="@id/imgMy"
             app:layout_constraintRight_toRightOf="parent"
-            android:src="@mipmap/imgback"
+            android:src="@drawable/imgback"
             android:tintMode="src_in"
             app:tint="@color/white"
             android:scaleX="-1"

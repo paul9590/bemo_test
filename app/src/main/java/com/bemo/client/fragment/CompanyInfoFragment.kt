@@ -8,7 +8,7 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.bemo.client.*
-import com.bemo.client.databinding.FragmentCompanyInfoBinding
+import com.bemo.client.databinding.FragmentRecyclerBinding
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -24,7 +24,7 @@ class CompanyInfoFragment : Fragment() {
     // TODO: Rename and change types of parameters
     private var param1: String? = null
     private var param2: String? = null
-    private lateinit var mBinding: FragmentCompanyInfoBinding
+    private lateinit var mBinding: FragmentRecyclerBinding
     private val mList = ArrayList<CompanyInfo>()
     private val mAdapter = RecyclerCompanyInfoAdapter(mList)
 
@@ -41,9 +41,9 @@ class CompanyInfoFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View {
         // Inflate the layout for this fragment
-        mBinding = FragmentCompanyInfoBinding.inflate(inflater, container, false)
-        mBinding.viewCompanyInfo.adapter = mAdapter
-        mBinding.viewCompanyInfo.layoutManager = LinearLayoutManager(activity, RecyclerView.VERTICAL, false)
+        mBinding = FragmentRecyclerBinding.inflate(inflater, container, false)
+        mBinding.viewRecycler.adapter = mAdapter
+        mBinding.viewRecycler.layoutManager = LinearLayoutManager(activity, RecyclerView.VERTICAL, false)
 
         return mBinding.root
     }

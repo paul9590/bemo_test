@@ -12,6 +12,8 @@
     <string name="company_career_rank">직급</string>
     <string name="company_career_career">커리어</string>
 
+    <string name="company_review_desc">리뷰 작성은 마이 페이지에서 가능합니다.</string>
+
     <dimen name="font_size_tab">9sp</dimen>
     <dimen name="font_size_10">10sp</dimen>
     <dimen name="font_size_12">12sp</dimen>
@@ -21,6 +23,7 @@
     <dimen name="guide_top">56dp</dimen>
 
     <dimen name="margin_left_4">4dp</dimen>
+    <dimen name="margin_left_8">8dp</dimen>
     <dimen name="margin_left_12">12dp</dimen>
     <dimen name="margin_left_16">16dp</dimen>
     <dimen name="margin_left_19">19dp</dimen>
@@ -29,24 +32,37 @@
     <dimen name="margin_left_31">31dp</dimen>
     <dimen name="margin_left_38">38dp</dimen>
 
+    <dimen name="margin_top_4">4dp</dimen>
+    <dimen name="margin_top_6">6dp</dimen>
     <dimen name="margin_top_7">7dp</dimen>
     <dimen name="margin_top_8">8dp</dimen>
     <dimen name="margin_top_10">10dp</dimen>
     <dimen name="margin_top_11">11dp</dimen>
     <dimen name="margin_top_12">12dp</dimen>
     <dimen name="margin_top_13">13dp</dimen>
+    <dimen name="margin_top_14">14dp</dimen>d
     <dimen name="margin_top_15">15dp</dimen>
     <dimen name="margin_top_16">16dp</dimen>
+    <dimen name="margin_top_19">19dp</dimen>
     <dimen name="margin_top_20">20dp</dimen>
     <dimen name="margin_top_24">24dp</dimen>
 
     <dimen name="margin_bottom_2">2dp</dimen>
 
+    <dimen name="height_6">6dp</dimen>
+    <dimen name="height_7">7dp</dimen>
+    <dimen name="height_11">11dp</dimen>
+    <dimen name="height_14">14dp</dimen>
+    <dimen name="height_20">20dp</dimen>
+    <dimen name="height_29">29dp</dimen>
     <dimen name="height_32">32dp</dimen>
     <dimen name="height_33">33dp</dimen>
+    <dimen name="height_36">36dp</dimen>
     <dimen name="height_44">44dp</dimen>
     <dimen name="height_90">90dp</dimen>
     <dimen name="height_115">115dp</dimen>
     <dimen name="height_143">143dp</dimen>
+
+    <drawable name="review_default">@drawable/imgdefaultmy</drawable>
 
 </resources>

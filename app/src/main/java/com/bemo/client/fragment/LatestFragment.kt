@@ -10,7 +10,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.bemo.client.Company
 import com.bemo.client.R
 import com.bemo.client.RecyclerCompanyAdapter
-import com.bemo.client.databinding.FragmentLatestBinding
+import com.bemo.client.databinding.FragmentRecyclerBinding
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -40,16 +40,16 @@ class LatestFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        val mBinding = FragmentLatestBinding.inflate(inflater, container, false)
+        val mBinding = FragmentRecyclerBinding.inflate(inflater, container, false)
 
         val mList = ArrayList<Company>()
         repeat(9) {
-            mList.add(Company("업체 이름", R.mipmap.imgcategory1, true, "경기도 남양주시 도농동", "10대", "1km"))
+            mList.add(Company("업체 이름", R.drawable.imgcategory1, true, "경기도 남양주시 도농동", "10대", "1km"))
         }
         mList.add(Company())
         val mAdapter = RecyclerCompanyAdapter(mList)
-        mBinding.viewLatestCompany.adapter = mAdapter
-        mBinding.viewLatestCompany.layoutManager = LinearLayoutManager(activity, RecyclerView.VERTICAL, false)
+        mBinding.viewRecycler.adapter = mAdapter
+        mBinding.viewRecycler.layoutManager = LinearLayoutManager(activity, RecyclerView.VERTICAL, false)
         return mBinding.root
     }
 

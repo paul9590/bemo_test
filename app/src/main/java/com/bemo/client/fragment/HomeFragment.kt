@@ -44,7 +44,7 @@ class HomeFragment : Fragment() {
 
         val mList = ArrayList<HomeCategory>()
         repeat(9) {
-            mList.add(HomeCategory(R.mipmap.imgcategory1, "유치원"))
+            mList.add(HomeCategory(R.drawable.imgcategory1, "유치원"))
         }
         val mAdapter = RecyclerCategoryAdapter(mList)
         mBinding.viewCategory.adapter = mAdapter

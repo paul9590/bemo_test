@@ -41,7 +41,7 @@ class MainActivity : AppCompatActivity() {
 
     private fun setTab() {
         val texts = arrayOf("홈", "검색 결과", "마이")
-        val icons = arrayOf(R.mipmap.iconhome, R.mipmap.iconresult, R.mipmap.iconmy)
+        val icons = arrayOf(R.drawable.iconhome, R.drawable.iconresult, R.drawable.iconmy)
 
         for(i in texts.indices) {
             val tab = mBinding.tabMain.getTabAt(i)!!
