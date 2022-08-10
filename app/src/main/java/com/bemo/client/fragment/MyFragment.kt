@@ -1,10 +1,10 @@
 package com.bemo.client.fragment
 
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.fragment.app.Fragment
 import com.bemo.client.MyViewAdapter
 import com.bemo.client.databinding.FragmentMyBinding
 
@@ -37,6 +37,7 @@ class MyFragment : Fragment() {
     ): View {
         // Inflate the layout for this fragment
         val mBinding = FragmentMyBinding.inflate(inflater, container, false)
+        // 로그인 정보 불러오기
         mBinding.txtMy.text = "김종민님,\n안녕하세요!!"
         val adapter = MyViewAdapter(childFragmentManager)
         mBinding.pagerMy.adapter = adapter

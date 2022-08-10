@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:background="@color/white"
     tools:context=".fragment.ResultFragment">
 
@@ -12,75 +12,75 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_begin= "@dimen/guide_top"/>
+        app:layout_constraintGuide_begin="@dimen/guide_top" />
 
     <TextView
-        android:text="검색 결과"
-        app:layout_constraintTop_toTopOf="parent"
+        style="@style/text_black_16"
+        android:text="@string/result_title"
         app:layout_constraintBottom_toTopOf="@id/guideTop"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        style="@style/text_black_16"/>
+        app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
         android:id="@+id/imgBack"
-        app:layout_constraintTop_toTopOf="parent"
+        style="@style/btn_back"
         app:layout_constraintBottom_toTopOf="@id/guideTop"
         app:layout_constraintLeft_toLeftOf="parent"
-        style="@style/btn_back"/>
+        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/btnPeek1"
+        style="@style/btn_peek"
+        android:layout_marginStart="@dimen/margin_left_24"
         android:layout_marginTop="@dimen/margin_top_12"
-        android:layout_marginLeft="@dimen/margin_left_24"
-        app:layout_constraintTop_toBottomOf="@id/guideTop"
         app:layout_constraintLeft_toLeftOf="parent"
-        style="@style/btn_peek"/>
+        app:layout_constraintTop_toBottomOf="@id/guideTop" />
 
     <Button
         android:id="@+id/btnPeek2"
-        android:layout_marginLeft="@dimen/margin_left_8"
-        app:layout_constraintTop_toTopOf="@id/btnPeek1"
+        style="@style/btn_peek"
+        android:layout_marginStart="@dimen/margin_left_8"
         app:layout_constraintBottom_toBottomOf="@id/btnPeek1"
         app:layout_constraintLeft_toRightOf="@id/btnPeek1"
-        style="@style/btn_peek"/>
+        app:layout_constraintTop_toTopOf="@id/btnPeek1" />
 
     <Button
         android:id="@+id/btnPeek3"
-        android:layout_marginLeft="@dimen/margin_left_8"
-        app:layout_constraintTop_toTopOf="@id/btnPeek1"
+        style="@style/btn_peek"
+        android:layout_marginStart="@dimen/margin_left_8"
         app:layout_constraintBottom_toBottomOf="@id/btnPeek1"
         app:layout_constraintLeft_toRightOf="@id/btnPeek2"
-        style="@style/btn_peek"/>
+        app:layout_constraintTop_toTopOf="@id/btnPeek1" />
 
     <Button
         android:id="@+id/btnLocate"
         android:layout_width="@dimen/height_32"
         android:layout_height="@dimen/height_32"
+        android:layout_marginEnd="@dimen/margin_left_24"
         android:background="@drawable/shapelocatebtn"
-        android:layout_marginRight="@dimen/margin_left_24"
-        app:layout_constraintTop_toTopOf="@id/btnPeek1"
         app:layout_constraintBottom_toBottomOf="@id/btnPeek1"
-        app:layout_constraintRight_toRightOf="parent"/>
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@id/btnPeek1" />
 
     <Button
         android:id="@+id/btnSort"
         android:layout_width="@dimen/height_32"
         android:layout_height="@dimen/height_32"
+        android:layout_marginEnd="@dimen/margin_left_12"
         android:background="@drawable/shapesortbtn"
-        android:layout_marginRight="@dimen/margin_left_12"
-        app:layout_constraintTop_toTopOf="@id/btnPeek1"
         app:layout_constraintBottom_toBottomOf="@id/btnPeek1"
-        app:layout_constraintRight_toLeftOf="@id/btnLocate"/>
+        app:layout_constraintRight_toLeftOf="@id/btnLocate"
+        app:layout_constraintTop_toTopOf="@id/btnPeek1" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/viewCompany"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_marginTop="@dimen/margin_top_10"
-        app:layout_constraintTop_toBottomOf="@id/btnPeek1"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"/>
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btnPeek1" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

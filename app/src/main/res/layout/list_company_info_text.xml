@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.cardview.widget.CardView
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="233dp"
@@ -12,32 +11,32 @@
 
         <TextView
             android:id="@+id/txtCompanyInfoTxt"
+            style="@style/text_black_12"
+            android:layout_marginStart="@dimen/margin_left_20"
             android:layout_marginTop="@dimen/margin_top_16"
-            android:layout_marginLeft="@dimen/margin_left_20"
-            app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintLeft_toLeftOf="parent"
-            style="@style/text_black_12"/>
+            app:layout_constraintTop_toTopOf="parent" />
 
         <androidx.core.widget.NestedScrollView
             android:layout_width="0dp"
             android:layout_height="0dp"
-            android:background="@drawable/shaperound2"
-            android:layout_marginTop="@dimen/margin_top_15"
-            android:layout_marginBottom="@dimen/margin_top_20"
             android:layout_marginLeft="@dimen/margin_left_20"
+            android:layout_marginTop="@dimen/margin_top_15"
             android:layout_marginRight="@dimen/margin_left_20"
-            android:paddingTop="@dimen/margin_top_12"
-            android:paddingBottom="@dimen/margin_top_12"
+            android:layout_marginBottom="@dimen/margin_top_20"
+            android:background="@drawable/shaperound2"
             android:paddingLeft="@dimen/margin_left_16"
+            android:paddingTop="@dimen/margin_top_12"
             android:paddingRight="@dimen/margin_left_16"
-            app:layout_constraintTop_toBottomOf="@id/txtCompanyInfoTxt"
+            android:paddingBottom="@dimen/margin_top_12"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintRight_toRightOf="parent">
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/txtCompanyInfoTxt">
 
             <TextView
                 android:id="@+id/txtCompanyInfo"
-                style="@style/text_black_12"/>
+                style="@style/text_black_12" />
 
         </androidx.core.widget.NestedScrollView>
 

@@ -3,7 +3,8 @@ package com.bemo.client
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
 import androidx.fragment.app.FragmentPagerAdapter
-import com.bemo.client.fragment.*
+import com.bemo.client.fragment.FavoriteFragment
+import com.bemo.client.fragment.LatestFragment
 
 class MyViewAdapter(fm: FragmentManager?) : FragmentPagerAdapter(fm!!,
     BEHAVIOR_RESUME_ONLY_CURRENT_FRAGMENT){

@@ -9,7 +9,6 @@ import androidx.recyclerview.widget.GridLayoutManager
 import com.bemo.client.HomeCategory
 import com.bemo.client.R
 import com.bemo.client.RecyclerCategoryAdapter
-import com.bemo.client.RecyclerCompanyAdapter
 import com.bemo.client.databinding.FragmentHomeBinding
 
 // TODO: Rename parameter arguments, choose names that match

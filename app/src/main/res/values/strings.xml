@@ -3,16 +3,46 @@
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
 
+    <!-- 홈 / fragment_home -->
+    <string name="home_logo_description">로고 이미지</string>
+    <string name="home_ad_description">배너 광고 이미지</string>
+    <string name="home_locate">내 위치</string>
+    <string name="home_area">지역</string>
+    <string name="home_age">나이</string>
+    <string name="home_hint">카테고리 또는 업체명을 입력해 주세요.</string>
+    <string name="home_search">검색</string>
+
+
+    <!-- 검색 결과 / fragment_result -->
+    <string name="result_title">검색 결과</string>
+
+
+    <!-- 마이 / fragment_my -->
+    <string name="my_title">마이 페이지</string>
+    <string name="my_my_description">내 프로필 이미지</string>
+    <string name="my_review_button">리뷰 작성 및 관리</string>
+
+
+    <!-- 업체 상세 / fragment_company_default, list_company -->
+    <string name="company_img">업체 사진</string>
+    <string name="company_img_description">업체 이미지</string>
     <string name="company_name">업체명</string>
     <string name="company_detail_address">상세주소</string>
     <string name="company_target">교육대상</string>
     <string name="company_distance">거리</string>
+    <string name="company_category">카테고리</string>
+    <string name="company_locate">위치</string>
 
+
+    <!-- 업체 상세 강사 소개 / list_company_info_career -->
+    <string name="company_career_img_description">강사 이미지</string>
     <string name="company_career_name">성함</string>
     <string name="company_career_rank">직급</string>
     <string name="company_career_career">커리어</string>
 
+
     <string name="company_review_desc">리뷰 작성은 마이 페이지에서 가능합니다.</string>
+
 
     <dimen name="font_size_tab">9sp</dimen>
     <dimen name="font_size_10">10sp</dimen>

@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:background="@color/white"
     tools:context=".fragment.MyFragment">
 
@@ -12,87 +12,90 @@
         android:layout_width="match_parent"
         android:layout_height="244dp"
         android:background="@color/blue"
-        app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent">
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
         <androidx.constraintlayout.widget.Guideline
             android:id="@+id/guideTop"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
-            app:layout_constraintGuide_begin= "@dimen/guide_top"/>
+            app:layout_constraintGuide_begin="@dimen/guide_top" />
 
         <TextView
-            android:text="마이 페이지"
-            app:layout_constraintTop_toTopOf="parent"
+            style="@style/text_black_16"
+            android:text="@string/my_title"
+            android:textColor="@color/white"
             app:layout_constraintBottom_toTopOf="@id/guideTop"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
-            android:textColor="@color/white"
-            style="@style/text_black_16"/>
+            app:layout_constraintTop_toTopOf="parent" />
 
         <ImageView
             android:id="@+id/imgBack"
+            style="@style/btn_back"
             android:tintMode="src_in"
-            app:tint="@color/white"
-            app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintBottom_toTopOf="@id/guideTop"
             app:layout_constraintLeft_toLeftOf="parent"
-            style="@style/btn_back"/>
+            app:layout_constraintTop_toTopOf="parent"
+            app:tint="@color/white" />
 
         <ImageView
             android:id="@+id/imgMy"
             android:layout_width="@dimen/height_44"
             android:layout_height="@dimen/height_44"
+            android:layout_marginStart="@dimen/margin_left_20"
+            android:layout_marginTop="@dimen/margin_top_24"
+            android:contentDescription="@string/my_my_description"
             android:src="@drawable/imgdefaultmy"
             app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/guideTop"
-            android:layout_marginTop="@dimen/margin_top_24"
-            android:layout_marginLeft="@dimen/margin_left_20"/>
+            app:layout_constraintTop_toBottomOf="@id/guideTop" />
 
         <TextView
             android:id="@+id/txtMy"
+            style="@style/text_black_14"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="@dimen/margin_left_12"
-            app:layout_constraintTop_toTopOf="@id/imgMy"
+            android:layout_marginStart="@dimen/margin_left_12"
+            android:textColor="@color/white"
             app:layout_constraintBottom_toBottomOf="@id/imgMy"
             app:layout_constraintLeft_toRightOf="@id/imgMy"
-            style="@style/text_black_14"
-            android:textColor="@color/white"/>
+            app:layout_constraintTop_toTopOf="@id/imgMy" />
 
         <ImageView
             android:id="@+id/imgSetting"
             android:layout_width="@dimen/height_7"
             android:layout_height="@dimen/height_14"
-            app:layout_constraintTop_toTopOf="@id/imgMy"
-            app:layout_constraintBottom_toBottomOf="@id/imgMy"
-            app:layout_constraintRight_toRightOf="parent"
+            android:layout_marginEnd="@dimen/margin_left_24"
+            android:scaleX="-1"
             android:src="@drawable/imgback"
             android:tintMode="src_in"
-            app:tint="@color/white"
-            android:scaleX="-1"
-            android:layout_marginRight="@dimen/margin_left_24"/>
+            app:layout_constraintBottom_toBottomOf="@id/imgMy"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="@id/imgMy"
+            app:tint="@color/white" />
 
         <androidx.constraintlayout.widget.ConstraintLayout
-            android:layout_width="320dp"
+            android:layout_width="0dp"
             android:layout_height="72dp"
-            android:background="@drawable/shapebtn2"
+            android:layout_marginLeft="@dimen/margin_left_20"
             android:layout_marginTop="@dimen/margin_top_24"
-            app:layout_constraintTop_toBottomOf="@id/imgMy"
+            android:layout_marginRight="@dimen/margin_left_20"
+            android:background="@drawable/shapebtn2"
             app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintRight_toRightOf="parent">
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/imgMy">
 
             <TextView
                 android:id="@+id/txtPoint"
+                style="@style/text_black_12"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                app:layout_constraintTop_toTopOf="parent"
+                android:layout_marginStart="@dimen/margin_left_24"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintLeft_toLeftOf="parent"
-                android:layout_marginLeft="@dimen/margin_left_24"
-                style="@style/text_black_12"/>
+                app:layout_constraintTop_toTopOf="parent" />
         </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -100,34 +103,34 @@
         android:id="@+id/tabMy"
         android:layout_width="0dp"
         android:layout_height="38dp"
-        app:tabTextAppearance="@style/myTabTextSize"
-        app:tabIndicatorHeight="4dp"
-        app:tabSelectedTextColor="@color/blue"
-        app:tabIndicatorColor="@color/blue"
-        app:tabTextColor="@color/gray"
-        app:tabRippleColor="@android:color/transparent"
-        app:layout_constraintTop_toBottomOf="@id/viewMyPage"
         app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toLeftOf="@id/btnReview"/>
+        app:layout_constraintRight_toLeftOf="@id/btnReview"
+        app:layout_constraintTop_toBottomOf="@id/viewMyPage"
+        app:tabIndicatorColor="@color/blue"
+        app:tabIndicatorHeight="4dp"
+        app:tabRippleColor="@android:color/transparent"
+        app:tabSelectedTextColor="@color/blue"
+        app:tabTextAppearance="@style/myTabTextSize"
+        app:tabTextColor="@color/gray" />
 
     <androidx.viewpager.widget.ViewPager
         android:id="@+id/pagerMy"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        app:layout_constraintTop_toBottomOf="@id/tabMy"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"/>
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tabMy" />
 
     <Button
         android:id="@+id/btnReview"
         android:layout_width="120dp"
         android:layout_height="38dp"
         android:background="@color/blue"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="@id/tabMy"
-        android:textSize="@dimen/font_size_12"
+        android:text="@string/my_review_button"
         android:textColor="@color/gray"
-        android:text="리뷰 작성 및 관리"/>
+        android:textSize="@dimen/font_size_12"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@id/tabMy" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

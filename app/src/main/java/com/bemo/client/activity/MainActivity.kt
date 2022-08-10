@@ -1,12 +1,12 @@
 package com.bemo.client.activity
 
 import android.graphics.PorterDuff
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import com.google.android.material.tabs.TabLayout
+import androidx.appcompat.app.AppCompatActivity
 import com.bemo.client.MainViewAdapter
 import com.bemo.client.R
 import com.bemo.client.databinding.ActivityMainBinding
+import com.google.android.material.tabs.TabLayout
 
 class MainActivity : AppCompatActivity() {
     private lateinit var mBinding : ActivityMainBinding

@@ -9,7 +9,7 @@
         <item name="android:fontFamily">@font/light</item>
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>
-        <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
+        <item name="android:statusBarColor" >?attr/colorPrimaryVariant</item>
 
     </style>
 
@@ -82,8 +82,7 @@
         <item name="android:layout_height">@dimen/height_20</item>
         <item name="android:src">@drawable/imgback</item>
         <item name="android:layout_marginLeft">@dimen/margin_left_31</item>
+        <item name="android:contentDescription">뒤로 가기</item>
     </style>
-
-
 
 </resources>
