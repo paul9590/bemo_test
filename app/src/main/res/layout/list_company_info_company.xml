@@ -2,8 +2,8 @@
 <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="130dp"
-    android:layout_marginBottom="@dimen/margin_top_2">
+    android:layout_height="158dp"
+    android:layout_marginTop="@dimen/margin_top_2">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
@@ -14,16 +14,17 @@
             android:layout_width="@dimen/height_90"
             android:layout_height="@dimen/height_90"
             android:layout_marginStart="@dimen/margin_left_20"
+            android:layout_marginTop="@dimen/margin_top_20"
             android:background="@drawable/shaperound"
-            android:contentDescription="@string/company_img_description"
-            app:layout_constraintBottom_toBottomOf="parent"
+            android:contentDescription="@string/company_img"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
             android:id="@+id/txtCompany1"
-            style="@style/text_black_14"
+            style="@style/text_gray2_12"
             android:layout_marginStart="@dimen/margin_left_16"
+            android:text="@string/company_name"
             app:layout_constraintBottom_toTopOf="@id/txtCompany2"
             app:layout_constraintLeft_toRightOf="@id/imgCompany"
             app:layout_constraintTop_toTopOf="@id/imgCompany" />
@@ -52,6 +53,14 @@
             app:layout_constraintLeft_toLeftOf="@id/txtCompany1"
             app:layout_constraintTop_toBottomOf="@id/txtCompany3" />
 
+
+        <TextView
+            android:id="@+id/txtCompanyName"
+            style="@style/text_black_12"
+            app:layout_constraintBottom_toBottomOf="@id/txtCompany1"
+            app:layout_constraintLeft_toLeftOf="@id/txtCompanyAddress"
+            app:layout_constraintTop_toTopOf="@id/txtCompany1" />
+
         <TextView
             android:id="@+id/txtCompanyAddress"
             style="@style/text_black_12"
@@ -74,15 +83,39 @@
             app:layout_constraintLeft_toLeftOf="@id/txtCompanyAddress"
             app:layout_constraintTop_toTopOf="@id/txtCompany4" />
 
-        <CheckBox
-            android:id="@+id/chkFavorite"
-            android:layout_width="21dp"
-            android:layout_height="18dp"
-            android:layout_margin="@dimen/margin_left_20"
-            android:background="@drawable/shapefavoritebtn"
-            android:button="@android:color/transparent"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintRight_toRightOf="parent" />
+        <TextView
+            android:id="@+id/txtCompanyShuttle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_top_13"
+            android:background="@drawable/shaperound"
+            android:paddingLeft="10dp"
+            android:paddingTop="4dp"
+            android:paddingRight="10dp"
+            android:paddingBottom="4dp"
+            android:textSize="@dimen/font_size_12"
+            app:layout_constraintLeft_toLeftOf="@id/txtCompany1"
+            app:layout_constraintTop_toBottomOf="@id/txtCompanyDistance" />
+
+
+        <Button
+            android:id="@+id/btnCompanyMsg"
+            android:layout_width="@dimen/height_33"
+            android:layout_height="@dimen/height_33"
+            android:layout_marginEnd="@dimen/margin_left_19"
+            android:layout_marginBottom="@dimen/margin_top_12"
+            android:background="@drawable/imgmsg"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/txtCompanyAddress" />
+
+        <Button
+            android:id="@+id/btnCompanyPhone"
+            android:layout_width="@dimen/height_33"
+            android:layout_height="@dimen/height_33"
+            android:layout_marginTop="@dimen/margin_top_7"
+            android:background="@drawable/imgphone"
+            app:layout_constraintRight_toRightOf="@id/btnCompanyMsg"
+            app:layout_constraintTop_toBottomOf="@id/btnCompanyMsg" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </androidx.cardview.widget.CardView>

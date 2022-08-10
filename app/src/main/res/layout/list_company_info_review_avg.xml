@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/height_115"
+    android:layout_marginTop="@dimen/margin_top_2">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/txtCompanyInfoReviewCnt"
+            style="@style/text_black_16"
+            android:layout_marginStart="@dimen/margin_left_24"
+            android:layout_marginTop="@dimen/margin_top_19"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/txtReview1"
+            style="@style/text_gray2_10"
+            android:text="@string/company_review_desc"
+            app:layout_constraintLeft_toLeftOf="@id/txtCompanyInfoReviewCnt"
+            app:layout_constraintTop_toBottomOf="@id/txtCompanyInfoReviewCnt" />
+
+        <RatingBar
+            android:id="@+id/ratingCompanyInfoReviewAvg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:isIndicator="true"
+            android:stepSize="0.1"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="@id/txtCompanyInfoReviewCnt"
+            app:layout_constraintTop_toBottomOf="@id/txtReview1" />
+
+        <TextView
+            android:id="@+id/txtCompanyReviewAvg"
+            style="@style/text_black_16"
+            android:layout_marginStart="@dimen/margin_left_8"
+            app:layout_constraintBottom_toBottomOf="@id/ratingCompanyInfoReviewAvg"
+            app:layout_constraintLeft_toRightOf="@id/ratingCompanyInfoReviewAvg"
+            app:layout_constraintTop_toTopOf="@id/ratingCompanyInfoReviewAvg" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.cardview.widget.CardView>
