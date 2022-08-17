@@ -21,6 +21,10 @@
         <item name="android:textSize">@dimen/font_size_12</item>
     </style>
 
+    <style name="reviewTabTextSize" parent="TextAppearance.Design.Tab">
+        <item name="android:textSize">@dimen/font_size_14</item>
+    </style>
+
 
     <style name="btn_peek" parent="@android:style/Widget.Button">
         <item name="android:layout_width">53dp</item>

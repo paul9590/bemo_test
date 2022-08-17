@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="190dp"
+    android:layout_marginTop="@dimen/margin_top_2">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/txtMyReviewCompany"
+            style="@style/text_black_14"
+            android:layout_marginStart="@dimen/margin_left_24"
+            android:layout_marginTop="@dimen/margin_top_12"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <RatingBar
+            android:id="@+id/ratingMyReview"
+            style="?android:attr/ratingBarStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_top_4"
+            android:isIndicator="true"
+            android:stepSize="0.1"
+            app:layout_constraintLeft_toLeftOf="@id/txtMyReviewCompany"
+            app:layout_constraintTop_toBottomOf="@id/txtMyReviewCompany" />
+
+        <TextView
+            android:id="@+id/txtMyReviewDate"
+            style="@style/text_gray2_10"
+            android:layout_marginStart="@dimen/margin_left_8"
+            app:layout_constraintBottom_toBottomOf="@id/ratingMyReview"
+            app:layout_constraintLeft_toRightOf="@id/ratingMyReview"
+            app:layout_constraintTop_toTopOf="@id/ratingMyReview" />
+
+        <TextView
+            android:id="@+id/txtMyReview"
+            style="@style/text_black_12"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginTop="@dimen/margin_top_14"
+            android:layout_marginEnd="@dimen/margin_left_24"
+            android:layout_marginBottom="@dimen/margin_top_22"
+            android:gravity="start"
+            android:maxLines="3"
+            app:layout_constraintBottom_toTopOf="@id/btnRemove"
+            app:layout_constraintLeft_toLeftOf="@id/txtMyReviewCompany"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/ratingMyReview" />
+
+        <Button
+            android:id="@+id/btnRemove"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_marginBottom="@dimen/margin_top_20"
+            android:background="@drawable/shape_btn4"
+            android:text="@string/button_remove"
+            android:textColor="@color/gray2"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="@id/txtMyReviewCompany"
+            app:layout_constraintRight_toLeftOf="@id/btnEdit" />
+
+        <Button
+            android:id="@+id/btnEdit"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="@dimen/margin_left_8"
+            android:layout_marginEnd="@dimen/margin_left_24"
+            android:background="@drawable/shape_btn"
+            android:text="@string/button_edit"
+            android:textColor="@color/white"
+            app:layout_constraintBottom_toBottomOf="@id/btnRemove"
+            app:layout_constraintLeft_toRightOf="@id/btnRemove"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="@id/btnRemove" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.cardview.widget.CardView>

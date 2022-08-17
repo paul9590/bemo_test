@@ -3,6 +3,11 @@
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
 
+    <!-- 버튼 -->
+    <string name="button_ok">확인</string>
+    <string name="button_remove">삭제</string>
+    <string name="button_edit">수정</string>
+
     <!-- 홈 / fragment_home -->
     <string name="home_logo_description">로고 이미지</string>
     <string name="home_ad_description">배너 광고 이미지</string>
@@ -47,6 +52,15 @@
     <!-- 리뷰 / activity_review -->
     <string name="review_title">리뷰</string>
 
+    <!-- 미작성 리뷰 / list_my_review_need_fill -->
+    <string name="review_button">리뷰 쓰러 가기</string>
+
+    <!-- 리뷰 작성 다이얼 / dial_review -->
+    <string name="review_dialog_title">별점</string>
+    <string name="review_dialog_hint">내용을 입력해 주세요.</string>
+
+
+
 
     <dimen name="font_size_tab">9sp</dimen>
     <dimen name="font_size_10">10sp</dimen>
@@ -82,6 +96,7 @@
     <dimen name="margin_top_20">20dp</dimen>
     <dimen name="margin_top_22">24dp</dimen>
     <dimen name="margin_top_24">24dp</dimen>
+    <dimen name="margin_top_90">90dp</dimen>
 
 
     <dimen name="height_6">6dp</dimen>

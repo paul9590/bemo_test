@@ -25,16 +25,40 @@ class ReviewViewAdapter(fm: FragmentManager?) : FragmentPagerAdapter(fm!!,
     override fun getItem(p0: Int): Fragment = fragList[p0]
 
     private fun setReviewInfo() {
+        setReview1()
+        setReview2()
+    }
+
+    private fun setReview1() {
         val list = ArrayList<CompanyInfo>()
-        val sb = StringBuilder()
-        repeat(100) {
-            sb.append("가나다라마바사아자차카타파하")
+        repeat(10) {
+            list.add(
+                Company(
+                    "업체 이름",
+                    R.drawable.img_category1,
+                    true,
+                    "경기도 남양주시 도농동",
+                    "10대",
+                    "1km",
+                    true
+                )
+            )
         }
-        list.add(CompanyInfoText("상세 설명", desc = sb.toString()))
-        list.add(CompanyInfoImg("이미지", R.drawable.img_default_company_info))
-        list.add(CompanyInfoCareer("김종민", "2016년 도농고 졸업\n\n2021년 시집 출판\n\n2022년", R.drawable.img_default_company_info_career, "대표?"))
-        for(i in 0 .. 1) {
-            fragList[i].addList(list)
+        fragList[0].addList(list)
+    }
+
+    private fun setReview2() {
+        val list = ArrayList<CompanyInfo>()
+        repeat(10) {
+            list.add(
+                CompanyInfoReview(
+                    name = "송수학학원",
+                    date = "2022/08/18",
+                    rating = 2.6f,
+                    desc = "가나다라마바사아자차카타파하"
+                )
+            )
         }
+        fragList[1].addList(list)
     }
 }

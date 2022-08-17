@@ -48,12 +48,17 @@
         <TextView
             android:id="@+id/txtCompanyInfoReviewBody"
             style="@style/text_black_12"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
             android:layout_marginTop="@dimen/margin_top_22"
             android:layout_marginEnd="@dimen/margin_left_24"
+            android:layout_marginBottom="@dimen/margin_top_16"
+            android:gravity="start"
             android:maxLines="3"
             app:layout_constraintLeft_toLeftOf="@id/imgCompanyInfoReview"
             app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/imgCompanyInfoReview" />
+            app:layout_constraintTop_toBottomOf="@id/imgCompanyInfoReview"
+            app:layout_constraintBottom_toBottomOf="parent"/>
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>
