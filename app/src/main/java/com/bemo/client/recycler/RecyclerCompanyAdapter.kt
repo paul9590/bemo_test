@@ -1,4 +1,4 @@
-package com.bemo.client
+package com.bemo.client.recycler
 
 import android.content.Context
 import android.content.Intent
@@ -9,6 +9,8 @@ import android.widget.CheckBox
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
+import com.bemo.client.Company
+import com.bemo.client.R
 import com.bemo.client.activity.CompanyActivity
 
 class RecyclerCompanyAdapter(data: ArrayList<Company>) :
@@ -20,18 +22,14 @@ class RecyclerCompanyAdapter(data: ArrayList<Company>) :
         mData = data
     }
 
-    override fun onCreateViewHolder(parent: ViewGroup,
-                                    viewType: Int):
-            RecyclerCompanyAdapter.CompanyViewHolder {
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): CompanyViewHolder {
 
         context = parent.context
-        // create a new view-
         val view: View = LayoutInflater.from(context).inflate(R.layout.list_company, parent, false)
 
         return CompanyViewHolder(view)
     }
 
-    // onBindViewHolder : position에 해당하는 데이터를 뷰홀더의 아이템뷰에 표시
     override fun onBindViewHolder(holder: CompanyViewHolder, position: Int) {
         val item: Company = mData[position]
         holder.chkFavorite.isChecked = item.farvorite
@@ -53,10 +51,8 @@ class RecyclerCompanyAdapter(data: ArrayList<Company>) :
         }
     }
 
-    // getItemCount : 전체 데이터의 개수를 리턴
     override fun getItemCount(): Int = mData.size
 
-    // 아이템 뷰를 저장하는 뷰홀더 클래스
     inner class CompanyViewHolder internal constructor(itemView: View) :
         RecyclerView.ViewHolder(itemView) {
         var name : TextView

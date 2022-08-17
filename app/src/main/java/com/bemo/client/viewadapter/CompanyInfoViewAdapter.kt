@@ -1,11 +1,12 @@
-package com.bemo.client
+package com.bemo.client.viewadapter
 
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
 import androidx.fragment.app.FragmentPagerAdapter
+import com.bemo.client.*
 import com.bemo.client.fragment.CompanyInfoFragment
 
-class CompanyViewAdapter(company: Company, fm: FragmentManager?) : FragmentPagerAdapter(fm!!,
+class CompanyInfoViewAdapter(company: Company, fm: FragmentManager?) : FragmentPagerAdapter(fm!!,
     BEHAVIOR_RESUME_ONLY_CURRENT_FRAGMENT
 ){
     private val fragList = ArrayList<CompanyInfoFragment>()
@@ -53,7 +54,7 @@ class CompanyViewAdapter(company: Company, fm: FragmentManager?) : FragmentPager
 
     private fun setCompanyReview(frag: CompanyInfoFragment) {
         val list = ArrayList<CompanyInfo>()
-        list.add(CompanyInfoReviewAvg("리뷰(13)", 4.2f))
+        list.add(CompanyInfoReviewAvg("리뷰(13)", 4.1f))
         repeat(5) {
             list.add(CompanyInfoReview("김종민", R.drawable.imgdefaultmy, "완전 좋아요!!", "2022/08/11", 3.8f))
         }

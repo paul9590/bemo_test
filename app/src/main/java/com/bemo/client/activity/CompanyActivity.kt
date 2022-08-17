@@ -3,6 +3,7 @@ package com.bemo.client.activity
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import com.bemo.client.*
+import com.bemo.client.viewadapter.CompanyInfoViewAdapter
 import com.bemo.client.databinding.ActivityCompanyBinding
 
 class CompanyActivity : AppCompatActivity(){
@@ -16,7 +17,7 @@ class CompanyActivity : AppCompatActivity(){
         val company = intent.getSerializableExtra("company") as Company
         mBinding.txtCompanyTitle.text = company.name
 
-        val adapter = CompanyViewAdapter(company, supportFragmentManager)
+        val adapter = CompanyInfoViewAdapter(company, supportFragmentManager)
         mBinding.pagerCompany.adapter = adapter
         mBinding.tabCompany.setupWithViewPager(mBinding.pagerCompany)
         setTab()

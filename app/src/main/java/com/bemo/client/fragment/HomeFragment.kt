@@ -6,9 +6,9 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.GridLayoutManager
-import com.bemo.client.HomeCategory
+import com.bemo.client.recycler.HomeCategory
 import com.bemo.client.R
-import com.bemo.client.RecyclerCategoryAdapter
+import com.bemo.client.recycler.RecyclerCategoryAdapter
 import com.bemo.client.databinding.FragmentHomeBinding
 
 // TODO: Rename parameter arguments, choose names that match
@@ -26,6 +26,8 @@ class HomeFragment : Fragment() {
     private var param1: String? = null
     private var param2: String? = null
 
+    private lateinit var mBinding: FragmentHomeBinding
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         arguments?.let {
@@ -39,8 +41,14 @@ class HomeFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View {
         // Inflate the layout for this fragment
-        val mBinding = FragmentHomeBinding.inflate(inflater, container, false)
+        mBinding = FragmentHomeBinding.inflate(inflater, container, false)
 
+        setCategoryTab()
+
+        return mBinding.root
+    }
+
+    private fun setCategoryTab() {
         val mList = ArrayList<HomeCategory>()
         repeat(9) {
             mList.add(HomeCategory(R.drawable.imgcategory1, "유치원"))
@@ -48,8 +56,6 @@ class HomeFragment : Fragment() {
         val mAdapter = RecyclerCategoryAdapter(mList)
         mBinding.viewCategory.adapter = mAdapter
         mBinding.viewCategory.layoutManager = GridLayoutManager(activity, 4)
-
-        return mBinding.root
     }
 
     companion object {

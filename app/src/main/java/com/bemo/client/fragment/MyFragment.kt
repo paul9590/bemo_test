@@ -5,7 +5,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
-import com.bemo.client.MyViewAdapter
+import com.bemo.client.viewadapter.MyViewAdapter
 import com.bemo.client.databinding.FragmentMyBinding
 
 // TODO: Rename parameter arguments, choose names that match
@@ -23,6 +23,8 @@ class MyFragment : Fragment() {
     private var param1: String? = null
     private var param2: String? = null
 
+    private lateinit var mBinding: FragmentMyBinding
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         arguments?.let {
@@ -36,14 +38,13 @@ class MyFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View {
         // Inflate the layout for this fragment
-        val mBinding = FragmentMyBinding.inflate(inflater, container, false)
-        // 로그인 정보 불러오기
-        mBinding.txtMy.text = "김종민님,\n안녕하세요!!"
-        val adapter = MyViewAdapter(childFragmentManager)
-        mBinding.pagerMy.adapter = adapter
-        mBinding.tabMy.setupWithViewPager(mBinding.pagerMy)
+        mBinding = FragmentMyBinding.inflate(inflater, container, false)
 
-        setTab(mBinding)
+        setTab()
+
+        mBinding.btnReview.setOnClickListener {
+
+        }
 
         return mBinding.root
     }
@@ -68,7 +69,14 @@ class MyFragment : Fragment() {
             }
     }
 
-    private fun setTab(mBinding : FragmentMyBinding) {
+    private fun setTab() {
+
+        // 로그인 정보 불러오기
+        mBinding.txtMy.text = "김종민님,\n안녕하세요!!"
+        val adapter = MyViewAdapter(childFragmentManager)
+        mBinding.pagerMy.adapter = adapter
+        mBinding.tabMy.setupWithViewPager(mBinding.pagerMy)
+
         val texts = arrayOf("최근 본", "찜")
 
         for(i in texts.indices) {

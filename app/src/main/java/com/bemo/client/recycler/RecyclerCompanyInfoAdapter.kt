@@ -1,4 +1,4 @@
-package com.bemo.client
+package com.bemo.client.recycler
 
 import android.content.Context
 import android.view.LayoutInflater
@@ -9,8 +9,8 @@ import android.widget.ImageView
 import android.widget.RatingBar
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
+import com.bemo.client.*
 import java.text.DecimalFormat
-import kotlin.math.roundToInt
 
 class RecyclerCompanyInfoAdapter(data: ArrayList<CompanyInfo>):
     RecyclerView.Adapter<RecyclerCompanyInfoAdapter.CompanyInfoViewHolder>(){
@@ -21,9 +21,7 @@ class RecyclerCompanyInfoAdapter(data: ArrayList<CompanyInfo>):
         mData = data
     }
 
-    override fun onCreateViewHolder(parent: ViewGroup,
-                                    viewType: Int):
-            RecyclerCompanyInfoAdapter.CompanyInfoViewHolder {
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): CompanyInfoViewHolder {
 
         context = parent.context
         // create a new view-
@@ -38,11 +36,11 @@ class RecyclerCompanyInfoAdapter(data: ArrayList<CompanyInfo>):
         map[TYPE_MAP] = R.layout.list_company_info_map
 
         val view = LayoutInflater.from(context).inflate(map[viewType]!!, parent, false)
+
         return CompanyInfoViewHolder(view, viewType)
     }
 
-    // onBindViewHolder : position에 해당하는 데이터를 뷰홀더의 아이템뷰에 표시
-    override fun onBindViewHolder(holder: RecyclerCompanyInfoAdapter.CompanyInfoViewHolder, position: Int) {
+    override fun onBindViewHolder(holder: CompanyInfoViewHolder, position: Int) {
         val item: CompanyInfo = mData[position]
 
         if(holder.name != null) {

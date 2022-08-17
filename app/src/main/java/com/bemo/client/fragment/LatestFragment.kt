@@ -9,7 +9,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.bemo.client.Company
 import com.bemo.client.R
-import com.bemo.client.RecyclerCompanyAdapter
+import com.bemo.client.recycler.RecyclerCompanyAdapter
 import com.bemo.client.databinding.FragmentRecyclerBinding
 
 // TODO: Rename parameter arguments, choose names that match
@@ -27,6 +27,10 @@ class LatestFragment : Fragment() {
     private var param1: String? = null
     private var param2: String? = null
 
+    private lateinit var mBinding: FragmentRecyclerBinding
+    private val mList = ArrayList<Company>()
+    private val mAdapter = RecyclerCompanyAdapter(mList)
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         arguments?.let {
@@ -40,18 +44,34 @@ class LatestFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View {
         // Inflate the layout for this fragment
-        val mBinding = FragmentRecyclerBinding.inflate(inflater, container, false)
+        mBinding = FragmentRecyclerBinding.inflate(inflater, container, false)
 
-        val mList = ArrayList<Company>()
-        repeat(9) {
-            mList.add(Company("업체 이름", R.drawable.imgcategory1, true, "경기도 남양주시 도농동", "10대", "1km"))
-        }
-        mList.add(Company())
-        val mAdapter = RecyclerCompanyAdapter(mList)
-        mBinding.viewRecycler.adapter = mAdapter
-        mBinding.viewRecycler.layoutManager = LinearLayoutManager(activity, RecyclerView.VERTICAL, false)
+        setAdapter()
+
         return mBinding.root
     }
+
+    private fun setAdapter() {
+        addList()
+        mBinding.viewRecycler.adapter = mAdapter
+        mBinding.viewRecycler.layoutManager = LinearLayoutManager(activity, RecyclerView.VERTICAL, false)
+    }
+
+    private fun addList() {
+        val start = mList.size
+        mList += getLatestList()
+        mAdapter.notifyItemRangeInserted(start, mList.size)
+    }
+
+    private fun getLatestList(): ArrayList<Company> {
+        val list = ArrayList<Company>()
+        repeat(9) {
+            list.add(Company("업체 이름", R.drawable.imgcategory1, true, "경기도 남양주시 도농동", "10대", "1km"))
+        }
+        list.add(Company())
+        return list
+    }
+
 
     companion object {
         /**

@@ -1,20 +1,18 @@
-package com.bemo.client
+package com.bemo.client.viewadapter
 
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
 import androidx.fragment.app.FragmentPagerAdapter
-import com.bemo.client.fragment.HomeFragment
-import com.bemo.client.fragment.MyFragment
-import com.bemo.client.fragment.ResultFragment
+import com.bemo.client.fragment.FavoriteFragment
+import com.bemo.client.fragment.LatestFragment
 
-class MainViewAdapter(fm: FragmentManager?) : FragmentPagerAdapter(fm!!,
+class MyViewAdapter(fm: FragmentManager?) : FragmentPagerAdapter(fm!!,
     BEHAVIOR_RESUME_ONLY_CURRENT_FRAGMENT){
     private val fragList = ArrayList<Fragment>()
 
     init {
-        fragList.add(HomeFragment())
-        fragList.add(ResultFragment())
-        fragList.add(MyFragment())
+        fragList.add(LatestFragment())
+        fragList.add(FavoriteFragment())
     }
 
     override fun getCount(): Int {
