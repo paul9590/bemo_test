@@ -58,7 +58,7 @@
         android:layout_width="@dimen/height_32"
         android:layout_height="@dimen/height_32"
         android:layout_marginEnd="@dimen/margin_left_24"
-        android:background="@drawable/shapelocatebtn"
+        android:background="@drawable/shape_locate_btn"
         app:layout_constraintBottom_toBottomOf="@id/btnPeek1"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="@id/btnPeek1" />
@@ -68,7 +68,7 @@
         android:layout_width="@dimen/height_32"
         android:layout_height="@dimen/height_32"
         android:layout_marginEnd="@dimen/margin_left_12"
-        android:background="@drawable/shapesortbtn"
+        android:background="@drawable/shape_sort_btn"
         app:layout_constraintBottom_toBottomOf="@id/btnPeek1"
         app:layout_constraintRight_toLeftOf="@id/btnLocate"
         app:layout_constraintTop_toTopOf="@id/btnPeek1" />

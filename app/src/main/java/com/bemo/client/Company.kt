@@ -20,23 +20,23 @@ data class CompanyInfoText(override val name: String = "", val desc: String = ""
     override val type = TYPE_TEXT
 }
 
-data class CompanyInfoImg(override val name: String = "", val img: Int = 0): CompanyInfo {
+data class CompanyInfoImg(override val name: String = "", val img: Int = R.drawable.img_default_company_info): CompanyInfo {
     override val type = TYPE_IMG
 }
 
-data class CompanyInfoCareer(override val name: String = "", val desc: String = "", val img: Int = 0, val rank: String = ""): CompanyInfo {
+data class CompanyInfoCareer(override val name: String = "", val desc: String = "", val img: Int = R.drawable.img_default_company_info_career, val rank: String = ""): CompanyInfo {
     override val type = TYPE_CAREER
 }
 data class CompanyInfoReviewAvg(override val name: String = "", val rating: Float = 0.0f): CompanyInfo {
     override val type = TYPE_REVIEW_AVG
 }
-data class CompanyInfoReview(override val name: String = "", val img: Int = 0, val desc: String = "", val date: String = "", val rating: Float = 0.0f): CompanyInfo {
+data class CompanyInfoReview(override val name: String = "", val img: Int = R.drawable.img_default_my, val desc: String = "", val date: String = "", val rating: Float = 0.0f): CompanyInfo {
     override val type = TYPE_REVIEW
 }
 
 data class Company(
     override val name: String = "",
-    val img: Int = R.drawable.imgdefaultcompany,
+    val img: Int = R.drawable.img_default_company,
     var farvorite: Boolean = false,
     var address: String = "",
     var target: String = "",
@@ -51,6 +51,6 @@ data class CompanyInfoCategory(override val name: String = "", val name2: String
     override val type = TYPE_CATEGORY
 }
 
-data class CompanyInfoMap(val img: Int = 0, override val name: String = ""): CompanyInfo {
+data class CompanyInfoMap(val img: Int = R.drawable.img_default_company_info, override val name: String = ""): CompanyInfo {
     override val type = TYPE_MAP
 }

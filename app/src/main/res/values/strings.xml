@@ -44,6 +44,10 @@
     <string name="company_review_desc">리뷰 작성은 마이 페이지에서 가능합니다.</string>
 
 
+    <!-- 리뷰 / activity_review -->
+    <string name="review_title">리뷰</string>
+
+
     <dimen name="font_size_tab">9sp</dimen>
     <dimen name="font_size_10">10sp</dimen>
     <dimen name="font_size_12">12sp</dimen>
@@ -94,6 +98,6 @@
     <dimen name="height_115">115dp</dimen>
     <dimen name="height_143">143dp</dimen>
 
-    <drawable name="review_default">@drawable/imgdefaultmy</drawable>
+    <drawable name="review_default">@drawable/img_default_my</drawable>
 
 </resources>

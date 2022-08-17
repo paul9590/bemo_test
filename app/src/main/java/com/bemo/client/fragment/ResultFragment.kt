@@ -9,7 +9,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.bemo.client.Company
 import com.bemo.client.R
-import com.bemo.client.recycler.RecyclerCompanyAdapter
+import com.bemo.client.recycler.CompanyRecyclerAdapter
 import com.bemo.client.databinding.FragmentResultBinding
 
 // TODO: Rename parameter arguments, choose names that match
@@ -29,7 +29,7 @@ class ResultFragment : Fragment() {
 
     private lateinit var mBinding: FragmentResultBinding
     private val mList = ArrayList<Company>()
-    private val mAdapter = RecyclerCompanyAdapter(mList)
+    private val mAdapter = CompanyRecyclerAdapter(mList)
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -57,7 +57,6 @@ class ResultFragment : Fragment() {
         mBinding.viewCompany.layoutManager = LinearLayoutManager(activity, RecyclerView.VERTICAL, false)
     }
 
-
     private fun addList() {
         val start = mList.size
         mList += getResultList()
@@ -68,7 +67,7 @@ class ResultFragment : Fragment() {
     private fun getResultList(): ArrayList<Company> {
         val list = ArrayList<Company>()
         repeat(9) {
-            list.add(Company("업체 이름", R.drawable.imgcategory1, true, "경기도 남양주시 도농동", "10대", "1km", true))
+            list.add(Company("업체 이름", R.drawable.img_category1, true, "경기도 남양주시 도농동", "10대", "1km", true))
         }
         list.add(Company())
         return list

@@ -34,8 +34,8 @@ class CompanyInfoViewAdapter(company: Company, fm: FragmentManager?) : FragmentP
             sb.append("가나다라마바사아자차카타파하")
         }
         list.add(CompanyInfoText("상세 설명", desc = sb.toString()))
-        list.add(CompanyInfoImg("이미지", R.drawable.imgdefaultmy))
-        list.add(CompanyInfoCareer("김종민", "2016년 도농고 졸업\n\n2021년 시집 출판\n\n2022년", R.drawable.imgdefaultmy, "대표?"))
+        list.add(CompanyInfoImg("이미지", R.drawable.img_default_company_info))
+        list.add(CompanyInfoCareer("김종민", "2016년 도농고 졸업\n\n2021년 시집 출판\n\n2022년", R.drawable.img_default_company_info_career, "대표?"))
         for(i in 1 .. 3) {
             fragList[i].addList(list)
         }
@@ -47,7 +47,7 @@ class CompanyInfoViewAdapter(company: Company, fm: FragmentManager?) : FragmentP
         val list = ArrayList<CompanyInfo>()
         list.add(company)
         list.add(CompanyInfoCategory("업체", "수학", "영어"))
-        list.add(CompanyInfoMap(R.drawable.imgdefaultmy))
+        list.add(CompanyInfoMap(R.drawable.img_default_my))
         frag.addList(list)
     }
 
@@ -56,7 +56,7 @@ class CompanyInfoViewAdapter(company: Company, fm: FragmentManager?) : FragmentP
         val list = ArrayList<CompanyInfo>()
         list.add(CompanyInfoReviewAvg("리뷰(13)", 4.1f))
         repeat(5) {
-            list.add(CompanyInfoReview("김종민", R.drawable.imgdefaultmy, "완전 좋아요!!", "2022/08/11", 3.8f))
+            list.add(CompanyInfoReview("김종민", R.drawable.img_default_my, "완전 좋아요!!", "2022/08/11", 3.8f))
         }
         frag.addList(list)
     }

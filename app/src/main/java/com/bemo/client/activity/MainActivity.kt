@@ -26,7 +26,7 @@ class MainActivity : AppCompatActivity() {
         mBinding.tabMain.setupWithViewPager(mBinding.pagerMain)
 
         val texts = arrayOf("홈", "검색 결과", "마이")
-        val icons = arrayOf(R.drawable.iconhome, R.drawable.iconresult, R.drawable.iconmy)
+        val icons = arrayOf(R.drawable.icon_home, R.drawable.icon_result, R.drawable.icon_my)
 
         for(i in texts.indices) {
             val tab = mBinding.tabMain.getTabAt(i)!!

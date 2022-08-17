@@ -14,7 +14,7 @@
             android:layout_width="@dimen/height_90"
             android:layout_height="@dimen/height_90"
             android:layout_marginStart="@dimen/margin_left_20"
-            android:background="@drawable/shaperound"
+            android:background="@drawable/shape_round"
             android:contentDescription="@string/company_img_description"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintLeft_toLeftOf="parent"
@@ -79,7 +79,7 @@
             android:layout_width="21dp"
             android:layout_height="18dp"
             android:layout_margin="@dimen/margin_left_20"
-            android:background="@drawable/shapefavoritebtn"
+            android:background="@drawable/shape_favorite_btn"
             android:button="@android:color/transparent"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintRight_toRightOf="parent" />

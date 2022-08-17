@@ -31,4 +31,5 @@ class CompanyActivity : AppCompatActivity(){
             tab.text = texts[i]
         }
     }
+
 }

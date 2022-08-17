@@ -15,7 +15,7 @@
             android:layout_height="@dimen/height_90"
             android:layout_marginStart="@dimen/margin_left_20"
             android:layout_marginTop="@dimen/margin_top_20"
-            android:background="@drawable/shaperound"
+            android:background="@drawable/shape_round"
             android:contentDescription="@string/company_img"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
@@ -88,7 +88,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/margin_top_13"
-            android:background="@drawable/shaperound"
+            android:background="@drawable/shape_round"
             android:paddingLeft="10dp"
             android:paddingTop="4dp"
             android:paddingRight="10dp"
@@ -104,7 +104,7 @@
             android:layout_height="@dimen/height_33"
             android:layout_marginEnd="@dimen/margin_left_19"
             android:layout_marginBottom="@dimen/margin_top_12"
-            android:background="@drawable/imgmsg"
+            android:background="@drawable/img_msg"
             app:layout_constraintRight_toRightOf="parent"
             app:layout_constraintTop_toBottomOf="@id/txtCompanyAddress" />
 
@@ -113,7 +113,7 @@
             android:layout_width="@dimen/height_33"
             android:layout_height="@dimen/height_33"
             android:layout_marginTop="@dimen/margin_top_7"
-            android:background="@drawable/imgphone"
+            android:background="@drawable/img_phone"
             app:layout_constraintRight_toRightOf="@id/btnCompanyMsg"
             app:layout_constraintTop_toBottomOf="@id/btnCompanyMsg" />
 

@@ -8,7 +8,7 @@ import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.bemo.client.CompanyInfo
-import com.bemo.client.recycler.RecyclerCompanyInfoAdapter
+import com.bemo.client.recycler.CompanyInfoRecyclerAdapter
 import com.bemo.client.databinding.FragmentRecyclerBinding
 
 // TODO: Rename parameter arguments, choose names that match
@@ -28,7 +28,7 @@ class CompanyInfoFragment : Fragment() {
 
     private lateinit var mBinding: FragmentRecyclerBinding
     private val mList = ArrayList<CompanyInfo>()
-    private val mAdapter = RecyclerCompanyInfoAdapter(mList)
+    private val mAdapter = CompanyInfoRecyclerAdapter(mList)
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

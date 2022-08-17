@@ -25,9 +25,9 @@
     <style name="btn_peek" parent="@android:style/Widget.Button">
         <item name="android:layout_width">53dp</item>
         <item name="android:layout_height">26dp</item>
-        <item name="android:background">@drawable/shapebtn2</item>
+        <item name="android:background">@drawable/shape_btn2</item>
         <item name="android:textColor">@color/blue</item>
-        <item name="android:drawableRight">@drawable/imgexit</item>
+        <item name="android:drawableRight">@drawable/img_exit</item>
         <item name="android:paddingRight">8dp</item>
         <item name="android:textSize">@dimen/font_size_10</item>
         <item name="android:text">업체</item>
@@ -36,7 +36,7 @@
     <style name="btn_category" parent="@android:style/Widget.Button">
         <item name="android:layout_width">46dp</item>
         <item name="android:layout_height">28dp</item>
-        <item name="android:background">@drawable/shapebtn</item>
+        <item name="android:background">@drawable/shape_btn</item>
         <item name="android:textColor">@color/white</item>
         <item name="android:textSize">@dimen/font_size_12</item>
         <item name="android:text">업체</item>
@@ -80,7 +80,7 @@
     <style name="btn_back" parent="@android:style/Widget.TextView">
         <item name="android:layout_width">@dimen/height_20</item>
         <item name="android:layout_height">@dimen/height_20</item>
-        <item name="android:src">@drawable/imgback</item>
+        <item name="android:src">@drawable/img_back</item>
         <item name="android:layout_marginLeft">@dimen/margin_left_31</item>
         <item name="android:contentDescription">뒤로 가기</item>
     </style>

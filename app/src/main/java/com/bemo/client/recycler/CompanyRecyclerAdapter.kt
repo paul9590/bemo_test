@@ -13,8 +13,8 @@ import com.bemo.client.Company
 import com.bemo.client.R
 import com.bemo.client.activity.CompanyActivity
 
-class RecyclerCompanyAdapter(data: ArrayList<Company>) :
-    RecyclerView.Adapter<RecyclerCompanyAdapter.CompanyViewHolder>(){
+class CompanyRecyclerAdapter(data: ArrayList<Company>) :
+    RecyclerView.Adapter<CompanyRecyclerAdapter.CompanyViewHolder>(){
     private val mData: ArrayList<Company>
     private lateinit var context : Context
 

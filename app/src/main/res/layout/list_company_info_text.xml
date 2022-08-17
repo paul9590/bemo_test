@@ -24,7 +24,7 @@
             android:layout_marginTop="@dimen/margin_top_15"
             android:layout_marginRight="@dimen/margin_left_20"
             android:layout_marginBottom="@dimen/margin_top_20"
-            android:background="@drawable/shaperound2"
+            android:background="@drawable/shape_round2"
             android:paddingLeft="@dimen/margin_left_16"
             android:paddingTop="@dimen/margin_top_12"
             android:paddingRight="@dimen/margin_left_16"
