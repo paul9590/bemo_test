@@ -5,6 +5,9 @@
       <map>
         <entry key="..\:/Users/paul9/AndroidStudioProjects/BEMO/app/src/main/res/drawable-v23/img_exit.xml" value="0.295" />
         <entry key="..\:/Users/paul9/AndroidStudioProjects/BEMO/app/src/main/res/drawable/img_exit.xml" value="0.296" />
+        <entry key="..\:/Users/paul9/AndroidStudioProjects/BEMO/app/src/main/res/drawable/img_login_id.xml" value="0.433" />
+        <entry key="..\:/Users/paul9/AndroidStudioProjects/BEMO/app/src/main/res/drawable/img_login_pw.xml" value="0.433" />
+        <entry key="..\:/Users/paul9/AndroidStudioProjects/BEMO/app/src/main/res/drawable/img_search.xml" value="0.433" />
         <entry key="..\:/Users/paul9/AndroidStudioProjects/BEMO/app/src/main/res/drawable/imgexit.xml" value="0.5245" />
         <entry key="..\:/Users/paul9/AndroidStudioProjects/BEMO/app/src/main/res/drawable/imglocatebtn.xml" value="0.5245" />
         <entry key="..\:/Users/paul9/AndroidStudioProjects/BEMO/app/src/main/res/drawable/imgsearch.xml" value="0.5255" />
@@ -12,6 +15,7 @@
         <entry key="..\:/Users/paul9/AndroidStudioProjects/BEMO/app/src/main/res/drawable/round.xml" value="0.3395" />
         <entry key="..\:/Users/paul9/AndroidStudioProjects/BEMO/app/src/main/res/drawable/shape_btn.xml" value="0.5255" />
         <entry key="..\:/Users/paul9/AndroidStudioProjects/BEMO/app/src/main/res/drawable/shape_btn4.xml" value="0.5245" />
+        <entry key="..\:/Users/paul9/AndroidStudioProjects/BEMO/app/src/main/res/drawable/shape_favorite_btn.xml" value="0.5255" />
         <entry key="..\:/Users/paul9/AndroidStudioProjects/BEMO/app/src/main/res/drawable/shape_round.xml" value="0.5255" />
         <entry key="..\:/Users/paul9/AndroidStudioProjects/BEMO/app/src/main/res/drawable/shapebtn.xml" value="0.5245" />
         <entry key="..\:/Users/paul9/AndroidStudioProjects/BEMO/app/src/main/res/drawable/shapebtn2.xml" value="0.5255" />
@@ -22,8 +26,10 @@
         <entry key="..\:/Users/paul9/AndroidStudioProjects/BEMO/app/src/main/res/drawable/shaperound.xml" value="0.5255" />
         <entry key="..\:/Users/paul9/AndroidStudioProjects/BEMO/app/src/main/res/drawable/shaperound2.xml" value="0.5245" />
         <entry key="..\:/Users/paul9/AndroidStudioProjects/BEMO/app/src/main/res/drawable/shapesortbtn.xml" value="0.5245" />
-        <entry key="..\:/Users/paul9/AndroidStudioProjects/BEMO/app/src/main/res/layout/activity_company.xml" value="0.4352287302265926" />
+        <entry key="..\:/Users/paul9/AndroidStudioProjects/BEMO/app/src/main/res/layout/activity_company.xml" value="0.25" />
+        <entry key="..\:/Users/paul9/AndroidStudioProjects/BEMO/app/src/main/res/layout/activity_login.xml" value="0.67" />
         <entry key="..\:/Users/paul9/AndroidStudioProjects/BEMO/app/src/main/res/layout/activity_main.xml" value="0.3944746376811594" />
+        <entry key="..\:/Users/paul9/AndroidStudioProjects/BEMO/app/src/main/res/layout/activity_register.xml" value="0.67" />
         <entry key="..\:/Users/paul9/AndroidStudioProjects/BEMO/app/src/main/res/layout/activity_review.xml" value="0.4352287302265926" />
         <entry key="..\:/Users/paul9/AndroidStudioProjects/BEMO/app/src/main/res/layout/dial_review.xml" value="0.33" />
         <entry key="..\:/Users/paul9/AndroidStudioProjects/BEMO/app/src/main/res/layout/fragment_company_default.xml" value="0.25" />

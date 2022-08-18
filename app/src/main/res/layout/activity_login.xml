@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".activity.LoginActivity">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideTop"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="@dimen/guide_top" />
+
+    <TextView
+        android:id="@+id/txtLogin1"
+        style="@style/text_black_16"
+        android:text="@string/login_title"
+        app:layout_constraintBottom_toTopOf="@id/guideTop"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/editLoginId"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="@dimen/margin_left_24"
+        android:layout_marginTop="@dimen/margin_top_60"
+        android:layout_marginEnd="@dimen/margin_left_24"
+        android:backgroundTint="@color/gray"
+        android:drawableStart="@drawable/img_login_id"
+        android:drawablePadding="@dimen/margin_left_12"
+        android:hint="@string/login_id"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/guideTop" />
+
+
+    <EditText
+        android:id="@+id/editLoginPw"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="@dimen/margin_top_24"
+        android:backgroundTint="@color/gray"
+        android:drawableStart="@drawable/img_login_pw"
+        android:drawablePadding="@dimen/margin_left_12"
+        android:hint="@string/login_pw"
+        app:layout_constraintLeft_toLeftOf="@id/editLoginId"
+        app:layout_constraintRight_toRightOf="@id/editLoginId"
+        app:layout_constraintTop_toBottomOf="@id/editLoginId" />
+
+    <CheckBox
+        android:id="@+id/chkLoginId"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_top_16"
+        android:text="@string/login_check_id"
+        android:textSize="@dimen/font_size_12"
+        app:layout_constraintLeft_toLeftOf="@id/editLoginPw"
+        app:layout_constraintTop_toBottomOf="@id/editLoginPw" />
+
+    <CheckBox
+        android:id="@+id/chkLoginAuto"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_left_20"
+        android:text="@string/login_check_auto"
+        android:textSize="@dimen/font_size_12"
+        app:layout_constraintBottom_toBottomOf="@id/chkLoginId"
+        app:layout_constraintLeft_toRightOf="@id/chkLoginId"
+        app:layout_constraintTop_toTopOf="@id/chkLoginId" />
+
+    <Button
+        android:id="@+id/btnLogin"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/height_48"
+        android:layout_marginTop="@dimen/margin_top_32"
+        android:background="@drawable/shape_btn3"
+        android:text="@string/login_title"
+        android:textColor="@color/white"
+        android:textSize="@dimen/font_size_16"
+        app:layout_constraintLeft_toLeftOf="@id/editLoginPw"
+        app:layout_constraintRight_toRightOf="@id/editLoginPw"
+        app:layout_constraintTop_toBottomOf="@id/chkLoginId" />
+
+    <TextView
+        android:id="@+id/txtFindId"
+        style="@style/text_black_12"
+        android:layout_marginTop="@dimen/margin_top_16"
+        android:text="@string/login_find_id"
+        app:layout_constraintLeft_toLeftOf="@id/btnLogin"
+        app:layout_constraintRight_toLeftOf="@id/txtFindPw"
+        app:layout_constraintTop_toBottomOf="@id/btnLogin" />
+
+    <TextView
+        android:id="@+id/txtFindPw"
+        style="@style/text_black_12"
+        android:text="@string/login_find_pw"
+        app:layout_constraintBottom_toBottomOf="@id/txtFindId"
+        app:layout_constraintLeft_toRightOf="@id/txtFindId"
+        app:layout_constraintRight_toLeftOf="@id/txtRegister"
+        app:layout_constraintTop_toTopOf="@id/txtFindId" />
+
+    <TextView
+        android:id="@+id/txtLogin4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/login_space"
+        android:textColor="@color/light_gray3"
+        android:textSize="@dimen/font_size_12"
+        app:layout_constraintBottom_toBottomOf="@id/txtFindPw"
+        app:layout_constraintLeft_toRightOf="@id/txtFindPw"
+        app:layout_constraintRight_toLeftOf="@id/txtFindId"
+        app:layout_constraintTop_toTopOf="@id/txtFindPw" />
+
+    <TextView
+        android:id="@+id/txtRegister"
+        style="@style/text_black_12"
+        android:text="@string/register"
+        app:layout_constraintBottom_toBottomOf="@id/txtFindPw"
+        app:layout_constraintLeft_toRightOf="@id/txtFindPw"
+        app:layout_constraintRight_toRightOf="@id/btnLogin"
+        app:layout_constraintTop_toTopOf="@id/txtFindPw" />
+
+    <TextView
+        android:id="@+id/txtLogin5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/login_space"
+        android:textColor="@color/light_gray3"
+        android:textSize="@dimen/font_size_12"
+        app:layout_constraintBottom_toBottomOf="@id/txtFindPw"
+        app:layout_constraintLeft_toRightOf="@id/txtFindPw"
+        app:layout_constraintRight_toLeftOf="@id/txtRegister"
+        app:layout_constraintTop_toTopOf="@id/txtFindPw" />
+
+
+    <TextView
+        android:id="@+id/txtGuestLogin"
+        style="@style/text_black_12"
+        android:layout_marginBottom="@dimen/margin_top_16"
+        android:text="@string/login_guest"
+        app:layout_constraintBottom_toTopOf="@id/txtSite"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
+
+    <TextView
+        android:id="@+id/txtSite"
+        style="@style/text_black_12"
+        android:layout_marginBottom="@dimen/margin_top_44"
+        android:text="@string/login_site"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

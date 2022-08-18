@@ -48,7 +48,6 @@
 
     <string name="company_review_desc">리뷰 작성은 마이 페이지에서 가능합니다.</string>
 
-
     <!-- 리뷰 / activity_review -->
     <string name="review_title">리뷰</string>
 
@@ -59,6 +58,30 @@
     <string name="review_dialog_title">별점</string>
     <string name="review_dialog_hint">내용을 입력해 주세요.</string>
 
+    <!-- 로그인 / activity_login -->
+    <string name="login_title">로그인</string>
+    <string name="login_id">아이디</string>
+    <string name="login_pw">비밀번호</string>
+    <string name="login_check_id">아이디 저장</string>
+    <string name="login_check_auto">자동 로그인</string>
+    <string name="login_find_id">아이디 찾기</string>
+    <string name="login_find_pw">비밀번호 찾기</string>
+    <string name="login_space">|</string>
+    <string name="login_guest">비회원으로 둘러볼게요</string>
+    <string name="login_site">업체 전용 사이트로 이용할래요</string>
+
+    <string name="register">회원 가입</string>
+
+    <!-- 회원가입 / activity_register -->
+    <string name="register_id">아이디 (전화번호)</string>
+    <string name="register_id_hint">아이디 입력</string>
+    <string name="register_name">이름</string>
+    <string name="register_name_hint">한글로 입력</string>
+    <string name="register_pw">비밀번호</string>
+    <string name="register_pw_hint">숫자, 영어, 특수문자 포함 8자 이상</string>
+    <string name="register_pw_check">비밀번호 확인</string>
+    <string name="register_ok">다음</string>
+    <string name="register_check_validate">중복 확인</string>
 
 
 
@@ -96,6 +119,11 @@
     <dimen name="margin_top_20">20dp</dimen>
     <dimen name="margin_top_22">24dp</dimen>
     <dimen name="margin_top_24">24dp</dimen>
+    <dimen name="margin_top_28">28dp</dimen>
+    <dimen name="margin_top_32">32dp</dimen>
+    <dimen name="margin_top_36">36dp</dimen>
+    <dimen name="margin_top_44">44dp</dimen>
+    <dimen name="margin_top_60">60dp</dimen>
     <dimen name="margin_top_90">90dp</dimen>
 
 
@@ -109,6 +137,7 @@
     <dimen name="height_33">33dp</dimen>
     <dimen name="height_36">36dp</dimen>
     <dimen name="height_44">44dp</dimen>
+    <dimen name="height_48">48dp</dimen>
     <dimen name="height_90">90dp</dimen>
     <dimen name="height_115">115dp</dimen>
     <dimen name="height_143">143dp</dimen>

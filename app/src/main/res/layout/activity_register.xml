@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".activity.RegisterActivity">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideTop"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="@dimen/guide_top" />
+
+    <TextView
+        android:id="@+id/txtRegister1"
+        style="@style/text_black_16"
+        android:text="@string/register"
+        app:layout_constraintBottom_toTopOf="@id/guideTop"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/txtRegister2"
+        style="@style/text_black_14"
+        android:layout_marginStart="@dimen/margin_left_24"
+        android:layout_marginTop="@dimen/margin_top_28"
+        android:text="@string/register_id"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/guideTop" />
+
+    <EditText
+        android:id="@+id/editRegisterId"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_top_20"
+        android:hint="@string/register_id_hint"
+        android:textSize="@dimen/font_size_12"
+        app:layout_constraintLeft_toLeftOf="@id/txtRegister2"
+        app:layout_constraintRight_toLeftOf="@id/btnRegisterValidate"
+        app:layout_constraintTop_toBottomOf="@id/txtRegister2" />
+
+    <Button
+        android:id="@+id/btnRegisterValidate"
+        android:layout_width="81dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="@dimen/margin_left_12"
+        android:layout_marginEnd="@dimen/margin_left_24"
+        android:background="@drawable/shape_btn4"
+        android:text="@string/register_check_validate"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="@id/editRegisterId"
+        app:layout_constraintLeft_toRightOf="@id/editRegisterId"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@id/editRegisterId" />
+
+    <TextView
+        android:id="@+id/txtRegister3"
+        style="@style/text_black_14"
+        android:layout_marginTop="@dimen/margin_top_36"
+        android:text="@string/register_name"
+        app:layout_constraintLeft_toLeftOf="@id/txtRegister2"
+        app:layout_constraintTop_toBottomOf="@id/editRegisterId" />
+
+    <EditText
+        android:id="@+id/editRegisterName"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_top_20"
+        android:hint="@string/register_name_hint"
+        android:textSize="@dimen/font_size_12"
+        app:layout_constraintLeft_toLeftOf="@id/txtRegister3"
+        app:layout_constraintRight_toRightOf="@id/btnRegisterValidate"
+        app:layout_constraintTop_toBottomOf="@id/txtRegister3" />
+
+    <TextView
+        android:id="@+id/txtRegister4"
+        style="@style/text_black_14"
+        android:layout_marginTop="@dimen/margin_top_36"
+        android:text="@string/register_pw"
+        app:layout_constraintLeft_toLeftOf="@id/txtRegister3"
+        app:layout_constraintTop_toBottomOf="@id/editRegisterName" />
+
+    <EditText
+        android:id="@+id/editRegisterPw"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_top_20"
+        android:hint="@string/register_pw_hint"
+        android:textSize="@dimen/font_size_12"
+        app:layout_constraintLeft_toLeftOf="@id/txtRegister4"
+        app:layout_constraintRight_toRightOf="@id/btnRegisterValidate"
+        app:layout_constraintTop_toBottomOf="@id/txtRegister4" />
+
+    <TextView
+        android:id="@+id/txtRegister5"
+        style="@style/text_black_14"
+        android:layout_marginTop="@dimen/margin_top_36"
+        android:text="@string/register_pw_check"
+        app:layout_constraintLeft_toLeftOf="@id/txtRegister4"
+        app:layout_constraintTop_toBottomOf="@id/editRegisterPw" />
+
+    <EditText
+        android:id="@+id/editRegisterPwCheck"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_top_20"
+        android:hint="@string/register_pw_hint"
+        android:textSize="@dimen/font_size_12"
+        app:layout_constraintLeft_toLeftOf="@id/txtRegister5"
+        app:layout_constraintRight_toRightOf="@id/btnRegisterValidate"
+        app:layout_constraintTop_toBottomOf="@id/txtRegister5" />
+
+    <Button
+        android:id="@+id/btnOk"
+        android:layout_width="0dp"
+        android:layout_height="60dp"
+        android:background="@drawable/shape_btn4"
+        android:text="@string/register_ok"
+        android:textColor="@color/white"
+        android:textSize="@dimen/font_size_16"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
