@@ -37,6 +37,7 @@ class LatestFragment : Fragment() {
             param1 = it.getString(ARG_PARAM1)
             param2 = it.getString(ARG_PARAM2)
         }
+        addList()
     }
 
     override fun onCreateView(
@@ -52,7 +53,6 @@ class LatestFragment : Fragment() {
     }
 
     private fun setAdapter() {
-        addList()
         mBinding.viewRecycler.adapter = mAdapter
         mBinding.viewRecycler.layoutManager = LinearLayoutManager(activity, RecyclerView.VERTICAL, false)
     }
@@ -65,7 +65,7 @@ class LatestFragment : Fragment() {
 
     private fun getLatestList(): ArrayList<Company> {
         val list = ArrayList<Company>()
-        repeat(9) {
+        repeat(5) {
             list.add(Company("업체 이름", R.drawable.img_category1, true, "경기도 남양주시 도농동", "10대", "1km"))
         }
         list.add(Company())

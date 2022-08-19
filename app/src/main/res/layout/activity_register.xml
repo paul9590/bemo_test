@@ -46,7 +46,7 @@
     <Button
         android:id="@+id/btnRegisterValidate"
         android:layout_width="81dp"
-        android:layout_height="0dp"
+        android:layout_height="@dimen/height_32"
         android:layout_marginStart="@dimen/margin_left_12"
         android:layout_marginEnd="@dimen/margin_left_24"
         android:background="@drawable/shape_btn4"

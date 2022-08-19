@@ -28,18 +28,8 @@ class CompanyInfoViewAdapter(company: Company, fm: FragmentManager?) : FragmentP
     override fun getItem(p0: Int): Fragment = fragList[p0]
 
     private fun setCompanyInfo(company: Company) {
-        val list = ArrayList<CompanyInfo>()
-        val sb = StringBuilder()
-        repeat(100) {
-            sb.append("가나다라마바사아자차카타파하")
-        }
-        list.add(CompanyInfoText("상세 설명", desc = sb.toString()))
-        list.add(CompanyInfoImg("이미지", R.drawable.img_default_company_info))
-        list.add(CompanyInfoCareer("김종민", "2016년 도농고 졸업\n\n2021년 시집 출판\n\n2022년", R.drawable.img_default_company_info_career, "대표?"))
-        for(i in 1 .. 3) {
-            fragList[i].addList(list)
-        }
         setCompanyDefault(company, fragList[0])
+        setOther()
         setCompanyReview(fragList[4])
     }
 
@@ -47,10 +37,16 @@ class CompanyInfoViewAdapter(company: Company, fm: FragmentManager?) : FragmentP
         val list = ArrayList<CompanyInfo>()
         list.add(company)
         list.add(CompanyInfoCategory("업체", "수학", "영어"))
+
+        val sb = StringBuilder()
+        repeat(100) {
+            sb.append("가나다라마바사아자차카타파하")
+        }
+
+        list.add(CompanyInfoText("상세 설명", desc = sb.toString()))
         list.add(CompanyInfoMap(R.drawable.img_default_my))
         frag.addList(list)
     }
-
 
     private fun setCompanyReview(frag: CompanyInfoFragment) {
         val list = ArrayList<CompanyInfo>()
@@ -59,5 +55,24 @@ class CompanyInfoViewAdapter(company: Company, fm: FragmentManager?) : FragmentP
             list.add(CompanyInfoReview("김종민", R.drawable.img_default_my, "완전 좋아요!!", "2022/08/11", 3.8f))
         }
         frag.addList(list)
+    }
+
+    private fun setOther() {
+
+        val list = ArrayList<CompanyInfo>()
+        val sb = StringBuilder()
+        repeat(100) {
+            sb.append("가나다라마바사아자차카타파하")
+        }
+        list.add(CompanyInfoText("상세 설명", desc = sb.toString()))
+        list.add(CompanyInfoImg("이미지", R.drawable.img_default_company_info))
+        fragList[1].addList(list)
+        fragList[2].addList(list)
+
+        val list3 = ArrayList<CompanyInfo>()
+        list3.add(CompanyInfoCareer("김종민", "공동대표", R.drawable.img_default_company_info_career, "대표"))
+        list3.add(CompanyInfoCareer("서예빈", "공동대표", R.drawable.img_default_company_info_career, "대표"))
+        list3.add(CompanyInfoCareer("황성현", "?", R.drawable.img_default_company_info_career, "개발자"))
+        fragList[3].addList(list3)
     }
 }

@@ -37,6 +37,7 @@ class ResultFragment : Fragment() {
             param1 = it.getString(ARG_PARAM1)
             param2 = it.getString(ARG_PARAM2)
         }
+        addList()
     }
 
     override fun onCreateView(
@@ -52,7 +53,6 @@ class ResultFragment : Fragment() {
     }
 
     private fun setAdapter() {
-        addList()
         mBinding.viewCompany.adapter = mAdapter
         mBinding.viewCompany.layoutManager = LinearLayoutManager(activity, RecyclerView.VERTICAL, false)
     }
