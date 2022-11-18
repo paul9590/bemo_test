@@ -49,10 +49,13 @@ class HomeFragment : Fragment() {
     }
 
     private fun setCategoryTab() {
-        val mList = ArrayList<HomeCategory>()
-        repeat(9) {
-            mList.add(HomeCategory(R.drawable.img_category1, "유치원"))
-        }
+        val mList = arrayListOf( HomeCategory(R.drawable.img_category1, "유치원"),
+            HomeCategory(R.drawable.img_category2, "학원"),
+            HomeCategory(R.drawable.img_category3, "독서실"),
+            HomeCategory(R.drawable.img_category4, "헬스장"),
+            HomeCategory(R.drawable.img_category5, "취미"),
+            HomeCategory(R.drawable.img_category6, "유학"),
+        )
         val mAdapter = RecyclerCategoryAdapter(mList)
         mBinding.viewCategory.adapter = mAdapter
         mBinding.viewCategory.layoutManager = GridLayoutManager(activity, 4)

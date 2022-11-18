@@ -16,6 +16,9 @@ class ReviewActivity: AppCompatActivity() {
         val adapter = ReviewViewAdapter(supportFragmentManager)
         mBinding.pagerReview.adapter = adapter
         mBinding.tabReview.setupWithViewPager(mBinding.pagerReview)
+        mBinding.imgBack.setOnClickListener {
+            finish()
+        }
         setTab()
     }
 

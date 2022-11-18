@@ -9,6 +9,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.bemo.client.Company
 import com.bemo.client.R
+import com.bemo.client.activity.MainActivity
 import com.bemo.client.recycler.CompanyRecyclerAdapter
 import com.bemo.client.databinding.FragmentResultBinding
 
@@ -48,6 +49,11 @@ class ResultFragment : Fragment() {
         mBinding = FragmentResultBinding.inflate(inflater, container, false)
 
         setAdapter()
+
+
+        mBinding.imgBack.setOnClickListener {
+            (activity as MainActivity).backPressed()
+        }
 
         return mBinding.root
     }

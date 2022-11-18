@@ -8,6 +8,7 @@ import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.bemo.client.CompanyInfo
+import com.bemo.client.activity.MainActivity
 import com.bemo.client.databinding.FragmentRecyclerBinding
 import com.bemo.client.recycler.ReviewRecyclerAdapter
 

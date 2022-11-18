@@ -50,4 +50,8 @@ class MainActivity : AppCompatActivity() {
             }
         })
     }
+
+    fun backPressed() {
+        mBinding.pagerMain.setCurrentItem(0, true)
+    }
 }
