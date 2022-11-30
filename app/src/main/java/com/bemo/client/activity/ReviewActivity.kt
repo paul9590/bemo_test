@@ -29,5 +29,6 @@ class ReviewActivity: AppCompatActivity() {
             val tab = mBinding.tabReview.getTabAt(i)!!
             tab.text = texts[i]
         }
+
     }
 }
