@@ -1,5 +1,6 @@
 package com.bemo.client
 
+import android.content.Intent
 import java.io.Serializable
 
 const val TYPE_COMPANY = 1
@@ -37,11 +38,12 @@ data class CompanyInfoReview(override val name: String = "", val img: Int = R.dr
 data class Company(
     override val name: String = "",
     val img: Int = R.drawable.img_default_company,
-    var farvorite: Boolean = false,
-    var address: String = "",
-    var target: String = "",
-    var distance: String = "",
-    var shuttle: Boolean = false
+    val isPremium: Boolean = false,
+    var favorite: Boolean = false,
+    val address: String = "",
+    val target: String = "",
+    val distance: String = "",
+    val shuttle: Boolean = false
 ) :
     Serializable, CompanyInfo {
     override val type = TYPE_COMPANY
@@ -54,3 +56,7 @@ data class CompanyInfoCategory(override val name: String = "", val name2: String
 data class CompanyInfoMap(val img: Int = R.drawable.img_default_company_info, override val name: String = ""): CompanyInfo {
     override val type = TYPE_MAP
 }
+
+data class HomeCategory(val img : Int, val txt : String)
+
+data class Setting(val name: String, val intent: Intent)

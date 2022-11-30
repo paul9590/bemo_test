@@ -12,13 +12,13 @@ class ReviewActivity: AppCompatActivity() {
         super.onCreate(savedInstanceState)
         mBinding = ActivityReviewBinding.inflate(layoutInflater)
         setContentView(mBinding.root)
+        mBinding.imgBack.setOnClickListener {
+            finish()
+        }
 
         val adapter = ReviewViewAdapter(supportFragmentManager)
         mBinding.pagerReview.adapter = adapter
         mBinding.tabReview.setupWithViewPager(mBinding.pagerReview)
-        mBinding.imgBack.setOnClickListener {
-            finish()
-        }
         setTab()
     }
 

@@ -8,7 +8,6 @@ import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.bemo.client.CompanyInfo
-import com.bemo.client.activity.MainActivity
 import com.bemo.client.databinding.FragmentRecyclerBinding
 import com.bemo.client.recycler.ReviewRecyclerAdapter
 
@@ -48,7 +47,6 @@ class ReviewFragment : Fragment() {
 
         mBinding.viewRecycler.adapter = mAdapter
         mBinding.viewRecycler.layoutManager = LinearLayoutManager(activity, RecyclerView.VERTICAL, false)
-
         return mBinding.root
     }
 

@@ -16,8 +16,8 @@
 
     <ImageView
         android:id="@+id/imgLogo"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:contentDescription="@string/home_logo_description"
         android:src="@drawable/img_default_logo"
         app:layout_constraintBottom_toTopOf="@id/guideTop"

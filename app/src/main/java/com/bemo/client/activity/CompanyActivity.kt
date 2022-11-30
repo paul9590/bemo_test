@@ -17,18 +17,19 @@ class CompanyActivity : AppCompatActivity(){
         val company = intent.getSerializableExtra("company") as Company
         mBinding.txtCompanyTitle.text = company.name
 
-        val adapter = CompanyInfoViewAdapter(company, supportFragmentManager)
-        mBinding.pagerCompany.adapter = adapter
-        mBinding.tabCompany.setupWithViewPager(mBinding.pagerCompany)
-        setTab()
 
         mBinding.imgBack.setOnClickListener {
             finish()
         }
+        
+        val adapter = CompanyInfoViewAdapter(company, supportFragmentManager)
+        mBinding.pagerCompany.adapter = adapter
+        mBinding.tabCompany.setupWithViewPager(mBinding.pagerCompany)
+        setTab()
     }
 
     private fun setTab() {
-        val texts = arrayOf("기본", "강사소개", "상세", "시설사진", "리뷰")
+        val texts = arrayOf("기본", "시설사진", "상세", "강사소개", "리뷰")
 
         for(i in texts.indices) {
             val tab = mBinding.tabCompany.getTabAt(i)!!

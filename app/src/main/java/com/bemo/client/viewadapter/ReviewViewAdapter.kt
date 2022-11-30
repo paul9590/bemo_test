@@ -34,13 +34,14 @@ class ReviewViewAdapter(fm: FragmentManager?) : FragmentPagerAdapter(fm!!,
         repeat(10) {
             list.add(
                 Company(
-                    "업체 이름",
-                    R.drawable.img_category1,
-                    true,
-                    "경기도 남양주시 도농동",
-                    "10대",
-                    "1km",
-                    true
+                    name ="업체 이름",
+                    img = R.drawable.img_category1,
+                    isPremium = true,
+                    favorite = true,
+                    address = "경기도 남양주시 도농동",
+                    target = "10대",
+                    distance = "1km",
+                    shuttle = true
                 )
             )
         }

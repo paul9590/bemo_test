@@ -1,15 +1,17 @@
 package com.bemo.client.recycler
 
+import android.content.Context
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
+import com.bemo.client.HomeCategory
 import com.bemo.client.R
 
-class RecyclerCategoryAdapter(data: ArrayList<HomeCategory>) :
-    RecyclerView.Adapter<RecyclerCategoryAdapter.CategoryViewHolder>() {
+class CategoryRecyclerAdapter(data: ArrayList<HomeCategory>) :
+    RecyclerView.Adapter<CategoryRecyclerAdapter.CategoryViewHolder>() {
     private val mData: ArrayList<HomeCategory>
 
     init {
@@ -52,5 +54,3 @@ class RecyclerCategoryAdapter(data: ArrayList<HomeCategory>) :
         }
     }
 }
-
-data class HomeCategory(val img : Int, val txt : String)

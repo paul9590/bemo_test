@@ -6,9 +6,9 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.GridLayoutManager
-import com.bemo.client.recycler.HomeCategory
+import com.bemo.client.HomeCategory
 import com.bemo.client.R
-import com.bemo.client.recycler.RecyclerCategoryAdapter
+import com.bemo.client.recycler.CategoryRecyclerAdapter
 import com.bemo.client.databinding.FragmentHomeBinding
 
 // TODO: Rename parameter arguments, choose names that match
@@ -49,14 +49,14 @@ class HomeFragment : Fragment() {
     }
 
     private fun setCategoryTab() {
-        val mList = arrayListOf( HomeCategory(R.drawable.img_category1, "유치원"),
-            HomeCategory(R.drawable.img_category2, "학원"),
-            HomeCategory(R.drawable.img_category3, "독서실"),
-            HomeCategory(R.drawable.img_category4, "헬스장"),
-            HomeCategory(R.drawable.img_category5, "취미"),
-            HomeCategory(R.drawable.img_category6, "유학"),
-        )
-        val mAdapter = RecyclerCategoryAdapter(mList)
+        val mList = ArrayList<HomeCategory>()
+        mList.add(HomeCategory(R.drawable.img_category1, "유치원"))
+        mList.add(HomeCategory(R.drawable.img_category2, "학원"))
+        mList.add(HomeCategory(R.drawable.img_category3, "독서실"))
+        mList.add(HomeCategory(R.drawable.img_category4, "헬스장"))
+        mList.add(HomeCategory(R.drawable.img_category5, "취미"))
+        mList.add(HomeCategory(R.drawable.img_category6, "유학"))
+        val mAdapter = CategoryRecyclerAdapter(mList)
         mBinding.viewCategory.adapter = mAdapter
         mBinding.viewCategory.layoutManager = GridLayoutManager(activity, 4)
     }

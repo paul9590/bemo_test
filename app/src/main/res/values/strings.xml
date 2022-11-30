@@ -83,6 +83,8 @@
     <string name="register_ok">다음</string>
     <string name="register_check_validate">중복 확인</string>
 
+    <!-- 환경설정 / activity_setting -->
+    <string name="setting_title">환경 설정</string>
 
 
     <dimen name="font_size_tab">9sp</dimen>

@@ -64,15 +64,17 @@ class CompanyInfoViewAdapter(company: Company, fm: FragmentManager?) : FragmentP
         repeat(100) {
             sb.append("가나다라마바사아자차카타파하")
         }
+        list.add(CompanyInfoImg("이미지"))
+        list.add(CompanyInfoText("상세 설명", desc = "안녕하세요"))
+        list.add(CompanyInfoImg("이미지"))
         list.add(CompanyInfoText("상세 설명", desc = sb.toString()))
-        list.add(CompanyInfoImg("이미지", R.drawable.img_default_company_info))
-        fragList[3].addList(list)
+        fragList[1].addList(list)
         fragList[2].addList(list)
 
         val list3 = ArrayList<CompanyInfo>()
         list3.add(CompanyInfoCareer("김종민", "공동대표", R.drawable.img_default_company_info_career, "대표"))
         list3.add(CompanyInfoCareer("서예빈", "공동대표", R.drawable.img_default_company_info_career, "대표"))
         list3.add(CompanyInfoCareer("황성현", "?", R.drawable.img_default_company_info_career, "개발자"))
-        fragList[1].addList(list3)
+        fragList[3].addList(list3)
     }
 }

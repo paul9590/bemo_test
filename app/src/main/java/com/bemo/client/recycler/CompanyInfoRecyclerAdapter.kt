@@ -22,16 +22,16 @@ class CompanyInfoRecyclerAdapter(data: ArrayList<CompanyInfo>):
 
         context = parent.context
         return when(viewType) {
-            TYPE_COMPANY -> CompanyInfoViewHolder(ListCompanyInfoCompanyBinding.inflate(LayoutInflater.from(parent.context), parent, false))
-            TYPE_TEXT -> CompanyInfoViewHolder(ListCompanyInfoTextBinding.inflate(LayoutInflater.from(parent.context), parent, false))
-            TYPE_IMG -> CompanyInfoViewHolder(ListCompanyInfoImgBinding.inflate(LayoutInflater.from(parent.context), parent, false))
-            TYPE_CAREER -> CompanyInfoViewHolder(ListCompanyInfoCareerBinding.inflate(LayoutInflater.from(parent.context), parent, false))
-            TYPE_REVIEW_AVG -> CompanyInfoViewHolder(ListCompanyInfoReviewAvgBinding.inflate(LayoutInflater.from(parent.context), parent, false))
-            TYPE_REVIEW -> CompanyInfoViewHolder(ListCompanyInfoReviewBinding.inflate(LayoutInflater.from(parent.context), parent, false))
-            TYPE_CATEGORY -> CompanyInfoViewHolder(ListCompanyInfoCategoryBinding.inflate(LayoutInflater.from(parent.context), parent, false))
-            TYPE_MAP -> CompanyInfoViewHolder(ListCompanyInfoMapBinding.inflate(LayoutInflater.from(parent.context), parent, false))
+            TYPE_COMPANY -> CompanyInfoViewHolder(ListCompanyInfoCompanyBinding.inflate(LayoutInflater.from(context), parent, false))
+            TYPE_TEXT -> CompanyInfoViewHolder(ListCompanyInfoTextBinding.inflate(LayoutInflater.from(context), parent, false))
+            TYPE_IMG -> CompanyInfoViewHolder(ListCompanyInfoImgBinding.inflate(LayoutInflater.from(context), parent, false))
+            TYPE_CAREER -> CompanyInfoViewHolder(ListCompanyInfoCareerBinding.inflate(LayoutInflater.from(context), parent, false))
+            TYPE_REVIEW_AVG -> CompanyInfoViewHolder(ListCompanyInfoReviewAvgBinding.inflate(LayoutInflater.from(context), parent, false))
+            TYPE_REVIEW -> CompanyInfoViewHolder(ListCompanyInfoReviewBinding.inflate(LayoutInflater.from(context), parent, false))
+            TYPE_CATEGORY -> CompanyInfoViewHolder(ListCompanyInfoCategoryBinding.inflate(LayoutInflater.from(context), parent, false))
+            TYPE_MAP -> CompanyInfoViewHolder(ListCompanyInfoMapBinding.inflate(LayoutInflater.from(context), parent, false))
 
-            else -> CompanyInfoViewHolder(ListCompanyInfoCompanyBinding.inflate(LayoutInflater.from(parent.context), parent, false))
+            else -> CompanyInfoViewHolder(ListCompanyInfoCompanyBinding.inflate(LayoutInflater.from(context), parent, false))
         }
 
     }

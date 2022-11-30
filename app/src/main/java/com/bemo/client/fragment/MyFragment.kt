@@ -7,8 +7,8 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import com.bemo.client.activity.LoginActivity
-import com.bemo.client.activity.MainActivity
 import com.bemo.client.activity.ReviewActivity
+import com.bemo.client.activity.SettingActivity
 import com.bemo.client.viewadapter.MyViewAdapter
 import com.bemo.client.databinding.FragmentMyBinding
 
@@ -52,13 +52,9 @@ class MyFragment : Fragment() {
             startActivity(intent)
         }
         mBinding.imgSetting.setOnClickListener {
-            val intent = Intent(activity, LoginActivity :: class.java)
+            val intent = Intent(activity, SettingActivity :: class.java)
             intent.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION)
             startActivity(intent)
-        }
-
-        mBinding.imgBack.setOnClickListener {
-            (activity as MainActivity).backPressed()
         }
 
         return mBinding.root

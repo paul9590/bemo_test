@@ -9,7 +9,6 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.bemo.client.Company
 import com.bemo.client.R
-import com.bemo.client.activity.MainActivity
 import com.bemo.client.recycler.CompanyRecyclerAdapter
 import com.bemo.client.databinding.FragmentResultBinding
 
@@ -50,11 +49,6 @@ class ResultFragment : Fragment() {
 
         setAdapter()
 
-
-        mBinding.imgBack.setOnClickListener {
-            (activity as MainActivity).backPressed()
-        }
-
         return mBinding.root
     }
 
@@ -73,7 +67,16 @@ class ResultFragment : Fragment() {
     private fun getResultList(): ArrayList<Company> {
         val list = ArrayList<Company>()
         repeat(9) {
-            list.add(Company("업체 이름", R.drawable.img_category1, true, "경기도 남양주시 도농동", "10대", "1km", true))
+            list.add(Company(
+                name = "업체 이름",
+                img = R.drawable.img_default_company,
+                isPremium = true,
+                favorite = true,
+                address = "경기도 남양주시 도농동",
+                target = "10대",
+                distance = "1km",
+                shuttle = true
+            ))
         }
         list.add(Company())
         return list

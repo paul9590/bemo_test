@@ -66,7 +66,15 @@ class LatestFragment : Fragment() {
     private fun getLatestList(): ArrayList<Company> {
         val list = ArrayList<Company>()
         repeat(5) {
-            list.add(Company("업체 이름", R.drawable.img_category1, true, "경기도 남양주시 도농동", "10대", "1km"))
+            list.add(Company(
+                name = "업체 이름",
+                img = R.drawable.img_category1,
+                isPremium = true,
+                favorite = true,
+                address = "경기도 남양주시 도농동",
+                target = "10대",
+                distance = "1km"
+            ))
         }
         list.add(Company())
         return list
