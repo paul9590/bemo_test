@@ -18,7 +18,7 @@ class CompanyActivity : AppCompatActivity(){
         mBinding.txtCompanyTitle.text = company.name
 
 
-        mBinding.imgBack.setOnClickListener {
+        mBinding.imbBack.setOnClickListener {
             finish()
         }
         

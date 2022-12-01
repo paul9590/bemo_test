@@ -16,8 +16,8 @@
 
     <ImageView
         android:id="@+id/imgLogo"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
         android:contentDescription="@string/home_logo_description"
         android:src="@drawable/img_default_logo"
         app:layout_constraintBottom_toTopOf="@id/guideTop"
@@ -39,14 +39,39 @@
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
+            <TextView
+                android:id="@+id/txtCategory1"
+                style="@style/text_black_16"
+                android:layout_marginStart="@dimen/margin_left_8"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                android:text="@string/home_category1" />
+
             <androidx.recyclerview.widget.RecyclerView
-                android:id="@+id/viewCategory"
+                android:id="@+id/viewCategory1"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:columnCount="4"
                 app:layout_constraintLeft_toLeftOf="parent"
                 app:layout_constraintRight_toRightOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintTop_toBottomOf="@id/txtCategory1"/>
+
+            <TextView
+                android:layout_marginStart="@dimen/margin_left_8"
+                android:id="@+id/txtCategory2"
+                style="@style/text_black_16"
+                app:layout_constraintTop_toBottomOf="@id/viewCategory1"
+                app:layout_constraintLeft_toLeftOf="parent"
+                android:text="@string/home_category2" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/viewCategory2"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:columnCount="4"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/txtCategory2"/>
 
             <ImageView
                 android:id="@+id/imgAD"
@@ -58,7 +83,7 @@
                 android:src="@drawable/img_default_ad"
                 app:layout_constraintLeft_toLeftOf="parent"
                 app:layout_constraintRight_toRightOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/viewCategory" />
+                app:layout_constraintTop_toBottomOf="@id/viewCategory2" />
 
             <EditText
                 android:id="@+id/editSearch"

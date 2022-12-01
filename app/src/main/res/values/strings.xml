@@ -9,6 +9,8 @@
     <string name="button_edit">수정</string>
 
     <!-- 홈 / fragment_home -->
+    <string name="home_category1">레슨</string>
+    <string name="home_category2">시설</string>
     <string name="home_logo_description">로고 이미지</string>
     <string name="home_ad_description">배너 광고 이미지</string>
     <string name="home_locate">내 위치</string>
@@ -26,6 +28,7 @@
     <string name="my_title">마이 페이지</string>
     <string name="my_my_description">내 프로필 이미지</string>
     <string name="my_review_button">리뷰 작성 및 관리</string>
+    <string name="my_point_button">포인트 상점</string>
 
 
     <!-- 업체 상세 / fragment_company_default, list_company -->
@@ -87,6 +90,12 @@
     <string name="setting_title">환경 설정</string>
 
 
+    <!-- 공지사항 / activity_info -->
+    <string name="notice_title">공지 사항</string>
+
+    <!-- 약관 및 정책 / activity_info -->
+    <string name="law_title">약관 및 정책</string>
+
     <dimen name="font_size_tab">9sp</dimen>
     <dimen name="font_size_10">10sp</dimen>
     <dimen name="font_size_12">12sp</dimen>
@@ -138,6 +147,7 @@
     <dimen name="height_32">32dp</dimen>
     <dimen name="height_33">33dp</dimen>
     <dimen name="height_36">36dp</dimen>
+    <dimen name="height_38">38dp</dimen>
     <dimen name="height_44">44dp</dimen>
     <dimen name="height_48">48dp</dimen>
     <dimen name="height_90">90dp</dimen>

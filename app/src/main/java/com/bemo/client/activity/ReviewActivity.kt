@@ -12,7 +12,7 @@ class ReviewActivity: AppCompatActivity() {
         super.onCreate(savedInstanceState)
         mBinding = ActivityReviewBinding.inflate(layoutInflater)
         setContentView(mBinding.root)
-        mBinding.imgBack.setOnClickListener {
+        mBinding.imbBack.setOnClickListener {
             finish()
         }
 

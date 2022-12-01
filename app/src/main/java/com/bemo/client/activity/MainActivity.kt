@@ -50,4 +50,8 @@ class MainActivity : AppCompatActivity() {
             }
         })
     }
+
+    fun setHome() {
+        mBinding.pagerMain.currentItem = 0
+    }
 }

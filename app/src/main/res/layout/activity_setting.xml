@@ -4,25 +4,36 @@
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
-    <TextView
-        android:id="@+id/txtSettingTitle"
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideTop"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="@dimen/guide_top" />
+
+    <TextView
+        style="@style/text_black_16"
+        android:text="@string/setting_title"
+        app:layout_constraintBottom_toTopOf="@id/guideTop"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:layout_marginTop="@dimen/margin_top_12"
-        style="@style/text_black_16"
-        android:text="@string/setting_title" />
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageButton
+        android:id="@+id/imbBack"
+        style="@style/btn_back"
+        app:layout_constraintBottom_toTopOf="@id/guideTop"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/viewSetting"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:layout_marginTop="@dimen/margin_top_12"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/txtSettingTitle"
+        app:layout_constraintTop_toBottomOf="@id/guideTop"
         app:layout_constraintBottom_toTopOf="@id/txtVersion"/>
 
 

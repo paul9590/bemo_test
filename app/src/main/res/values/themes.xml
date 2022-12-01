@@ -81,20 +81,20 @@
         <item name="android:textSize">@dimen/font_size_12</item>
     </style>
 
-    <style name="btn_back" parent="@android:style/Widget.TextView">
+    <style name="btn_back" parent="Widget.AppCompat.ImageButton">
         <item name="android:layout_width">@dimen/height_20</item>
         <item name="android:layout_height">@dimen/height_20</item>
-        <item name="android:src">@drawable/img_back</item>
+        <item name="android:background">@drawable/imb_back</item>
         <item name="android:layout_marginLeft">@dimen/margin_left_31</item>
         <item name="android:contentDescription">뒤로 가기</item>
     </style>
 
 
-    <style name="btn_back_flip" parent="@android:style/Widget.TextView">
+    <style name="btn_back_flip" parent="Widget.AppCompat.ImageButton">
         <item name="android:layout_width">@dimen/height_20</item>
         <item name="android:layout_height">@dimen/height_20</item>
         <item name="android:scaleX">-1</item>
-        <item name="android:src">@drawable/img_back</item>
+        <item name="android:background">@drawable/imb_back</item>
         <item name="android:layout_marginRight">@dimen/margin_left_31</item>
         <item name="android:contentDescription">뒤로 가기</item>
     </style>

@@ -22,8 +22,8 @@
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <ImageView
-        android:id="@+id/imgBack"
+    <ImageButton
+        android:id="@+id/imbBack"
         style="@style/btn_back"
         app:layout_constraintBottom_toTopOf="@id/guideTop"
         app:layout_constraintLeft_toLeftOf="parent"

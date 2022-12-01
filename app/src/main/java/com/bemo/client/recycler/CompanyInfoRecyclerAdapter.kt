@@ -60,6 +60,13 @@ class CompanyInfoRecyclerAdapter(data: ArrayList<CompanyInfo>):
                     mBinding.txtCompanyShuttle.text = "셔틀버스 없음"
                     mBinding.txtCompanyShuttle.setTextColor(context.resources.getColor(R.color.red))
                 }
+                if(item.lesson) {
+                    mBinding.txtCompanyLesson.text = "인터넷 강의 있음"
+                    mBinding.txtCompanyLesson.setTextColor(context.resources.getColor(R.color.blue))
+                }else {
+                    mBinding.txtCompanyLesson.text = "인터넷 강의 없음"
+                    mBinding.txtCompanyLesson.setTextColor(context.resources.getColor(R.color.red))
+                }
             }
             TYPE_TEXT -> {
                 item as CompanyInfoText

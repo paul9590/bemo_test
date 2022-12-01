@@ -1,11 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="@color/white"
-    tools:context=".activity.CompanyActivity">
+    android:layout_height="match_parent">
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideTop"
@@ -15,7 +13,7 @@
         app:layout_constraintGuide_begin="@dimen/guide_top" />
 
     <TextView
-        android:id="@+id/txtCompanyTitle"
+        android:id="@+id/txtTitle"
         style="@style/text_black_16"
         app:layout_constraintBottom_toTopOf="@id/guideTop"
         app:layout_constraintLeft_toLeftOf="parent"
@@ -29,27 +27,16 @@
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <com.google.android.material.tabs.TabLayout
-        android:id="@+id/tabCompany"
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/viewNotice"
         android:layout_width="0dp"
-        android:layout_height="38dp"
+        android:layout_height="0dp"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toBottomOf="@id/guideTop"
-        app:tabIndicatorColor="@color/blue"
-        app:tabIndicatorHeight="4dp"
-        app:tabRippleColor="@android:color/transparent"
-        app:tabSelectedTextColor="@color/blue"
-        app:tabTextAppearance="@style/myTabTextSize"
-        app:tabTextColor="@color/gray" />
+        app:layout_constraintBottom_toBottomOf="parent"/>
 
-    <androidx.viewpager.widget.ViewPager
-        android:id="@+id/pagerCompany"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/tabCompany" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

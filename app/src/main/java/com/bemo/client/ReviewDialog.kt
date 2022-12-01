@@ -7,8 +7,6 @@ import android.graphics.drawable.ColorDrawable
 import android.view.LayoutInflater
 import android.view.Window
 import com.bemo.client.databinding.DialReviewBinding
-import com.bemo.client.databinding.ListMyReviewFilledBinding
-
 
 class ReviewDialog(val context: Context) {
     private val dial = Dialog(context)

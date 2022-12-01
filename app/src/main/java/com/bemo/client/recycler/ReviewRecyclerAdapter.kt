@@ -7,7 +7,6 @@ import androidx.recyclerview.widget.RecyclerView
 import androidx.viewbinding.ViewBinding
 import com.bemo.client.*
 import com.bemo.client.databinding.*
-import java.lang.Exception
 
 class ReviewRecyclerAdapter(data: ArrayList<CompanyInfo>):
     RecyclerView.Adapter<ReviewRecyclerAdapter.ReviewViewHolder>(){

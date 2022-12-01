@@ -6,7 +6,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
-import com.bemo.client.activity.LoginActivity
+import com.bemo.client.activity.MainActivity
 import com.bemo.client.activity.ReviewActivity
 import com.bemo.client.activity.SettingActivity
 import com.bemo.client.viewadapter.MyViewAdapter
@@ -45,6 +45,10 @@ class MyFragment : Fragment() {
         mBinding = FragmentMyBinding.inflate(inflater, container, false)
 
         setTab()
+
+        mBinding.imbBack.setOnClickListener {
+            (activity as MainActivity).setHome()
+        }
 
         mBinding.btnReview.setOnClickListener {
             val intent = Intent(activity, ReviewActivity :: class.java)

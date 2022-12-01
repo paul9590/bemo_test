@@ -43,7 +43,8 @@ data class Company(
     val address: String = "",
     val target: String = "",
     val distance: String = "",
-    val shuttle: Boolean = false
+    val shuttle: Boolean = false,
+    val lesson: Boolean = false
 ) :
     Serializable, CompanyInfo {
     override val type = TYPE_COMPANY
@@ -59,4 +60,6 @@ data class CompanyInfoMap(val img: Int = R.drawable.img_default_company_info, ov
 
 data class HomeCategory(val img : Int, val txt : String)
 
-data class Setting(val name: String, val intent: Intent)
+data class InfoIntent(val name: String, val intent: Intent)
+
+data class Info(val title: String, val body: String)
