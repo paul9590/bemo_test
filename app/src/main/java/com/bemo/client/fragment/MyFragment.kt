@@ -7,6 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import com.bemo.client.activity.MainActivity
+import com.bemo.client.activity.PointActivity
 import com.bemo.client.activity.ReviewActivity
 import com.bemo.client.activity.SettingActivity
 import com.bemo.client.viewadapter.MyViewAdapter
@@ -55,8 +56,15 @@ class MyFragment : Fragment() {
             intent.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION)
             startActivity(intent)
         }
+
         mBinding.imgSetting.setOnClickListener {
             val intent = Intent(activity, SettingActivity :: class.java)
+            intent.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION)
+            startActivity(intent)
+        }
+
+        mBinding.btnPoint.setOnClickListener {
+            val intent = Intent(activity, PointActivity :: class.java)
             intent.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION)
             startActivity(intent)
         }

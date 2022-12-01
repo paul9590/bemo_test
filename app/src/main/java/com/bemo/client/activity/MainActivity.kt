@@ -3,9 +3,12 @@ package com.bemo.client.activity
 import android.graphics.PorterDuff
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
-import com.bemo.client.viewadapter.MainViewAdapter
+import com.bemo.client.viewadapter.ViewAdapter
 import com.bemo.client.R
 import com.bemo.client.databinding.ActivityMainBinding
+import com.bemo.client.fragment.HomeFragment
+import com.bemo.client.fragment.MyFragment
+import com.bemo.client.fragment.ResultFragment
 import com.google.android.material.tabs.TabLayout
 
 class MainActivity : AppCompatActivity() {
@@ -21,7 +24,10 @@ class MainActivity : AppCompatActivity() {
 
     private fun setTab() {
 
-        val adapter = MainViewAdapter(supportFragmentManager)
+        val adapter = ViewAdapter(supportFragmentManager)
+        adapter.addList(HomeFragment())
+        adapter.addList(ResultFragment())
+        adapter.addList(MyFragment())
         mBinding.pagerMain.adapter = adapter
         mBinding.tabMain.setupWithViewPager(mBinding.pagerMain)
 

@@ -96,6 +96,10 @@
     <!-- 약관 및 정책 / activity_info -->
     <string name="law_title">약관 및 정책</string>
 
+    <!-- 포인트 상점 / activity_point -->
+    <string name="point_title">포인트 상점</string>
+    <string name="point_button">구매 신청</string>
+
     <dimen name="font_size_tab">9sp</dimen>
     <dimen name="font_size_10">10sp</dimen>
     <dimen name="font_size_12">12sp</dimen>

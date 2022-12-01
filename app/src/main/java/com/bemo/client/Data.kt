@@ -63,3 +63,5 @@ data class HomeCategory(val img : Int, val txt : String)
 data class InfoIntent(val name: String, val intent: Intent)
 
 data class Info(val title: String, val body: String)
+
+data class PointInfo(val title: String, val body: String, val img: Int)

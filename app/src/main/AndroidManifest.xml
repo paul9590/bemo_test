@@ -30,6 +30,7 @@
         <activity android:name=".activity.SettingActivity"/>
         <activity android:name=".activity.NoticeActivity"/>
         <activity android:name=".activity.LawActivity"/>
+        <activity android:name=".activity.PointActivity"/>
 
     </application>
 
