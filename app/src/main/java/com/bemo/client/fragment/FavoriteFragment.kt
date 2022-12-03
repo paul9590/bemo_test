@@ -68,7 +68,7 @@ class FavoriteFragment : Fragment() {
         repeat(5) {
             list.add(Company(
                 name = "업체 이름",
-                img = R.drawable.img_category1,
+                img = R.drawable.img_place1,
                 isPremium = true,
                 favorite = true,
                 address = "경기도 남양주시 도농동",

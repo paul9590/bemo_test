@@ -61,10 +61,10 @@ class CompanyInfoRecyclerAdapter(data: ArrayList<CompanyInfo>):
                     mBinding.txtCompanyShuttle.setTextColor(context.resources.getColor(R.color.red))
                 }
                 if(item.lesson) {
-                    mBinding.txtCompanyLesson.text = "인터넷 강의 있음"
+                    mBinding.txtCompanyLesson.text = "비대면 강의 있음"
                     mBinding.txtCompanyLesson.setTextColor(context.resources.getColor(R.color.blue))
                 }else {
-                    mBinding.txtCompanyLesson.text = "인터넷 강의 없음"
+                    mBinding.txtCompanyLesson.text = "비대면 강의 없음"
                     mBinding.txtCompanyLesson.setTextColor(context.resources.getColor(R.color.red))
                 }
             }

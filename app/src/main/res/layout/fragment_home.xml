@@ -41,8 +41,8 @@
             android:orientation="vertical">
 
             <ImageView
-                android:layout_width="60dp"
-                android:layout_height="25dp"
+                android:layout_width="50dp"
+                android:layout_height="20dp"
                 android:background="@drawable/img_lesson"
                 android:id="@+id/imgCategory1"
                 android:layout_marginStart="@dimen/margin_left_8"
@@ -69,8 +69,8 @@
                 app:layout_constraintTop_toBottomOf="@id/imgCategory1"/>
 
             <ImageView
-                android:layout_width="60dp"
-                android:layout_height="25dp"
+                android:layout_width="50dp"
+                android:layout_height="20dp"
                 android:background="@drawable/img_place"
                 android:layout_marginTop="@dimen/margin_top_8"
                 android:layout_marginStart="@dimen/margin_left_8"

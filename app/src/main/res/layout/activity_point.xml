@@ -29,13 +29,35 @@
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="보유 포인트 : 300p"
+        app:layout_constraintTop_toBottomOf="@id/guideTop"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintBottom_toBottomOf="@id/btnPointDetail"
+        android:layout_marginStart="@dimen/margin_left_24"/>
+
+    <Button
+        android:layout_width="50dp"
+        android:layout_height="30dp"
+        android:id="@+id/btnPointDetail"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/guideTop"
+        android:layout_marginEnd="@dimen/margin_left_24"
+        android:text="내역"
+        android:textColor="@color/white"
+        android:background="@drawable/shape_btn" />
+
     <com.google.android.material.tabs.TabLayout
         android:id="@+id/tabPoint"
         android:layout_width="0dp"
         android:layout_height="@dimen/height_44"
+        android:layout_marginTop="@dimen/margin_top_14"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/guideTop"
+        app:layout_constraintTop_toBottomOf="@id/btnPointDetail"
         app:tabIndicatorColor="@color/blue"
         app:tabIndicatorHeight="4dp"
         app:tabRippleColor="@android:color/transparent"
