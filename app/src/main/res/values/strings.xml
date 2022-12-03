@@ -100,6 +100,12 @@
     <string name="point_title">포인트 상점</string>
     <string name="point_button">구매 신청</string>
 
+    <!-- 고객 센터 / activity_customer_service -->
+    <string name="customer_service_kakao">카카오톡 : 배움의 모든것</string>
+    <string name="customer_service_email_text">이메일 : bemo1117@naver.com</string>
+    <string name="customer_service_email">bemo1117@naver.com</string>
+    <string name="customer_service_kakao_uri">http://pf.kakao.com/_GxaZxnxj/chat</string>
+
     <dimen name="font_size_tab">9sp</dimen>
     <dimen name="font_size_10">10sp</dimen>
     <dimen name="font_size_12">12sp</dimen>

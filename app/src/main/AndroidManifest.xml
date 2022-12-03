@@ -31,6 +31,7 @@
         <activity android:name=".activity.NoticeActivity"/>
         <activity android:name=".activity.LawActivity"/>
         <activity android:name=".activity.PointActivity"/>
+        <activity android:name=".activity.CustomerServiceActivity"/>
 
     </application>
 

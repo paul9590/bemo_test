@@ -33,7 +33,7 @@ class SettingActivity : AppCompatActivity(){
     private fun addList() {
         mList += InfoIntent("공지사항", Intent(applicationContext, NoticeActivity :: class.java))
         mList += InfoIntent("자주 묻는 질문", Intent(applicationContext, SettingActivity :: class.java))
-        mList += InfoIntent("고객센터", Intent(applicationContext, SettingActivity :: class.java))
+        mList += InfoIntent("고객센터", Intent(applicationContext, CustomerServiceActivity :: class.java))
         mList += InfoIntent("알림 설정", Intent(applicationContext, SettingActivity :: class.java))
         mList += InfoIntent("제휴 및 광고 문의", Intent(applicationContext, SettingActivity :: class.java))
         mList += InfoIntent("약관 및 정책", Intent(applicationContext, LawActivity :: class.java))
