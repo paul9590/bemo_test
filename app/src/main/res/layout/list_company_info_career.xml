@@ -22,7 +22,7 @@
 
         <TextView
             android:id="@+id/txtCompany1"
-            style="@style/text_gray2_12"
+            style="@style/text_title_gray2_12"
             android:layout_marginStart="@dimen/margin_left_16"
             android:text="@string/company_career_name"
             app:layout_constraintBottom_toTopOf="@id/txtCompany2"
@@ -31,7 +31,7 @@
 
         <TextView
             android:id="@+id/txtCompany2"
-            style="@style/text_gray2_12"
+            style="@style/text_title_gray2_12"
             android:layout_marginTop="@dimen/margin_top_8"
             android:text="@string/company_career_rank"
             app:layout_constraintLeft_toLeftOf="@id/txtCompany1"
@@ -39,7 +39,7 @@
 
         <TextView
             android:id="@+id/txtCompany3"
-            style="@style/text_gray2_12"
+            style="@style/text_title_gray2_12"
             android:layout_marginTop="@dimen/margin_top_8"
             android:text="@string/company_career_career"
             app:layout_constraintLeft_toLeftOf="@id/txtCompany1"
@@ -47,7 +47,7 @@
 
         <TextView
             android:id="@+id/txtCareerName"
-            style="@style/text_black_12"
+            style="@style/text_title_black_12"
             android:layout_marginStart="@dimen/margin_left_38"
             app:layout_constraintBottom_toBottomOf="@id/txtCompany1"
             app:layout_constraintLeft_toRightOf="@id/txtCompany1"

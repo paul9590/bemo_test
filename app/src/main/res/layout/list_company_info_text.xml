@@ -11,7 +11,7 @@
 
         <TextView
             android:id="@+id/txtCompanyInfoTxt"
-            style="@style/text_black_12"
+            style="@style/text_title_black_12"
             android:layout_marginStart="@dimen/margin_left_20"
             android:layout_marginTop="@dimen/margin_top_16"
             app:layout_constraintLeft_toLeftOf="parent"
@@ -34,6 +34,8 @@
                 android:paddingLeft="@dimen/margin_left_16"
                 android:paddingTop="@dimen/margin_top_12"
                 android:paddingRight="@dimen/margin_left_16"
+                android:linksClickable="true"
+                android:autoLink="web"
                 android:paddingBottom="@dimen/margin_top_12"/>
 
     </androidx.constraintlayout.widget.ConstraintLayout>

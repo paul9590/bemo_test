@@ -4,13 +4,12 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/white"
     tools:context=".fragment.MyFragment">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/viewMyPage"
         android:layout_width="match_parent"
-        android:layout_height="244dp"
+        android:layout_height="300dp"
         android:background="@color/blue"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
@@ -76,10 +75,11 @@
             app:tint="@color/white" />
 
         <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/viewPoint"
             android:layout_width="0dp"
-            android:layout_height="72dp"
+            android:layout_height="58dp"
             android:layout_marginLeft="@dimen/margin_left_20"
-            android:layout_marginTop="@dimen/margin_top_24"
+            android:layout_marginTop="@dimen/margin_top_14"
             android:layout_marginRight="@dimen/margin_left_20"
             android:background="@drawable/shape_btn2"
             app:layout_constraintLeft_toLeftOf="parent"
@@ -103,7 +103,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
-                app:layout_constraintGuide_percent="0.4" />
+                app:layout_constraintGuide_percent="0.45" />
 
             <Button
                 android:id="@+id/btnPoint"
@@ -120,7 +120,7 @@
 
             <Button
                 android:id="@+id/btnReview"
-                android:layout_width="wrap_content"
+                android:layout_width="70dp"
                 android:layout_height="38dp"
                 android:background="@drawable/shape_btn"
                 android:text="@string/my_review_button"
@@ -130,8 +130,34 @@
                 app:layout_constraintRight_toRightOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintBottom_toBottomOf="parent"/>
-
         </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginTop="@dimen/margin_top_14"
+            android:layout_marginBottom="@dimen/margin_top_14"
+            app:layout_constraintTop_toBottomOf="@id/viewPoint"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="@id/viewPoint"
+            app:layout_constraintRight_toRightOf="@id/viewPoint"
+            app:cardCornerRadius="10dp">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="1dp"
+                app:cardCornerRadius="10dp">
+
+                <ImageView
+                    android:background="@drawable/img_default_ad"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:id="@+id/imgAD" />
+
+            </androidx.cardview.widget.CardView>
+        </androidx.cardview.widget.CardView>
+
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <com.google.android.material.tabs.TabLayout

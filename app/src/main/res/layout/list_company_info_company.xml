@@ -22,7 +22,7 @@
 
         <TextView
             android:id="@+id/txtCompany1"
-            style="@style/text_gray2_12"
+            style="@style/text_title_gray2_12"
             android:layout_marginStart="@dimen/margin_left_16"
             android:text="@string/company_name"
             app:layout_constraintBottom_toTopOf="@id/txtCompany2"
@@ -31,7 +31,7 @@
 
         <TextView
             android:id="@+id/txtCompany2"
-            style="@style/text_gray2_12"
+            style="@style/text_title_gray2_12"
             android:text="@string/company_detail_address"
             app:layout_constraintBottom_toTopOf="@id/txtCompany3"
             app:layout_constraintLeft_toLeftOf="@id/txtCompany1"
@@ -39,7 +39,7 @@
 
         <TextView
             android:id="@+id/txtCompany3"
-            style="@style/text_gray2_12"
+            style="@style/text_title_gray2_12"
             android:text="@string/company_target"
             app:layout_constraintBottom_toTopOf="@id/txtCompany4"
             app:layout_constraintLeft_toLeftOf="@id/txtCompany1"
@@ -47,7 +47,7 @@
 
         <TextView
             android:id="@+id/txtCompany4"
-            style="@style/text_gray2_12"
+            style="@style/text_title_gray2_12"
             android:text="@string/company_distance"
             app:layout_constraintBottom_toBottomOf="@id/imgCompany"
             app:layout_constraintLeft_toLeftOf="@id/txtCompany1"
@@ -56,14 +56,14 @@
 
         <TextView
             android:id="@+id/txtCompanyName"
-            style="@style/text_black_12"
+            style="@style/text_title_black_12"
             app:layout_constraintBottom_toBottomOf="@id/txtCompany1"
             app:layout_constraintLeft_toLeftOf="@id/txtCompanyAddress"
             app:layout_constraintTop_toTopOf="@id/txtCompany1" />
 
         <TextView
             android:id="@+id/txtCompanyAddress"
-            style="@style/text_black_12"
+            style="@style/text_title_black_12"
             android:layout_marginStart="@dimen/margin_left_16"
             app:layout_constraintBottom_toBottomOf="@id/txtCompany2"
             app:layout_constraintLeft_toRightOf="@id/txtCompany2"
@@ -71,14 +71,14 @@
 
         <TextView
             android:id="@+id/txtCompanyTarget"
-            style="@style/text_black_12"
+            style="@style/text_title_black_12"
             app:layout_constraintBottom_toBottomOf="@id/txtCompany3"
             app:layout_constraintLeft_toLeftOf="@id/txtCompanyAddress"
             app:layout_constraintTop_toTopOf="@id/txtCompany3" />
 
         <TextView
             android:id="@+id/txtCompanyDistance"
-            style="@style/text_black_12"
+            style="@style/text_title_black_12"
             app:layout_constraintBottom_toBottomOf="@id/txtCompany4"
             app:layout_constraintLeft_toLeftOf="@id/txtCompanyAddress"
             app:layout_constraintTop_toTopOf="@id/txtCompany4" />
@@ -94,11 +94,13 @@
             android:paddingRight="10dp"
             android:paddingBottom="4dp"
             android:textSize="@dimen/font_size_12"
+            android:fontFamily="@font/title_font"
             app:layout_constraintLeft_toLeftOf="@id/txtCompany1"
             app:layout_constraintTop_toBottomOf="@id/txtCompanyDistance" />
 
 
         <TextView
+            android:fontFamily="@font/title_font"
             android:id="@+id/txtCompanyLesson"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"

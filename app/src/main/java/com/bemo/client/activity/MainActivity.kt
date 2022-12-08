@@ -6,6 +6,7 @@ import androidx.appcompat.app.AppCompatActivity
 import com.bemo.client.viewadapter.ViewAdapter
 import com.bemo.client.R
 import com.bemo.client.databinding.ActivityMainBinding
+import com.bemo.client.dialog.PopUpDialog
 import com.bemo.client.fragment.HomeFragment
 import com.bemo.client.fragment.MyFragment
 import com.bemo.client.fragment.ResultFragment
@@ -20,6 +21,15 @@ class MainActivity : AppCompatActivity() {
         setContentView(mBinding.root)
 
         setTab()
+    }
+
+    override fun onStart() {
+        super.onStart()
+        popUpDial()
+    }
+
+    private fun popUpDial() {
+        PopUpDialog(this, resources.getDrawable(R.drawable.img_default_ad)).show()
     }
 
     private fun setTab() {

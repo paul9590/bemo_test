@@ -27,7 +27,7 @@
     <!-- 마이 / fragment_my -->
     <string name="my_title">마이 페이지</string>
     <string name="my_my_description">내 프로필 이미지</string>
-    <string name="my_review_button">리뷰 작성 및 관리</string>
+    <string name="my_review_button">리뷰 관리</string>
     <string name="my_point_button">포인트 상점</string>
 
 
@@ -89,7 +89,6 @@
     <!-- 환경설정 / activity_setting -->
     <string name="setting_title">환경 설정</string>
 
-
     <!-- 공지사항 / activity_info -->
     <string name="notice_title">공지 사항</string>
 
@@ -105,6 +104,10 @@
     <string name="customer_service_email_text">이메일 : bemo1117@naver.com</string>
     <string name="customer_service_email">bemo1117@naver.com</string>
     <string name="customer_service_kakao_uri">http://pf.kakao.com/_GxaZxnxj/chat</string>
+
+    <!-- 팝업 광고 / dial_pop_up_ad -->
+    <string name="pop_up_title">일주일 동안 보지 않기</string>
+    <string name="pop_up_exit">닫기</string>
 
     <dimen name="font_size_tab">9sp</dimen>
     <dimen name="font_size_10">10sp</dimen>

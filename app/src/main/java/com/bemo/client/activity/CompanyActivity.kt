@@ -29,7 +29,7 @@ class CompanyActivity : AppCompatActivity(){
     }
 
     private fun setTab() {
-        val texts = arrayOf("기본", "시설사진", "상세", "강사소개", "리뷰")
+        val texts = arrayOf("기본", "강사소개", "상세", "시설사진", "리뷰")
 
         for(i in texts.indices) {
             val tab = mBinding.tabCompany.getTabAt(i)!!

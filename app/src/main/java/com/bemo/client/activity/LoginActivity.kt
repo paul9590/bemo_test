@@ -18,6 +18,13 @@ class LoginActivity: AppCompatActivity() {
             intent.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION)
             startActivity(intent)
         }
+        mBinding.txtGuestLogin.setOnClickListener {
+            finish()
+        }
+    }
+
+    override fun onBackPressed() {
+
     }
 
 }

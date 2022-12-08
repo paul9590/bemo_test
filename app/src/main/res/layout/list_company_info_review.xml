@@ -21,7 +21,7 @@
 
         <TextView
             android:id="@+id/txtCompanyInfoReviewTitle"
-            style="@style/text_black_12"
+            style="@style/text_title_black_12"
             android:layout_marginStart="@dimen/margin_left_12"
             app:layout_constraintLeft_toRightOf="@id/imgCompanyInfoReview"
             app:layout_constraintTop_toTopOf="@id/imgCompanyInfoReview" />

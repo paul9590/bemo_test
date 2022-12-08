@@ -44,7 +44,7 @@
 
         <TextView
             android:id="@+id/txtCompany2"
-            style="@style/text_gray2_12"
+            style="@style/text_title_gray2_12"
             android:text="@string/company_detail_address"
             app:layout_constraintBottom_toTopOf="@id/txtCompany3"
             app:layout_constraintLeft_toLeftOf="@id/txtCompany1"
@@ -52,7 +52,7 @@
 
         <TextView
             android:id="@+id/txtCompany3"
-            style="@style/text_gray2_12"
+            style="@style/text_title_gray2_12"
             android:text="@string/company_target"
             app:layout_constraintBottom_toTopOf="@id/txtCompany4"
             app:layout_constraintLeft_toLeftOf="@id/txtCompany1"
@@ -60,7 +60,7 @@
 
         <TextView
             android:id="@+id/txtCompany4"
-            style="@style/text_gray2_12"
+            style="@style/text_title_gray2_12"
             android:text="@string/company_distance"
             app:layout_constraintBottom_toBottomOf="@id/imgFrame"
             app:layout_constraintLeft_toLeftOf="@id/txtCompany1"
@@ -68,7 +68,7 @@
 
         <TextView
             android:id="@+id/txtCompanyAddress"
-            style="@style/text_black_12"
+            style="@style/text_title_black_12"
             android:layout_marginStart="@dimen/margin_left_16"
             app:layout_constraintBottom_toBottomOf="@id/txtCompany2"
             app:layout_constraintLeft_toRightOf="@id/txtCompany2"
@@ -76,14 +76,14 @@
 
         <TextView
             android:id="@+id/txtCompanyTarget"
-            style="@style/text_black_12"
+            style="@style/text_title_black_12"
             app:layout_constraintBottom_toBottomOf="@id/txtCompany3"
             app:layout_constraintLeft_toLeftOf="@id/txtCompanyAddress"
             app:layout_constraintTop_toTopOf="@id/txtCompany3" />
 
         <TextView
             android:id="@+id/txtCompanyDistance"
-            style="@style/text_black_12"
+            style="@style/text_title_black_12"
             app:layout_constraintBottom_toBottomOf="@id/txtCompany4"
             app:layout_constraintLeft_toLeftOf="@id/txtCompanyAddress"
             app:layout_constraintTop_toTopOf="@id/txtCompany4" />

@@ -11,7 +11,7 @@
 
         <TextView
             android:id="@+id/txtCompany1"
-            style="@style/text_black_12"
+            style="@style/text_title_black_12"
             android:layout_marginStart="@dimen/margin_left_20"
             android:layout_marginTop="@dimen/margin_top_16"
             android:text="@string/company_map"

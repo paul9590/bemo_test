@@ -1,16 +1,12 @@
 package com.bemo.client.recycler
 
-import android.app.Dialog
 import android.content.Context
-import android.graphics.Color
-import android.graphics.drawable.ColorDrawable
 import android.view.LayoutInflater
 import android.view.ViewGroup
-import android.view.Window
 import androidx.recyclerview.widget.RecyclerView
 import com.bemo.client.Info
-import com.bemo.client.databinding.DialNoticeBinding
 import com.bemo.client.databinding.ListTextBinding
+import com.bemo.client.dialog.NoticeDialog
 
 class NoticeRecyclerAdapter(data: ArrayList<Info>) :
     RecyclerView.Adapter<NoticeRecyclerAdapter.NoticeViewHolder>() {
@@ -35,18 +31,7 @@ class NoticeRecyclerAdapter(data: ArrayList<Info>) :
     }
 
     private fun showNoticeDial(item: Info) {
-        val dial = Dialog(context)
-        dial.requestWindowFeature(Window.FEATURE_NO_TITLE)
-        dial.window!!.setBackgroundDrawable(ColorDrawable(Color.TRANSPARENT))
-        val mBinding = DialNoticeBinding.inflate(LayoutInflater.from(context))
-        dial.setContentView(mBinding.root)
-        dial.window!!.setLayout(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.MATCH_PARENT)
-        mBinding.txtNoticeTitle.text = item.title
-        mBinding.txtNoticeBody.text = item.body
-        mBinding.imbBack.setOnClickListener {
-            dial.dismiss()
-        }
-        dial.show()
+        NoticeDialog(context, item).show()
     }
 
     override fun getItemCount(): Int {

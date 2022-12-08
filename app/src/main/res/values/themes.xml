@@ -4,9 +4,9 @@
         <!-- Primary brand color. -->
         <item name="colorPrimary">@color/blue</item>
         <item name="colorPrimaryDark">@color/blue</item>
-        <item name="colorAccent">@color/teal_200</item>
+        <item name="colorAccent">@color/yellow</item>
         <!-- Customize your theme here. -->
-        <item name="android:fontFamily">@font/light</item>
+        <item name="android:fontFamily">@font/text_font</item>
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>
         <item name="android:statusBarColor" >?attr/colorPrimaryVariant</item>
@@ -14,17 +14,19 @@
     </style>
 
     <style name="homeTabTextSize" parent="TextAppearance.Design.Tab">
+        <item name="android:fontFamily">@font/title_font</item>
         <item name="android:textSize">@dimen/font_size_tab</item>
     </style>
 
     <style name="myTabTextSize" parent="TextAppearance.Design.Tab">
+        <item name="fontFamily">@font/title_font</item>
         <item name="android:textSize">@dimen/font_size_12</item>
     </style>
 
     <style name="reviewTabTextSize" parent="TextAppearance.Design.Tab">
+        <item name="fontFamily">@font/title_font</item>
         <item name="android:textSize">@dimen/font_size_14</item>
     </style>
-
 
     <style name="btn_peek" parent="@android:style/Widget.Button">
         <item name="android:layout_width">53dp</item>
@@ -53,7 +55,16 @@
         <item name="android:textSize">@dimen/font_size_12</item>
     </style>
 
+    <style name="text_title_black_12"  parent="@android:style/Widget.TextView">
+        <item name="fontFamily">@font/title_font</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textSize">@dimen/font_size_12</item>
+    </style>
+
     <style name="text_black_14"  parent="@android:style/Widget.TextView">
+        <item name="fontFamily">@font/title_font</item>
         <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">wrap_content</item>
         <item name="android:textColor">@color/black</item>
@@ -61,6 +72,7 @@
     </style>
 
     <style name="text_black_16"  parent="@android:style/Widget.TextView">
+        <item name="fontFamily">@font/title_font</item>
         <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">wrap_content</item>
         <item name="android:textColor">@color/black</item>
@@ -73,6 +85,15 @@
         <item name="android:textColor">@color/gray2</item>
         <item name="android:textSize">@dimen/font_size_10</item>
     </style>
+
+    <style name="text_title_gray2_12"  parent="@android:style/Widget.TextView">
+        <item name="fontFamily">@font/title_font</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/gray2</item>
+        <item name="android:textSize">@dimen/font_size_12</item>
+    </style>
+
 
     <style name="text_gray2_12"  parent="@android:style/Widget.TextView">
         <item name="android:layout_width">wrap_content</item>

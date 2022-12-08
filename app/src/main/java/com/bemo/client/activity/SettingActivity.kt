@@ -37,6 +37,7 @@ class SettingActivity : AppCompatActivity(){
         mList += InfoIntent("알림 설정", Intent(applicationContext, SettingActivity :: class.java))
         mList += InfoIntent("제휴 및 광고 문의", Intent(applicationContext, SettingActivity :: class.java))
         mList += InfoIntent("약관 및 정책", Intent(applicationContext, LawActivity :: class.java))
+        mList += InfoIntent("로그 아웃", Intent(applicationContext, LoginActivity :: class.java))
         mList += InfoIntent("계정 탈퇴 및 삭제", Intent(applicationContext, SettingActivity :: class.java))
     }
 }
