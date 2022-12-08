@@ -9,24 +9,31 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-        <ImageView
-            android:id="@+id/imgCompany"
+        <androidx.cardview.widget.CardView
+            android:id="@+id/viewImg"
             android:layout_width="@dimen/height_90"
             android:layout_height="@dimen/height_90"
+            app:cardCornerRadius="@dimen/corner_10"
             android:layout_marginStart="@dimen/margin_left_20"
             android:layout_marginTop="@dimen/margin_top_20"
-            android:background="@drawable/shape_round"
-            android:contentDescription="@string/company_img_description"
             app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toTopOf="parent" >
+
+        <ImageView
+            android:id="@+id/imgCompany"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:contentDescription="@string/company_img_description"/>
+
+        </androidx.cardview.widget.CardView>
 
         <TextView
             android:id="@+id/txtCompany1"
             style="@style/text_black_14"
             android:layout_marginStart="@dimen/margin_left_16"
             app:layout_constraintBottom_toTopOf="@id/txtCompany2"
-            app:layout_constraintLeft_toRightOf="@id/imgCompany"
-            app:layout_constraintTop_toTopOf="@id/imgCompany" />
+            app:layout_constraintLeft_toRightOf="@id/viewImg"
+            app:layout_constraintTop_toTopOf="@id/viewImg" />
 
         <TextView
             android:id="@+id/txtCompany2"
@@ -48,7 +55,7 @@
             android:id="@+id/txtCompany4"
             style="@style/text_title_gray2_12"
             android:text="@string/company_distance"
-            app:layout_constraintBottom_toBottomOf="@id/imgCompany"
+            app:layout_constraintBottom_toBottomOf="@id/viewImg"
             app:layout_constraintLeft_toLeftOf="@id/txtCompany1"
             app:layout_constraintTop_toBottomOf="@id/txtCompany3" />
 
@@ -87,7 +94,7 @@
             android:textSize="@dimen/font_size_12"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/imgCompany" />
+            app:layout_constraintTop_toBottomOf="@id/viewImg" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </androidx.cardview.widget.CardView>

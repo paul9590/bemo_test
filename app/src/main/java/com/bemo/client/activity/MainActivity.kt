@@ -21,15 +21,11 @@ class MainActivity : AppCompatActivity() {
         setContentView(mBinding.root)
 
         setTab()
-    }
-
-    override fun onStart() {
-        super.onStart()
         popUpDial()
     }
 
     private fun popUpDial() {
-        PopUpDialog(this, resources.getDrawable(R.drawable.img_default_ad)).show()
+        PopUpDialog(this, resources.getDrawable(R.drawable.img_default_pop_ad)).show()
     }
 
     private fun setTab() {

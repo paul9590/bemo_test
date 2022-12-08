@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardCornerRadius="@dimen/corner_10">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideTop"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_begin="@dimen/guide_top" />
+
+        <TextView
+            android:id="@+id/txtDeleteTitle"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            style="@style/text_black_16"
+            app:layout_constraintBottom_toTopOf="@id/guideTop"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:background="@color/light_gray2"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            android:layout_marginLeft="@dimen/margin_left_24"
+            android:layout_marginRight="@dimen/margin_left_24"
+            app:layout_constraintTop_toTopOf="@id/guideTop"/>
+
+        <TextView
+            android:id="@+id/txtDeleteBody"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/guideTop"
+            android:padding="@dimen/margin_left_24"
+            android:text="@string/delete_body"
+            app:layout_constraintBottom_toTopOf="@id/btnNo"
+            style="@style/text_black_14"/>
+
+        <Button
+            android:textColor="@color/white"
+            android:id="@+id/btnNo"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:textSize="20dp"
+            android:background="@drawable/shape_btn5"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:text="@string/button_no"
+            android:layout_margin="@dimen/margin_left_12"
+            android:fontFamily="@font/category_font"
+            app:layout_constraintRight_toLeftOf="@id/btnYes" />
+
+        <Button
+            android:textColor="@color/white"
+            android:id="@+id/btnYes"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:textSize="20dp"
+            android:layout_margin="@dimen/margin_left_12"
+            android:fontFamily="@font/category_font"
+            android:background="@drawable/shape_btn5"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toRightOf="@id/btnNo"
+            android:text="@string/delete_yes"
+            app:layout_constraintRight_toRightOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.cardview.widget.CardView>

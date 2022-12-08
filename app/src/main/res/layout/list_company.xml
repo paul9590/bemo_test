@@ -18,13 +18,19 @@
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintTop_toTopOf="parent">
 
-            <ImageView
-                android:id="@+id/imgCompany"
+            <androidx.cardview.widget.CardView
                 android:layout_width="90dp"
                 android:layout_height="90dp"
-                android:background="@drawable/shape_round"
                 android:layout_gravity="center"
-                android:contentDescription="@string/company_img_description" />
+                app:cardCornerRadius="@dimen/corner_10">
+
+                <ImageView
+                    android:id="@+id/imgCompany"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:contentDescription="@string/company_img_description" />
+
+            </androidx.cardview.widget.CardView>
 
             <ImageView
                 android:id="@+id/imgThumbs"

@@ -23,8 +23,8 @@ class ReviewRecyclerAdapter(data: ArrayList<CompanyInfo>):
         context = parent.context
         // create a new view-
         return when(viewType) {
-            TYPE_COMPANY -> ReviewViewHolder(ListMyReviewNeedFillBinding.inflate(LayoutInflater.from(parent.context), parent, false))
-            TYPE_REVIEW -> ReviewViewHolder(ListMyReviewFilledBinding.inflate(LayoutInflater.from(parent.context), parent, false))
+            COMPANY_COMPANY -> ReviewViewHolder(ListMyReviewNeedFillBinding.inflate(LayoutInflater.from(parent.context), parent, false))
+            COMPANY_REVIEW -> ReviewViewHolder(ListMyReviewFilledBinding.inflate(LayoutInflater.from(parent.context), parent, false))
 
             else -> ReviewViewHolder(ListMyReviewNeedFillBinding.inflate(LayoutInflater.from(parent.context), parent, false))
         }
@@ -39,7 +39,7 @@ class ReviewRecyclerAdapter(data: ArrayList<CompanyInfo>):
 
     private fun bind(item: CompanyInfo, mBinding: ViewBinding) {
         when(item.type) {
-            TYPE_COMPANY -> {
+            COMPANY_COMPANY -> {
                 item as Company
                 mBinding as ListMyReviewNeedFillBinding
                 mBinding.txtCompany1.text = item.name
@@ -51,7 +51,7 @@ class ReviewRecyclerAdapter(data: ArrayList<CompanyInfo>):
                     ReviewDialog(context).show()
                 }
             }
-            TYPE_REVIEW -> {
+            COMPANY_REVIEW -> {
                 item as CompanyInfoReview
                 mBinding as ListMyReviewFilledBinding
                 mBinding.txtMyReviewCompany.text = item.name

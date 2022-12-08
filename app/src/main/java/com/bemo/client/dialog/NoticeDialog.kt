@@ -18,7 +18,6 @@ class NoticeDialog(val context: Context) {
         mBinding.txtNoticeBody.text = item.body
     }
 
-
     init {
         mBinding.imbBack.setOnClickListener {
             dial.dismiss()
@@ -35,5 +34,4 @@ class NoticeDialog(val context: Context) {
         dial.window!!.setBackgroundDrawable(ColorDrawable(Color.TRANSPARENT))
         dial.setContentView(mBinding.root)
     }
-
 }

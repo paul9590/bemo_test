@@ -22,14 +22,14 @@ class CompanyInfoRecyclerAdapter(data: ArrayList<CompanyInfo>):
 
         context = parent.context
         return when(viewType) {
-            TYPE_COMPANY -> CompanyInfoViewHolder(ListCompanyInfoCompanyBinding.inflate(LayoutInflater.from(context), parent, false))
-            TYPE_TEXT -> CompanyInfoViewHolder(ListCompanyInfoTextBinding.inflate(LayoutInflater.from(context), parent, false))
-            TYPE_IMG -> CompanyInfoViewHolder(ListCompanyInfoImgBinding.inflate(LayoutInflater.from(context), parent, false))
-            TYPE_CAREER -> CompanyInfoViewHolder(ListCompanyInfoCareerBinding.inflate(LayoutInflater.from(context), parent, false))
-            TYPE_REVIEW_AVG -> CompanyInfoViewHolder(ListCompanyInfoReviewAvgBinding.inflate(LayoutInflater.from(context), parent, false))
-            TYPE_REVIEW -> CompanyInfoViewHolder(ListCompanyInfoReviewBinding.inflate(LayoutInflater.from(context), parent, false))
-            TYPE_CATEGORY -> CompanyInfoViewHolder(ListCompanyInfoCategoryBinding.inflate(LayoutInflater.from(context), parent, false))
-            TYPE_MAP -> CompanyInfoViewHolder(ListCompanyInfoMapBinding.inflate(LayoutInflater.from(context), parent, false))
+            COMPANY_COMPANY -> CompanyInfoViewHolder(ListCompanyInfoCompanyBinding.inflate(LayoutInflater.from(context), parent, false))
+            COMPANY_TEXT -> CompanyInfoViewHolder(ListCompanyInfoTextBinding.inflate(LayoutInflater.from(context), parent, false))
+            COMPANY_IMG -> CompanyInfoViewHolder(ListCompanyInfoImgBinding.inflate(LayoutInflater.from(context), parent, false))
+            COMPANY_CAREER -> CompanyInfoViewHolder(ListCompanyInfoCareerBinding.inflate(LayoutInflater.from(context), parent, false))
+            COMPANY_REVIEW_AVG -> CompanyInfoViewHolder(ListCompanyInfoReviewAvgBinding.inflate(LayoutInflater.from(context), parent, false))
+            COMPANY_REVIEW -> CompanyInfoViewHolder(ListCompanyInfoReviewBinding.inflate(LayoutInflater.from(context), parent, false))
+            COMPANY_CATEGORY -> CompanyInfoViewHolder(ListCompanyInfoCategoryBinding.inflate(LayoutInflater.from(context), parent, false))
+            COMPANY_MAP -> CompanyInfoViewHolder(ListCompanyInfoMapBinding.inflate(LayoutInflater.from(context), parent, false))
 
             else -> CompanyInfoViewHolder(ListCompanyInfoCompanyBinding.inflate(LayoutInflater.from(context), parent, false))
         }
@@ -45,7 +45,7 @@ class CompanyInfoRecyclerAdapter(data: ArrayList<CompanyInfo>):
     private fun bind(item: CompanyInfo, mBinding: ViewBinding) {
 
         when(item.type) {
-            TYPE_COMPANY -> {
+            COMPANY_COMPANY -> {
                 item as Company
                 mBinding as ListCompanyInfoCompanyBinding
                 mBinding.txtCompanyName.text = item.name
@@ -68,19 +68,19 @@ class CompanyInfoRecyclerAdapter(data: ArrayList<CompanyInfo>):
                     mBinding.txtCompanyLesson.setTextColor(context.resources.getColor(R.color.red))
                 }
             }
-            TYPE_TEXT -> {
+            COMPANY_TEXT -> {
                 item as CompanyInfoText
                 mBinding as ListCompanyInfoTextBinding
                 mBinding.txtCompanyInfoTxt.text = item.name
                 mBinding.txtCompanyInfo.text = item.desc
             }
-            TYPE_IMG -> {
+            COMPANY_IMG -> {
                 item as CompanyInfoImg
                 mBinding as ListCompanyInfoImgBinding
                 mBinding.txtCompanyInfoName.text = item.name
                 mBinding.imgCompanyInfo.setImageResource(item.img)
             }
-            TYPE_CAREER -> {
+            COMPANY_CAREER -> {
                 item as CompanyInfoCareer
                 mBinding as ListCompanyInfoCareerBinding
                 mBinding.txtCareerName.text = item.name
@@ -88,14 +88,14 @@ class CompanyInfoRecyclerAdapter(data: ArrayList<CompanyInfo>):
                 mBinding.txtCareerRank.text = item.rank
                 mBinding.txtCareerDetail.text = item.desc
             }
-            TYPE_REVIEW_AVG -> {
+            COMPANY_REVIEW_AVG -> {
                 item as CompanyInfoReviewAvg
                 mBinding as ListCompanyInfoReviewAvgBinding
                 mBinding.txtCompanyInfoReviewCnt.text = item.name
                 mBinding.txtCompanyReviewAvg.text = DecimalFormat("#.##").format(item.rating).toString()
                 mBinding.ratingCompanyInfoReviewAvg.rating = item.rating
             }
-            TYPE_REVIEW -> {
+            COMPANY_REVIEW -> {
                 item as CompanyInfoReview
                 mBinding as ListCompanyInfoReviewBinding
                 mBinding.txtCompanyInfoReviewTitle.text = item.name
@@ -104,14 +104,14 @@ class CompanyInfoRecyclerAdapter(data: ArrayList<CompanyInfo>):
                 mBinding.txtCompanyInfoReviewBody.text = item.desc
                 mBinding.txtCompanyInfoReviewDate.text = item.date
             }
-            TYPE_CATEGORY -> {
+            COMPANY_CATEGORY -> {
                 item as CompanyInfoCategory
                 mBinding as ListCompanyInfoCategoryBinding
                 mBinding.btnCategory1.text = item.name
                 mBinding.btnCategory2.text = item.name2
                 mBinding.btnCategory3.text = item.name3
             }
-            TYPE_MAP -> {
+            COMPANY_MAP -> {
                 item as CompanyInfoMap
                 mBinding as ListCompanyInfoMapBinding
                 mBinding.imgCompanyMap.setImageResource(item.img)

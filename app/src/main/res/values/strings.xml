@@ -7,6 +7,9 @@
     <string name="button_ok">확인</string>
     <string name="button_remove">삭제</string>
     <string name="button_edit">수정</string>
+    <string name="button_next">다음</string>
+    <string name="button_exit">닫기</string>
+    <string name="button_no">취소</string>
 
     <!-- 홈 / fragment_home -->
     <string name="home_category1">레슨</string>
@@ -41,13 +44,11 @@
     <string name="company_category">카테고리</string>
     <string name="company_map">위치</string>
 
-
     <!-- 업체 상세 강사 소개 / list_company_info_career -->
     <string name="company_career_img_description">강사 이미지</string>
     <string name="company_career_name">성함</string>
     <string name="company_career_rank">직급</string>
     <string name="company_career_career">커리어</string>
-
 
     <string name="company_review_desc">리뷰 작성은 마이 페이지에서 가능합니다.</string>
 
@@ -72,7 +73,6 @@
     <string name="login_space">|</string>
     <string name="login_guest">비회원으로 둘러볼게요</string>
     <string name="login_site">업체 전용 사이트로 이용할래요</string>
-
     <string name="register">회원 가입</string>
 
     <!-- 회원가입 / activity_register -->
@@ -83,7 +83,6 @@
     <string name="register_pw">비밀번호</string>
     <string name="register_pw_hint">숫자, 영어, 특수문자 포함 8자 이상</string>
     <string name="register_pw_check">비밀번호 확인</string>
-    <string name="register_ok">다음</string>
     <string name="register_check_validate">중복 확인</string>
 
     <!-- 환경설정 / activity_setting -->
@@ -92,7 +91,7 @@
     <!-- 공지사항 / activity_info -->
     <string name="notice_title">공지 사항</string>
 
-    <!-- 약관 및 정책 / activity_info -->
+    <!-- 약관 및 정책 / activity_law -->
     <string name="law_title">약관 및 정책</string>
 
     <!-- 포인트 상점 / activity_point -->
@@ -107,7 +106,14 @@
 
     <!-- 팝업 광고 / dial_pop_up_ad -->
     <string name="pop_up_title">일주일 동안 보지 않기</string>
-    <string name="pop_up_exit">닫기</string>
+
+    <!-- 회원 탈퇴 / dial_delete -->
+    <string name="delete_body">정말 계정을 탈퇴하시겠습니까?계정을 탈퇴 하시면 모든 계정 정보가 삭제 되며 복구가 불가능 합니다.</string>
+    <string name="delete_yes">회원 탈퇴</string>
+
+    <!-- 로그 아웃 / dial_log_out -->
+    <string name="log_out_body">정말 로그 아웃 하시겠습니까?</string>
+
 
     <dimen name="font_size_tab">9sp</dimen>
     <dimen name="font_size_10">10sp</dimen>
@@ -166,6 +172,8 @@
     <dimen name="height_90">90dp</dimen>
     <dimen name="height_115">115dp</dimen>
     <dimen name="height_143">143dp</dimen>
+
+    <dimen name="corner_10">10dp</dimen>
 
     <drawable name="review_default">@drawable/img_default_my</drawable>
 
