@@ -103,7 +103,7 @@
                 android:textSize="@dimen/font_size_14"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="5000000P"
+                android:text="5,000,000P"
                 android:textColor="@color/black"
                 android:layout_marginStart="@dimen/margin_left_8"
                 android:fontFamily="@font/point_font"

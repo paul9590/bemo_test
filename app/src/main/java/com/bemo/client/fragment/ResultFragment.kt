@@ -71,18 +71,14 @@ class ResultFragment : Fragment() {
 
     private fun getResultList(): ArrayList<Company> {
         val list = ArrayList<Company>()
-        repeat(9) {
-            list.add(Company(
-                name = "업체 이름",
-                img = R.drawable.img_default_company,
-                isPremium = true,
-                favorite = true,
-                address = "경기도 남양주시 도농동",
-                target = "10대",
-                distance = "1km",
-                shuttle = true
-            ))
-        }
+
+        list.add(Company("송수학 학원", R.drawable.img_place1, true, true, "경기도 남양주시 도농동", "10대", distance = "1km", shuttle = true))
+        list.add(Company("구주이베 학원", R.drawable.img_place2, true, true, "경기도 남양주시 다산동", "10대", distance = "1km", shuttle = true))
+        list.add(Company("윙 스피킹 강남", R.drawable.img_place3, true, true, "경기도 구리시 벌말로", "10대", distance = "1km", shuttle = true))
+        list.add(Company("BIS어학원 서초 캠퍼스", R.drawable.img_place4, true, true, "경기도 남양주시 평내호평동", "10대", distance = "1km", shuttle = true))
+        list.add(Company("이안어학원 서초브랜치", R.drawable.img_lesson4, true, true, "경기도 의정부시 의정부 1동", "10대", distance = "1km", shuttle = true))
+        list.add(Company("와이즈만 영재교육 서초센터", R.drawable.img_lesson6, true, true, "경기도 의정부시 녹양동", "10대", distance = "1km", shuttle = true))
+        list.add(Company("생각하는 황서 서초 학원", R.drawable.img_lesson1, true, true, "경기도 동두천시 벌말로", "10대", distance = "1km", shuttle = true))
         list.add(Company())
         return list
     }

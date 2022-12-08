@@ -17,7 +17,7 @@
     <ImageView
         android:id="@+id/imgLogo"
         android:layout_width="0dp"
-        android:layout_height="0dp"
+        android:layout_height="40dp"
         android:contentDescription="@string/home_logo_description"
         android:src="@drawable/img_default_logo"
         app:layout_constraintBottom_toTopOf="@id/guideTop"
@@ -40,26 +40,6 @@
             android:layout_marginTop="1dp"
             android:orientation="vertical">
 
-            <ImageView
-                android:layout_width="50dp"
-                android:layout_height="20dp"
-                android:background="@drawable/img_lesson"
-                android:id="@+id/imgCategory1"
-                android:layout_marginStart="@dimen/margin_left_20"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintLeft_toLeftOf="parent"/>
-
-            <TextView
-                android:layout_marginLeft="@dimen/margin_left_38"
-                android:layout_width="0dp"
-                android:layout_height="1dp"
-                android:layout_marginEnd="@dimen/margin_left_20"
-                app:layout_constraintLeft_toLeftOf="@id/imgCategory1"
-                app:layout_constraintRight_toRightOf="parent"
-                app:layout_constraintTop_toTopOf="@id/imgCategory1"
-                app:layout_constraintBottom_toBottomOf="@id/imgCategory1"
-                android:background="@color/blue"/>
-
             <androidx.recyclerview.widget.RecyclerView
                 android:layout_marginLeft="@dimen/margin_left_24"
                 android:layout_marginRight="@dimen/margin_left_24"
@@ -70,28 +50,30 @@
                 android:layout_marginTop="@dimen/margin_top_8"
                 app:layout_constraintLeft_toLeftOf="parent"
                 app:layout_constraintRight_toRightOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/imgCategory1"/>
+                app:layout_constraintTop_toTopOf="parent"/>
 
-            <ImageView
-                android:layout_width="50dp"
-                android:layout_height="20dp"
-                android:background="@drawable/img_place"
+            <TextView
+                android:textSize="@dimen/font_size_14"
+                android:id="@+id/txtCategory2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/margin_top_8"
-                android:layout_marginStart="@dimen/margin_left_20"
-                android:id="@+id/imgCategory2"
+                android:text="시설"
+                android:fontFamily="@font/category_font"
+                android:textColor="#CC2552D8"
                 app:layout_constraintTop_toBottomOf="@id/viewCategory1"
-                app:layout_constraintLeft_toLeftOf="parent"/>
+                app:layout_constraintLeft_toLeftOf="@id/viewCategory2"/>
 
             <TextView
                 android:layout_width="0dp"
                 android:layout_height="1dp"
+                android:background="#CC2552D8"
                 android:layout_marginEnd="@dimen/margin_left_20"
-                app:layout_constraintLeft_toLeftOf="@id/imgCategory2"
-                app:layout_constraintRight_toRightOf="parent"
-                android:layout_marginLeft="@dimen/margin_left_38"
-                app:layout_constraintTop_toTopOf="@id/imgCategory2"
-                app:layout_constraintBottom_toBottomOf="@id/imgCategory2"
-                android:background="@color/blue"/>
+                app:layout_constraintLeft_toRightOf="@id/txtCategory2"
+                android:layout_marginLeft="@dimen/margin_left_20"
+                app:layout_constraintRight_toRightOf="@id/viewCategory2"
+                app:layout_constraintTop_toTopOf="@id/txtCategory2"
+                app:layout_constraintBottom_toBottomOf="@id/txtCategory2"/>
 
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/viewCategory2"
@@ -103,7 +85,7 @@
                 android:columnCount="4"
                 app:layout_constraintLeft_toLeftOf="parent"
                 app:layout_constraintRight_toRightOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/imgCategory2"/>
+                app:layout_constraintTop_toBottomOf="@id/txtCategory2"/>
 
             <ImageView
                 android:id="@+id/imgAD"

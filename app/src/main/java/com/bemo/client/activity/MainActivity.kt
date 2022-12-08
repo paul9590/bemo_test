@@ -21,7 +21,7 @@ class MainActivity : AppCompatActivity() {
         setContentView(mBinding.root)
 
         setTab()
-        popUpDial()
+        //popUpDial()
     }
 
     private fun popUpDial() {

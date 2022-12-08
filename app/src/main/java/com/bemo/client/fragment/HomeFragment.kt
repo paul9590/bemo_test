@@ -65,6 +65,7 @@ class HomeFragment : Fragment() {
         placeList.add(HomeCategory(R.drawable.img_place2, "유치원"))
         placeList.add(HomeCategory(R.drawable.img_place3, "휘트니스"))
         placeList.add(HomeCategory(R.drawable.img_place4, "레저"))
+        placeList.add(HomeCategory(R.drawable.img_place5, "도서관"))
         mBinding.viewCategory2.adapter = CategoryRecyclerAdapter(placeList)
         mBinding.viewCategory2.layoutManager = GridLayoutManager(activity, 4)
     }
