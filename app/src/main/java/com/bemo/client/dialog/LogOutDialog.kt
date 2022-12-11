@@ -6,10 +6,8 @@ import android.graphics.Color
 import android.graphics.drawable.ColorDrawable
 import android.view.LayoutInflater
 import android.view.Window
-import com.bemo.client.CompanyInfoReview
 import com.bemo.client.InfoIntent
 import com.bemo.client.databinding.DialLogOutBinding
-import com.bemo.client.databinding.DialReviewBinding
 
 class LogOutDialog(val context: Context) {
     private val dial = Dialog(context)
@@ -44,7 +42,6 @@ class LogOutDialog(val context: Context) {
         val y = (context.resources.displayMetrics.heightPixels * 0.25).toInt()
 
         dial.window?.setLayout(x, y)
-
         dial.window!!.setBackgroundDrawable(ColorDrawable(Color.TRANSPARENT))
     }
 }

@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
@@ -21,7 +20,6 @@
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-
     <ImageButton
         android:id="@+id/imbBack"
         style="@style/btn_back"
@@ -29,42 +27,41 @@
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-
     <TextView
         android:id="@+id/txtPointTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="보유 포인트"
-        android:textSize="@dimen/font_size_14"
+        android:layout_marginStart="@dimen/margin_left_24"
         android:fontFamily="@font/category_font"
-        app:layout_constraintTop_toBottomOf="@id/guideTop"
-        app:layout_constraintLeft_toLeftOf="parent"
+        android:text="@string/point_has"
+        android:textSize="@dimen/font_size_14"
         app:layout_constraintBottom_toBottomOf="@id/btnPointDetail"
-        android:layout_marginStart="@dimen/margin_left_24"/>
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/guideTop" />
 
     <TextView
-        android:textSize="@dimen/font_size_14"
         android:id="@+id/txtPoint"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_left_8"
+        android:fontFamily="@font/point_font"
         android:text="1000P"
         android:textColor="@color/black"
-        android:fontFamily="@font/point_font"
-        app:layout_constraintTop_toBottomOf="@id/guideTop"
-        app:layout_constraintLeft_toRightOf="@id/txtPointTitle"
+        android:textSize="@dimen/font_size_14"
         app:layout_constraintBottom_toBottomOf="@id/btnPointDetail"
-        android:layout_marginStart="@dimen/margin_left_8"/>
+        app:layout_constraintLeft_toRightOf="@id/txtPointTitle"
+        app:layout_constraintTop_toBottomOf="@id/guideTop" />
 
     <Button
+        android:id="@+id/btnPointDetail"
         android:layout_width="50dp"
         android:layout_height="30dp"
-        android:id="@+id/btnPointDetail"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/guideTop"
         android:layout_marginEnd="@dimen/margin_left_24"
-        android:text="내역"
+        android:background="@drawable/shape_btn"
+        android:text="@string/point_history"
         android:textColor="@color/white"
-        android:background="@drawable/shape_btn" />
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/guideTop" />
 
     <com.google.android.material.tabs.TabLayout
         android:id="@+id/tabPoint"
@@ -88,6 +85,6 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/tabPoint"/>
+        app:layout_constraintTop_toBottomOf="@id/tabPoint" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

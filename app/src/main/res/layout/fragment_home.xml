@@ -40,51 +40,51 @@
             android:orientation="vertical">
 
             <androidx.recyclerview.widget.RecyclerView
-                android:layout_marginLeft="@dimen/margin_left_24"
-                android:layout_marginRight="@dimen/margin_left_24"
                 android:id="@+id/viewCategory1"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:columnCount="4"
+                android:layout_marginLeft="@dimen/margin_left_24"
                 android:layout_marginTop="@dimen/margin_top_8"
+                android:layout_marginRight="@dimen/margin_left_24"
+                android:columnCount="4"
                 app:layout_constraintLeft_toLeftOf="parent"
                 app:layout_constraintRight_toRightOf="parent"
-                app:layout_constraintTop_toTopOf="parent"/>
+                app:layout_constraintTop_toTopOf="parent" />
 
             <TextView
-                android:textSize="@dimen/font_size_14"
                 android:id="@+id/txtCategory2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/margin_top_8"
-                android:text="시설"
                 android:fontFamily="@font/category_font"
+                android:text="@string/home_category2"
                 android:textColor="#CC2552D8"
-                app:layout_constraintTop_toBottomOf="@id/viewCategory1"
-                app:layout_constraintLeft_toLeftOf="@id/viewCategory2"/>
+                android:textSize="@dimen/font_size_14"
+                app:layout_constraintLeft_toLeftOf="@id/viewCategory2"
+                app:layout_constraintTop_toBottomOf="@id/viewCategory1" />
 
             <TextView
                 android:layout_width="0dp"
                 android:layout_height="1dp"
-                android:background="#CC2552D8"
+                android:layout_marginStart="@dimen/margin_left_20"
                 android:layout_marginEnd="@dimen/margin_left_20"
+                android:background="#CC2552D8"
+                app:layout_constraintBottom_toBottomOf="@id/txtCategory2"
                 app:layout_constraintLeft_toRightOf="@id/txtCategory2"
-                android:layout_marginLeft="@dimen/margin_left_20"
                 app:layout_constraintRight_toRightOf="@id/viewCategory2"
-                app:layout_constraintTop_toTopOf="@id/txtCategory2"
-                app:layout_constraintBottom_toBottomOf="@id/txtCategory2"/>
+                app:layout_constraintTop_toTopOf="@id/txtCategory2" />
 
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/viewCategory2"
-                android:layout_marginLeft="@dimen/margin_left_24"
-                android:layout_marginRight="@dimen/margin_left_24"
-                android:layout_marginTop="@dimen/margin_top_8"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin_left_24"
+                android:layout_marginTop="@dimen/margin_top_8"
+                android:layout_marginRight="@dimen/margin_left_24"
                 android:columnCount="4"
                 app:layout_constraintLeft_toLeftOf="parent"
                 app:layout_constraintRight_toRightOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/txtCategory2"/>
+                app:layout_constraintTop_toBottomOf="@id/txtCategory2" />
 
             <ImageView
                 android:id="@+id/imgAD"
@@ -168,7 +168,7 @@
                 app:layout_constraintTop_toBottomOf="@id/btnPeek1">
 
                 <TextView
-                    android:id="@+id/txthome1"
+                    android:id="@+id/txtHome1"
                     style="@style/text_black_12"
                     android:layout_marginStart="@dimen/margin_left_20"
                     android:layout_marginTop="@dimen/margin_top_24"
@@ -187,9 +187,9 @@
                     android:paddingStart="@dimen/margin_left_12"
                     android:paddingEnd="0dp"
                     android:textSize="@dimen/font_size_12"
-                    app:layout_constraintLeft_toLeftOf="@id/txthome1"
+                    app:layout_constraintLeft_toLeftOf="@id/txtHome1"
                     app:layout_constraintRight_toLeftOf="@id/btnLocate"
-                    app:layout_constraintTop_toBottomOf="@id/txthome1" />
+                    app:layout_constraintTop_toBottomOf="@id/txtHome1" />
 
                 <Button
                     android:id="@+id/btnLocate"
@@ -204,11 +204,11 @@
                     app:layout_constraintTop_toTopOf="@id/editLocate" />
 
                 <TextView
-                    android:id="@+id/txthome2"
+                    android:id="@+id/txtHome2"
                     style="@style/text_black_12"
                     android:layout_marginTop="@dimen/margin_top_24"
                     android:text="@string/home_area"
-                    app:layout_constraintLeft_toLeftOf="@id/txthome1"
+                    app:layout_constraintLeft_toLeftOf="@id/txtHome1"
                     app:layout_constraintTop_toBottomOf="@id/editLocate" />
 
                 <EditText
@@ -223,16 +223,16 @@
                     android:paddingStart="@dimen/margin_left_12"
                     android:paddingEnd="0dp"
                     android:textSize="@dimen/font_size_12"
-                    app:layout_constraintLeft_toLeftOf="@id/txthome1"
+                    app:layout_constraintLeft_toLeftOf="@id/txtHome1"
                     app:layout_constraintRight_toRightOf="parent"
-                    app:layout_constraintTop_toBottomOf="@id/txthome2" />
+                    app:layout_constraintTop_toBottomOf="@id/txtHome2" />
 
                 <TextView
-                    android:id="@+id/txthome3"
+                    android:id="@+id/txtHome3"
                     style="@style/text_black_12"
                     android:layout_marginTop="@dimen/margin_top_24"
                     android:text="@string/home_age"
-                    app:layout_constraintLeft_toLeftOf="@id/txthome1"
+                    app:layout_constraintLeft_toLeftOf="@id/txtHome1"
                     app:layout_constraintTop_toBottomOf="@id/editArea" />
 
                 <EditText
@@ -247,9 +247,9 @@
                     android:paddingStart="@dimen/margin_left_12"
                     android:paddingEnd="0dp"
                     android:textSize="@dimen/font_size_12"
-                    app:layout_constraintLeft_toLeftOf="@id/txthome1"
+                    app:layout_constraintLeft_toLeftOf="@id/txtHome1"
                     app:layout_constraintRight_toRightOf="parent"
-                    app:layout_constraintTop_toBottomOf="@id/txthome3" />
+                    app:layout_constraintTop_toBottomOf="@id/txtHome3" />
 
             </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -261,5 +261,7 @@
                 app:layout_constraintTop_toBottomOf="@id/viewHome" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
+
     </ScrollView>
+
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,18 +1,12 @@
 package com.bemo.client.recycler
 
-import android.app.Dialog
 import android.content.Context
-import android.graphics.Color
-import android.graphics.drawable.ColorDrawable
 import android.view.LayoutInflater
 import android.view.ViewGroup
-import android.view.Window
 import androidx.recyclerview.widget.RecyclerView
 import com.bemo.client.INTENT_LOGOUT
 import com.bemo.client.INTENT_DELETE
 import com.bemo.client.InfoIntent
-import com.bemo.client.databinding.DialDeleteBinding
-import com.bemo.client.databinding.DialLogOutBinding
 import com.bemo.client.databinding.ListTextBinding
 import com.bemo.client.dialog.DeleteDialog
 import com.bemo.client.dialog.LogOutDialog

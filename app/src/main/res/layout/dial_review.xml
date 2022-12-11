@@ -39,7 +39,6 @@
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toBottomOf="@id/txtReview1" />
 
-
     <EditText
         android:id="@+id/editReview"
         style="@style/text_black_12"
@@ -52,6 +51,7 @@
         android:background="@drawable/shape_round2"
         android:gravity="top"
         android:hint="@string/review_dialog_hint"
+        android:inputType="text"
         android:paddingLeft="@dimen/margin_left_16"
         android:paddingTop="@dimen/margin_top_12"
         android:paddingRight="@dimen/margin_left_16"
@@ -75,6 +75,5 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="@id/editReview"
         app:layout_constraintRight_toRightOf="@id/editReview" />
-
 
 </androidx.constraintlayout.widget.ConstraintLayout>

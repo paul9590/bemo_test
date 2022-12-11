@@ -55,21 +55,20 @@
             android:layout_marginBottom="@dimen/margin_top_16"
             android:gravity="start"
             android:maxLines="3"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintLeft_toLeftOf="@id/imgCompanyInfoReview"
             app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/imgCompanyInfoReview"
-            app:layout_constraintBottom_toBottomOf="parent"/>
-
+            app:layout_constraintTop_toBottomOf="@id/imgCompanyInfoReview" />
 
         <ImageButton
             android:layout_width="20dp"
             android:layout_height="20dp"
+            android:layout_marginTop="@dimen/margin_top_8"
+            android:layout_marginEnd="@dimen/margin_left_38"
             android:background="@drawable/imb_report"
             app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            android:layout_marginTop="@dimen/margin_top_8"
-            android:layout_marginRight="@dimen/margin_left_38"/>
-
+            app:layout_constraintTop_toTopOf="parent" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
+
 </androidx.cardview.widget.CardView>

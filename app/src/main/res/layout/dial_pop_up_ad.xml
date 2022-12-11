@@ -1,75 +1,73 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     app:cardCornerRadius="10dp">
-
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        >
+        android:layout_height="match_parent">
 
         <Button
             android:id="@+id/btnExit"
             android:layout_width="16dp"
             android:layout_height="16dp"
-            android:backgroundTint="@color/black"
+            android:layout_margin="@dimen/margin_left_16"
             android:background="@drawable/img_exit2"
-            app:layout_constraintTop_toTopOf="parent"
+            android:backgroundTint="@color/black"
             app:layout_constraintRight_toRightOf="parent"
-            android:layout_margin="@dimen/margin_left_16"/>
+            app:layout_constraintTop_toTopOf="parent" />
 
         <ImageView
             android:id="@+id/imgAD"
             android:layout_width="0dp"
             android:layout_height="0dp"
+            app:layout_constraintBottom_toTopOf="@id/viewPopUp"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintBottom_toTopOf="@id/viewPopUp"/>
+            app:layout_constraintTop_toTopOf="parent" />
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/viewPopUp"
             android:layout_width="0dp"
             android:layout_height="40dp"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintBottom_toBottomOf="parent">
+            app:layout_constraintRight_toRightOf="parent">
 
-        <CheckBox
-            android:id="@+id/chkPopUp"
-            android:scaleX="0.7"
-            android:scaleY="0.7"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            android:buttonTint="@color/light_gray3"
-            android:layout_marginLeft="@dimen/margin_left_12"
-            app:layout_constraintBottom_toBottomOf="parent"/>
+            <CheckBox
+                android:id="@+id/chkPopUp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_left_12"
+                android:buttonTint="@color/light_gray3"
+                android:scaleX="0.7"
+                android:scaleY="0.7"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textSize="10dp"
                 android:text="@string/pop_up_title"
                 android:textColor="@color/light_gray3"
+                android:textSize="10sp"
+                app:layout_constraintBottom_toBottomOf="@id/chkPopUp"
                 app:layout_constraintLeft_toRightOf="@id/chkPopUp"
-                app:layout_constraintTop_toTopOf="@id/chkPopUp"
-                app:layout_constraintBottom_toBottomOf="@id/chkPopUp"/>
+                app:layout_constraintTop_toTopOf="@id/chkPopUp" />
 
             <TextView
-                android:textSize="10dp"
+                android:id="@+id/txtExit"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                app:layout_constraintTop_toTopOf="parent"
+                android:layout_marginEnd="@dimen/margin_left_12"
+                android:text="@string/button_exit"
+                android:textSize="10sp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintRight_toRightOf="parent"
-                android:layout_marginRight="@dimen/margin_left_12"
-                android:id="@+id/txtExit"
-                android:text="@string/button_exit"/>
+                app:layout_constraintTop_toTopOf="parent" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 

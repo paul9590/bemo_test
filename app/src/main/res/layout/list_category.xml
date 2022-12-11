@@ -25,5 +25,4 @@
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toBottomOf="@id/imgCategory" />
 
-
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -13,9 +13,9 @@
             android:id="@+id/viewImg"
             android:layout_width="@dimen/height_90"
             android:layout_height="@dimen/height_90"
-            app:cardCornerRadius="@dimen/corner_10"
             android:layout_marginStart="@dimen/margin_left_20"
             android:layout_marginTop="@dimen/margin_top_20"
+            app:cardCornerRadius="@dimen/corner_10"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintTop_toTopOf="parent">
 
@@ -96,24 +96,23 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/margin_top_13"
             android:background="@drawable/shape_round"
+            android:fontFamily="@font/title_font"
             android:paddingLeft="10dp"
             android:paddingTop="4dp"
             android:paddingRight="10dp"
             android:paddingBottom="4dp"
             android:textSize="@dimen/font_size_12"
-            android:fontFamily="@font/title_font"
             app:layout_constraintLeft_toLeftOf="@id/txtCompany1"
             app:layout_constraintTop_toBottomOf="@id/txtCompanyDistance" />
 
-
         <TextView
-            android:fontFamily="@font/title_font"
             android:id="@+id/txtCompanyLesson"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/margin_top_13"
             android:layout_marginStart="@dimen/margin_left_12"
+            android:layout_marginTop="@dimen/margin_top_13"
             android:background="@drawable/shape_round"
+            android:fontFamily="@font/title_font"
             android:paddingLeft="10dp"
             android:paddingTop="4dp"
             android:paddingRight="10dp"
@@ -122,7 +121,6 @@
             app:layout_constraintLeft_toRightOf="@id/txtCompanyShuttle"
             app:layout_constraintRight_toLeftOf="@id/btnCompanyPhone"
             app:layout_constraintTop_toBottomOf="@id/txtCompanyDistance" />
-
 
         <Button
             android:id="@+id/btnCompanyMsg"
@@ -144,4 +142,5 @@
             app:layout_constraintTop_toBottomOf="@id/btnCompanyMsg" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
+
 </androidx.cardview.widget.CardView>

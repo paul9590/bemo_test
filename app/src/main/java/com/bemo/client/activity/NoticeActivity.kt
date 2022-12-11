@@ -21,8 +21,6 @@ class NoticeActivity: AppCompatActivity() {
         setContentView(mBinding.root)
         mBinding.txtTitle.text = getString(R.string.notice_title)
 
-
-
         mBinding.viewNotice.adapter = mAdapter
         mBinding.viewNotice.layoutManager = LinearLayoutManager(applicationContext, RecyclerView.VERTICAL, false)
 

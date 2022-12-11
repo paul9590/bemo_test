@@ -3,7 +3,6 @@ package com.bemo.client.recycler
 import android.content.Context
 import android.view.LayoutInflater
 import android.view.ViewGroup
-import android.widget.Toast
 import androidx.recyclerview.widget.RecyclerView
 import com.bemo.client.Info
 import com.bemo.client.databinding.ListTextBinding

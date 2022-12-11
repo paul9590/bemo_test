@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
+    android:layout_height="match_parent">
 
     <ImageButton
         android:id="@+id/btnExit"
@@ -13,43 +13,42 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
+        android:id="@+id/txtKaKao"
         style="@style/text_black_16"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:layout_constraintTop_toTopOf="parent"
-        android:id="@+id/txtKaKao"
+        android:text="@string/customer_service_kakao"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        android:text="@string/customer_service_kakao"/>
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        style="@style/text_black_16"
         android:id="@+id/txtEmail"
+        style="@style/text_black_16"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@id/txtKaKao"
+        android:text="@string/customer_service_email_text"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        android:text="@string/customer_service_email_text"/>
-
+        app:layout_constraintTop_toBottomOf="@id/txtKaKao" />
 
     <Button
-        android:layout_width="@dimen/height_20"
-        android:layout_height="@dimen/height_20"
         android:id="@+id/btnKakao"
-        app:layout_constraintLeft_toRightOf="@id/txtKaKao"
-        app:layout_constraintTop_toTopOf="@id/txtKaKao"
-        app:layout_constraintBottom_toBottomOf="@id/txtKaKao"
-        android:background="@drawable/img_msg"/>
-
-    <Button
         android:layout_width="@dimen/height_20"
         android:layout_height="@dimen/height_20"
+        android:background="@drawable/img_msg"
+        app:layout_constraintBottom_toBottomOf="@id/txtKaKao"
+        app:layout_constraintLeft_toRightOf="@id/txtKaKao"
+        app:layout_constraintTop_toTopOf="@id/txtKaKao" />
+
+    <Button
         android:id="@+id/btnEmail"
-        app:layout_constraintLeft_toRightOf="@id/txtEmail"
-        app:layout_constraintTop_toTopOf="@id/txtEmail"
+        android:layout_width="@dimen/height_20"
+        android:layout_height="@dimen/height_20"
+        android:background="@drawable/img_msg"
         app:layout_constraintBottom_toBottomOf="@id/txtEmail"
-        android:background="@drawable/img_msg"/>
+        app:layout_constraintLeft_toRightOf="@id/txtEmail"
+        app:layout_constraintTop_toTopOf="@id/txtEmail" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

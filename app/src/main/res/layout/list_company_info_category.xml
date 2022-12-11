@@ -45,4 +45,5 @@
             app:layout_constraintTop_toTopOf="@id/btnCategory2" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
+
 </androidx.cardview.widget.CardView>

@@ -26,7 +26,6 @@ class DeleteDialog(val context: Context) {
         }
     }
 
-
     fun show() {
         initDial()
         dial.show()

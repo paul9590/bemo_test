@@ -34,10 +34,10 @@
         android:drawableStart="@drawable/img_login_id"
         android:drawablePadding="@dimen/margin_left_12"
         android:hint="@string/login_id"
+        android:inputType="text"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toBottomOf="@id/guideTop" />
-
 
     <EditText
         android:id="@+id/editLoginPw"
@@ -48,6 +48,7 @@
         android:drawableStart="@drawable/img_login_pw"
         android:drawablePadding="@dimen/margin_left_12"
         android:hint="@string/login_pw"
+        android:inputType="text"
         app:layout_constraintLeft_toLeftOf="@id/editLoginId"
         app:layout_constraintRight_toRightOf="@id/editLoginId"
         app:layout_constraintTop_toBottomOf="@id/editLoginId" />
@@ -137,7 +138,6 @@
         app:layout_constraintRight_toLeftOf="@id/txtRegister"
         app:layout_constraintTop_toTopOf="@id/txtFindPw" />
 
-
     <TextView
         android:id="@+id/txtGuestLogin"
         style="@style/text_black_12"
@@ -155,6 +155,5 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent" />
-
 
 </androidx.constraintlayout.widget.ConstraintLayout>

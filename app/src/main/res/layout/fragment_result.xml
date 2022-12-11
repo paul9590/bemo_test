@@ -27,7 +27,7 @@
         style="@style/btn_back"
         app:layout_constraintBottom_toTopOf="@id/guideTop"
         app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintTop_toTopOf="parent"/>
+        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/btnPeek1"
@@ -77,8 +77,8 @@
         android:id="@+id/viewCompany"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:layout_marginTop="@dimen/margin_top_10"
         android:layout_marginStart="@dimen/margin_left_12"
+        android:layout_marginTop="@dimen/margin_top_10"
         android:layout_marginEnd="@dimen/margin_left_12"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"

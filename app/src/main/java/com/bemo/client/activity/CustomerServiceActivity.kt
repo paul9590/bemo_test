@@ -10,7 +10,6 @@ import com.bemo.client.databinding.ActivityCustomerServiceBinding
 class CustomerServiceActivity: AppCompatActivity() {
     private lateinit var mBinding : ActivityCustomerServiceBinding
 
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         mBinding = ActivityCustomerServiceBinding.inflate(layoutInflater)
