@@ -38,6 +38,6 @@ class SettingActivity : AppCompatActivity(){
         mList += InfoIntent("제휴 및 광고 문의", Intent(applicationContext, SettingActivity :: class.java))
         mList += InfoIntent("약관 및 정책", Intent(applicationContext, LawActivity :: class.java))
         mList += InfoIntent("로그 아웃", Intent(applicationContext, LoginActivity :: class.java), flag = INTENT_LOGOUT)
-        mList += InfoIntent("계정 탈퇴 및 삭제", Intent(applicationContext, SettingActivity :: class.java), flag = INTENT_DELETE)
+        mList += InfoIntent("계정 탈퇴 및 삭제", Intent(applicationContext, LoginActivity :: class.java), flag = INTENT_DELETE)
     }
 }

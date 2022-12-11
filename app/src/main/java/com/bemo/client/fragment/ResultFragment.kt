@@ -51,7 +51,7 @@ class ResultFragment : Fragment() {
         setAdapter()
 
         mBinding.imbBack.setOnClickListener {
-            (activity as MainActivity).setHome()
+            (activity as MainActivity).viewHome()
         }
 
         return mBinding.root

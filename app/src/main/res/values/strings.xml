@@ -114,6 +114,11 @@
     <!-- 로그 아웃 / dial_log_out -->
     <string name="log_out_body">정말 로그 아웃 하시겠습니까?</string>
 
+    <!-- 문의 하기 / dial_contact -->
+    <string name="contact_title">수강 문의</string>
+
+    <!-- 스플래시 / activity_splash -->
+    <string name="splash_title">배우고 싶을땐 배움의 모든 것</string>
 
     <dimen name="font_size_tab">9sp</dimen>
     <dimen name="font_size_10">10sp</dimen>

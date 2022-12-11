@@ -58,7 +58,7 @@
             android:layout_marginBottom="@dimen/margin_top_20"
             android:background="@drawable/shape_btn4"
             android:text="@string/button_remove"
-            android:textColor="@color/gray2"
+            android:textColor="@color/white"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintLeft_toLeftOf="@id/txtMyReviewCompany"
             app:layout_constraintRight_toLeftOf="@id/btnEdit" />

@@ -21,7 +21,7 @@ class CustomerServiceActivity: AppCompatActivity() {
         mBinding.btnEmail.setOnClickListener {
             val email = Intent(Intent.ACTION_SEND)
             email.type = "plain/text"
-            email.putExtra(Intent.EXTRA_EMAIL, arrayOf(getString(R.string.customer_service_email)))
+            email.putExtra(Intent.EXTRA_EMAIL, getString(R.string.customer_service_email))
             startActivity(email)
         }
         mBinding.btnExit.setOnClickListener {

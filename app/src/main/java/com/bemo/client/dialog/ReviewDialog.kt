@@ -16,10 +16,7 @@ class ReviewDialog(val context: Context) {
     constructor(context: Context, item: CompanyInfoReview) : this(context) {
         mBinding.ratingReview.rating = item.rating
         mBinding.editReview.setText(item.desc)
-    }
 
-    
-    init {
         mBinding.btnExit.setOnClickListener {
             dial.dismiss()
         }

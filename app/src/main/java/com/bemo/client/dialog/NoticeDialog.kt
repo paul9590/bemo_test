@@ -1,5 +1,6 @@
 package com.bemo.client.dialog
 
+import android.app.ActionBar.LayoutParams
 import android.app.Dialog
 import android.content.Context
 import android.graphics.Color
@@ -31,7 +32,8 @@ class NoticeDialog(val context: Context) {
 
     private fun initDial() {
         dial.requestWindowFeature(Window.FEATURE_NO_TITLE)
-        dial.window!!.setBackgroundDrawable(ColorDrawable(Color.TRANSPARENT))
         dial.setContentView(mBinding.root)
+        dial.window?.setLayout(LayoutParams.MATCH_PARENT, LayoutParams.MATCH_PARENT)
+        dial.window!!.setBackgroundDrawable(ColorDrawable(Color.TRANSPARENT))
     }
 }

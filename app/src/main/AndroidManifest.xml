@@ -22,7 +22,6 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
         <activity android:name=".activity.CompanyActivity"/>
         <activity android:name=".activity.ReviewActivity"/>
         <activity android:name=".activity.LoginActivity"/>
@@ -34,5 +33,4 @@
         <activity android:name=".activity.CustomerServiceActivity"/>
 
     </application>
-
 </manifest>

@@ -21,7 +21,7 @@ class MainActivity : AppCompatActivity() {
         setContentView(mBinding.root)
 
         setTab()
-        //popUpDial()
+        popUpDial()
     }
 
     private fun popUpDial() {
@@ -29,7 +29,6 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun setTab() {
-
         val adapter = ViewAdapter(supportFragmentManager)
         adapter.addList(HomeFragment())
         adapter.addList(ResultFragment())
@@ -63,7 +62,7 @@ class MainActivity : AppCompatActivity() {
         })
     }
 
-    fun setHome() {
+    fun viewHome() {
         mBinding.pagerMain.currentItem = 0
     }
 }

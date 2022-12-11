@@ -4,26 +4,28 @@ import android.app.Dialog
 import android.content.Context
 import android.graphics.Color
 import android.graphics.drawable.ColorDrawable
-import android.graphics.drawable.Drawable
 import android.view.LayoutInflater
 import android.view.Window
-import com.bemo.client.databinding.DialPopUpAdBinding
+import com.bemo.client.InfoIntent
+import com.bemo.client.databinding.DialDeleteBinding
 
-class PopUpDialog(val context: Context) {
+class DeleteDialog(val context: Context) {
     private val dial = Dialog(context)
-    private val mBinding: DialPopUpAdBinding = DialPopUpAdBinding.inflate(LayoutInflater.from(context))
+    private val mBinding: DialDeleteBinding = DialDeleteBinding.inflate(LayoutInflater.from(context))
 
-    constructor(context: Context, item: Drawable) : this(context) {
-        mBinding.imgAD.background = item
+    constructor(context: Context, item: InfoIntent) : this(context) {
+        mBinding.txtDeleteTitle.text = item.name
 
-        mBinding.txtExit.setOnClickListener {
+        mBinding.btnNo.setOnClickListener {
             dial.dismiss()
         }
 
-        mBinding.btnExit.setOnClickListener {
+        mBinding.btnYes.setOnClickListener {
+            context.startActivity(item.intent)
             dial.dismiss()
         }
     }
+
 
     fun show() {
         initDial()
@@ -38,10 +40,10 @@ class PopUpDialog(val context: Context) {
 
     private fun setSize() {
         val x = (context.resources.displayMetrics.widthPixels * 0.8).toInt()
-        val y = (context.resources.displayMetrics.heightPixels * 0.6).toInt()
+        val y = (context.resources.displayMetrics.heightPixels * 0.3).toInt()
 
         dial.window?.setLayout(x, y)
-        //dial.setCancelable(false)
+
         dial.window!!.setBackgroundDrawable(ColorDrawable(Color.TRANSPARENT))
     }
 }

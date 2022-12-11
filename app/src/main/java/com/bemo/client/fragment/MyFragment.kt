@@ -10,8 +10,8 @@ import com.bemo.client.activity.MainActivity
 import com.bemo.client.activity.PointActivity
 import com.bemo.client.activity.ReviewActivity
 import com.bemo.client.activity.SettingActivity
-import com.bemo.client.viewadapter.MyViewAdapter
 import com.bemo.client.databinding.FragmentMyBinding
+import com.bemo.client.viewadapter.ViewAdapter
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -48,7 +48,7 @@ class MyFragment : Fragment() {
         setTab()
 
         mBinding.imbBack.setOnClickListener {
-            (activity as MainActivity).setHome()
+            (activity as MainActivity).viewHome()
         }
 
         mBinding.btnReview.setOnClickListener {
@@ -96,7 +96,9 @@ class MyFragment : Fragment() {
 
         // 로그인 정보 불러오기
         mBinding.txtMy.text = "김종민님,\n안녕하세요!!"
-        val adapter = MyViewAdapter(childFragmentManager)
+        val adapter = ViewAdapter(childFragmentManager)
+        adapter.addList(LatestFragment())
+        adapter.addList(FavoriteFragment())
         mBinding.pagerMy.adapter = adapter
         mBinding.tabMy.setupWithViewPager(mBinding.pagerMy)
 

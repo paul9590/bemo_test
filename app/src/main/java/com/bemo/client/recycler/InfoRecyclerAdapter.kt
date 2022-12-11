@@ -14,6 +14,8 @@ import com.bemo.client.InfoIntent
 import com.bemo.client.databinding.DialDeleteBinding
 import com.bemo.client.databinding.DialLogOutBinding
 import com.bemo.client.databinding.ListTextBinding
+import com.bemo.client.dialog.DeleteDialog
+import com.bemo.client.dialog.LogOutDialog
 
 class InfoRecyclerAdapter(data: ArrayList<InfoIntent>) :
     RecyclerView.Adapter<InfoRecyclerAdapter.InfoViewHolder>() {
@@ -35,56 +37,17 @@ class InfoRecyclerAdapter(data: ArrayList<InfoIntent>) :
         holder.mBinding.root.setOnClickListener {
             when(item.flag) {
                 INTENT_LOGOUT -> {
-                    logOutDial(item)
+                    LogOutDialog(context, item).show()
                 }
 
                 INTENT_DELETE -> {
-                    deleteDial(item)
+                    DeleteDialog(context, item).show()
                 }
 
                 else -> {
                     context.startActivity(item.intent)
                 }
             }
-        }
-    }
-
-    private fun logOutDial(item: InfoIntent) {
-        val dial = Dialog(context)
-        val mBinding = DialLogOutBinding.inflate(LayoutInflater.from(context))
-        dial.requestWindowFeature(Window.FEATURE_NO_TITLE)
-        dial.setContentView(mBinding.root)
-        val x = (context.resources.displayMetrics.widthPixels * 0.8).toInt()
-        val y = (context.resources.displayMetrics.heightPixels * 0.25).toInt()
-        dial.window?.setLayout(x, y)
-        dial.window!!.setBackgroundDrawable(ColorDrawable(Color.TRANSPARENT))
-        dial.show()
-
-        mBinding.txtLogOutTitle.text = item.name
-        mBinding.btnNo.setOnClickListener {
-            dial.dismiss()
-        }
-        mBinding.btnYes.setOnClickListener {
-            context.startActivity(item.intent)
-        }
-    }
-
-    private fun deleteDial(item: InfoIntent) {
-        val dial = Dialog(context)
-        val mBinding = DialDeleteBinding.inflate(LayoutInflater.from(context))
-        dial.requestWindowFeature(Window.FEATURE_NO_TITLE)
-        dial.setContentView(mBinding.root)
-        val x = (context.resources.displayMetrics.widthPixels * 0.8).toInt()
-        val y = (context.resources.displayMetrics.heightPixels * 0.3).toInt()
-        dial.window?.setLayout(x, y)
-        dial.window!!.setBackgroundDrawable(ColorDrawable(Color.TRANSPARENT))
-        dial.show()
-        mBinding.txtDeleteTitle.text = item.name
-        mBinding.btnNo.setOnClickListener {
-            dial.dismiss()
-        }
-        mBinding.btnYes.setOnClickListener {
-            context.startActivity(item.intent)
         }
     }
 

@@ -4,23 +4,26 @@ import android.app.Dialog
 import android.content.Context
 import android.graphics.Color
 import android.graphics.drawable.ColorDrawable
-import android.graphics.drawable.Drawable
 import android.view.LayoutInflater
 import android.view.Window
-import com.bemo.client.databinding.DialPopUpAdBinding
+import com.bemo.client.CompanyInfoReview
+import com.bemo.client.InfoIntent
+import com.bemo.client.databinding.DialLogOutBinding
+import com.bemo.client.databinding.DialReviewBinding
 
-class PopUpDialog(val context: Context) {
+class LogOutDialog(val context: Context) {
     private val dial = Dialog(context)
-    private val mBinding: DialPopUpAdBinding = DialPopUpAdBinding.inflate(LayoutInflater.from(context))
+    private val mBinding: DialLogOutBinding = DialLogOutBinding.inflate(LayoutInflater.from(context))
 
-    constructor(context: Context, item: Drawable) : this(context) {
-        mBinding.imgAD.background = item
+    constructor(context: Context, item: InfoIntent) : this(context) {
+        mBinding.txtLogOutTitle.text = item.name
 
-        mBinding.txtExit.setOnClickListener {
+        mBinding.btnNo.setOnClickListener {
             dial.dismiss()
         }
 
-        mBinding.btnExit.setOnClickListener {
+        mBinding.btnYes.setOnClickListener {
+            context.startActivity(item.intent)
             dial.dismiss()
         }
     }
@@ -38,10 +41,10 @@ class PopUpDialog(val context: Context) {
 
     private fun setSize() {
         val x = (context.resources.displayMetrics.widthPixels * 0.8).toInt()
-        val y = (context.resources.displayMetrics.heightPixels * 0.6).toInt()
+        val y = (context.resources.displayMetrics.heightPixels * 0.25).toInt()
 
         dial.window?.setLayout(x, y)
-        //dial.setCancelable(false)
+
         dial.window!!.setBackgroundDrawable(ColorDrawable(Color.TRANSPARENT))
     }
 }
