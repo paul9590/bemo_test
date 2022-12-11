@@ -29,6 +29,8 @@ class CompanyActivity : AppCompatActivity(){
     }
 
     private fun setTab() {
+
+        // TODO: 학원 정보 API 호출
         val texts = arrayOf("기본", "강사소개", "상세", "시설사진", "리뷰")
 
         for(i in texts.indices) {

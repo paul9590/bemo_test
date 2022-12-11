@@ -34,7 +34,7 @@ class CompanyRecyclerAdapter(data: ArrayList<Company>) :
             holder.mBinding.imgThumbs.setImageResource(R.drawable.img_thumbs)
         }
         holder.mBinding.chkFavorite.setOnClickListener {
-            // 찜 목록 클릭 시 서버 통신
+            // TODO: 찜 목록 등록 API 호출
             item.favorite = !holder.mBinding.chkFavorite.isChecked
         }
         holder.mBinding.imgCompany.setImageResource(item.img)

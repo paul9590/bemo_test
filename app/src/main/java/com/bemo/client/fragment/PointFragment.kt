@@ -45,6 +45,8 @@ class PointFragment : Fragment() {
     }
 
     fun setList(newList: ArrayList<PointInfo>) {
+
+        // TODO: 포인트 상점 API 호출
         mList.clear()
         mList += newList
         mAdapter.notifyDataSetChanged()

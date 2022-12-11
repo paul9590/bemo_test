@@ -49,6 +49,8 @@ class FavoriteFragment : Fragment() {
     }
 
     private fun addList() {
+
+        // TODO: 찜 목록 API 호출
         val start = mList.size
         mList += getFavoriteList()
         mAdapter.notifyItemRangeInserted(start, mList.size)

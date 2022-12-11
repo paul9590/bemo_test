@@ -43,6 +43,8 @@ class ReviewFragment : Fragment() {
 
     fun addList(item: ArrayList<CompanyInfo>) {
         val start = mList.size
+
+        // TODO: 작성한 리뷰 API 호출
         mList += item
         mAdapter.notifyItemRangeInserted(start, mList.size)
     }

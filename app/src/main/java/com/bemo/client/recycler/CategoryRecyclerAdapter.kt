@@ -47,7 +47,7 @@ class CategoryRecyclerAdapter(data: ArrayList<HomeCategory>) :
                 val pos = adapterPosition
                 if (pos != RecyclerView.NO_POSITION) {
                     val item = mData[pos]
-                    // 카테고리 클릭 시
+                    // TODO: 카테고리 클릭 시
                 }
             }
         }

@@ -22,7 +22,7 @@ class ReviewDialog(val context: Context) {
         }
 
         mBinding.btnOk.setOnClickListener {
-            // 리뷰 작성
+            // TODO: 리뷰 API 호출
         }
     }
 

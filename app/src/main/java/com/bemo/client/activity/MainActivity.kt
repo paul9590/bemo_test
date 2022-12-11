@@ -25,6 +25,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun popUpDial() {
+        // TODO: 팝업 API 호출
         PopUpDialog(this, resources.getDrawable(R.drawable.img_default_pop_ad)).show()
     }
 

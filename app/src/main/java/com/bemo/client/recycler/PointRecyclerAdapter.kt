@@ -27,7 +27,7 @@ class PointRecyclerAdapter(data: ArrayList<PointInfo>) :
         holder.mBinding.txtPointBody.text = item.body
         holder.mBinding.imgPoint.setImageResource(item.img)
         holder.mBinding.btnPoint.setOnClickListener{
-            // 서버 연결
+            // TODO: 포인트 상점 구매 신청 API 호출
         }
     }
 

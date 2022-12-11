@@ -63,6 +63,7 @@ class ResultFragment : Fragment() {
     private fun getResultList(): ArrayList<Company> {
         val list = ArrayList<Company>()
 
+        // TODO: 업체 목록 조회 API 호출
         list.add(Company("송수학 학원", R.drawable.img_place1, true, true, "경기도 남양주시 도농동", "10대", distance = "1km", shuttle = true))
         list.add(Company("구주이베 학원", R.drawable.img_place2, true, true, "경기도 남양주시 다산동", "10대", distance = "1km", shuttle = true))
         list.add(Company("윙 스피킹 강남", R.drawable.img_place3, true, true, "경기도 구리시 벌말로", "10대", distance = "1km", shuttle = true))

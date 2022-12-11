@@ -11,5 +11,9 @@ class RegisterActivity: AppCompatActivity() {
         super.onCreate(savedInstanceState)
         mBinding = ActivityRegisterBinding.inflate(layoutInflater)
         setContentView(mBinding.root)
+        
+        mBinding.btnOk.setOnClickListener {
+            // TODO: 회원 가입 API 호출
+        }
     }
 }

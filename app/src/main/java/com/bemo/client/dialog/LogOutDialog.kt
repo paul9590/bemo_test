@@ -22,6 +22,7 @@ class LogOutDialog(val context: Context) {
 
         mBinding.btnYes.setOnClickListener {
             context.startActivity(item.intent)
+            // TODO: sqlite 회원 정보 삭제
             dial.dismiss()
         }
     }

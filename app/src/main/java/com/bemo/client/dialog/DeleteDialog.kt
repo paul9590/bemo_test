@@ -22,6 +22,7 @@ class DeleteDialog(val context: Context) {
 
         mBinding.btnYes.setOnClickListener {
             context.startActivity(item.intent)
+            // TODO: 회원 탈퇴 API 호출
             dial.dismiss()
         }
     }

@@ -50,6 +50,8 @@ class LatestFragment : Fragment() {
 
     private fun addList() {
         val start = mList.size
+
+        // TODO: 최근 본 업체 정보 API 호출
         mList += getLatestList()
         mAdapter.notifyItemRangeInserted(start, mList.size)
     }

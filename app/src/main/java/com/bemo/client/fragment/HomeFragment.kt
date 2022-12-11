@@ -40,6 +40,8 @@ class HomeFragment : Fragment() {
     }
 
     private fun setCategoryTab() {
+
+        // TODO: 카테고리 목록 API 호출
         val lessonList = ArrayList<HomeCategory>()
         lessonList.add(HomeCategory(R.drawable.img_lesson1, "교과목"))
         lessonList.add(HomeCategory(R.drawable.img_lesson2, "예술"))

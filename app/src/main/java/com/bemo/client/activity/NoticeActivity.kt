@@ -31,6 +31,7 @@ class NoticeActivity: AppCompatActivity() {
     }
 
     private fun addList() {
+        // TODO: 공지 목록 API 호출
         mList += Info("따뜻한 봄바람이다 인생에 따뜻한 봄바람을", "고동을 들어 보라 청춘의 피는 끓는다 끓는 피에 뛰노는 심장은 거선의 기관과 같이 힘있다 이것이다 인류의 역사를 꾸며 내려온 동력은 바로 이것이다 이성은 투명하되 얼음과 같으며 지혜는 날카로우나 갑 속에 든 칼이다")
     }
 }
