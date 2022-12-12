@@ -15,16 +15,18 @@ class CompanyActivity : AppCompatActivity(){
         setContentView(mBinding.root)
 
         val company = intent.getSerializableExtra("company") as Company
-        mBinding.txtCompanyTitle.text = company.name
+        val adapter = CompanyInfoViewAdapter(company, supportFragmentManager)
 
+        mBinding.apply {
+            txtCompanyTitle.text = company.name
+            pagerCompany.adapter = adapter
+            tabCompany.setupWithViewPager(mBinding.pagerCompany)
+        }
 
         mBinding.imbBack.setOnClickListener {
             finish()
         }
         
-        val adapter = CompanyInfoViewAdapter(company, supportFragmentManager)
-        mBinding.pagerCompany.adapter = adapter
-        mBinding.tabCompany.setupWithViewPager(mBinding.pagerCompany)
         setTab()
     }
 

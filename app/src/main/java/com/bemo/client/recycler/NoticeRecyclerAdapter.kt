@@ -9,7 +9,7 @@ import com.bemo.client.databinding.ListTextBinding
 import com.bemo.client.dialog.NoticeDialog
 
 class NoticeRecyclerAdapter(data: ArrayList<Info>) :
-    RecyclerView.Adapter<NoticeRecyclerAdapter.NoticeViewHolder>() {
+    RecyclerView.Adapter<CustomViewHolder>() {
     private val mData: ArrayList<Info>
     private lateinit var context: Context
 
@@ -17,23 +17,22 @@ class NoticeRecyclerAdapter(data: ArrayList<Info>) :
         mData = data
     }
 
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): NoticeViewHolder {
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): CustomViewHolder {
         context = parent.context
-        return NoticeViewHolder(ListTextBinding.inflate(LayoutInflater.from(parent.context), parent, false))
+        return CustomViewHolder(ListTextBinding.inflate(LayoutInflater.from(parent.context), parent, false))
     }
 
-    override fun onBindViewHolder(holder: NoticeViewHolder, position: Int) {
+    override fun onBindViewHolder(holder: CustomViewHolder, position: Int) {
         val item: Info = mData[position]
-        holder.mBinding.text.text = item.title
-        holder.mBinding.root.setOnClickListener {
-            NoticeDialog(context, item).show()
+        (holder.mBinding as ListTextBinding).apply {
+            text.text = item.title
+            root.setOnClickListener {
+                NoticeDialog(context, item).show()
+            }
         }
     }
 
     override fun getItemCount(): Int {
         return mData.size
     }
-
-    inner class NoticeViewHolder internal constructor(val mBinding: ListTextBinding) :
-        RecyclerView.ViewHolder(mBinding.root)
 }

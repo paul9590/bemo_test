@@ -18,9 +18,11 @@ class LoginActivity: AppCompatActivity() {
             intent.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION)
             startActivity(intent)
         }
+
         mBinding.btnLogin.setOnClickListener {
             // TODO: 로그인 API 호출
         }
+
         mBinding.txtGuestLogin.setOnClickListener {
             finish()
         }

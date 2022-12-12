@@ -10,7 +10,7 @@ import com.bemo.client.databinding.*
 import java.text.DecimalFormat
 
 class CompanyInfoRecyclerAdapter(data: ArrayList<CompanyInfo>):
-    RecyclerView.Adapter<CompanyInfoRecyclerAdapter.CompanyInfoViewHolder>(){
+    RecyclerView.Adapter<CustomViewHolder>(){
     private val mData: ArrayList<CompanyInfo>
     private lateinit var context: Context
 
@@ -18,25 +18,25 @@ class CompanyInfoRecyclerAdapter(data: ArrayList<CompanyInfo>):
         mData = data
     }
 
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): CompanyInfoViewHolder {
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): CustomViewHolder {
 
         context = parent.context
         return when(viewType) {
-            COMPANY_COMPANY -> CompanyInfoViewHolder(ListCompanyInfoCompanyBinding.inflate(LayoutInflater.from(context), parent, false))
-            COMPANY_TEXT -> CompanyInfoViewHolder(ListCompanyInfoTextBinding.inflate(LayoutInflater.from(context), parent, false))
-            COMPANY_IMG -> CompanyInfoViewHolder(ListCompanyInfoImgBinding.inflate(LayoutInflater.from(context), parent, false))
-            COMPANY_CAREER -> CompanyInfoViewHolder(ListCompanyInfoCareerBinding.inflate(LayoutInflater.from(context), parent, false))
-            COMPANY_REVIEW_AVG -> CompanyInfoViewHolder(ListCompanyInfoReviewAvgBinding.inflate(LayoutInflater.from(context), parent, false))
-            COMPANY_REVIEW -> CompanyInfoViewHolder(ListCompanyInfoReviewBinding.inflate(LayoutInflater.from(context), parent, false))
-            COMPANY_CATEGORY -> CompanyInfoViewHolder(ListCompanyInfoCategoryBinding.inflate(LayoutInflater.from(context), parent, false))
-            COMPANY_MAP -> CompanyInfoViewHolder(ListCompanyInfoMapBinding.inflate(LayoutInflater.from(context), parent, false))
+            COMPANY_COMPANY -> CustomViewHolder(ListCompanyInfoCompanyBinding.inflate(LayoutInflater.from(context), parent, false))
+            COMPANY_TEXT -> CustomViewHolder(ListCompanyInfoTextBinding.inflate(LayoutInflater.from(context), parent, false))
+            COMPANY_IMG -> CustomViewHolder(ListCompanyInfoImgBinding.inflate(LayoutInflater.from(context), parent, false))
+            COMPANY_CAREER -> CustomViewHolder(ListCompanyInfoCareerBinding.inflate(LayoutInflater.from(context), parent, false))
+            COMPANY_REVIEW_AVG -> CustomViewHolder(ListCompanyInfoReviewAvgBinding.inflate(LayoutInflater.from(context), parent, false))
+            COMPANY_REVIEW -> CustomViewHolder(ListCompanyInfoReviewBinding.inflate(LayoutInflater.from(context), parent, false))
+            COMPANY_CATEGORY -> CustomViewHolder(ListCompanyInfoCategoryBinding.inflate(LayoutInflater.from(context), parent, false))
+            COMPANY_MAP -> CustomViewHolder(ListCompanyInfoMapBinding.inflate(LayoutInflater.from(context), parent, false))
 
-            else -> CompanyInfoViewHolder(ListCompanyInfoCompanyBinding.inflate(LayoutInflater.from(context), parent, false))
+            else -> CustomViewHolder(ListCompanyInfoCompanyBinding.inflate(LayoutInflater.from(context), parent, false))
         }
 
     }
 
-    override fun onBindViewHolder(holder: CompanyInfoViewHolder, position: Int) {
+    override fun onBindViewHolder(holder: CustomViewHolder, position: Int) {
         val item: CompanyInfo = mData[position]
         val mBinding = holder.mBinding
         bind(item, mBinding)
@@ -47,74 +47,83 @@ class CompanyInfoRecyclerAdapter(data: ArrayList<CompanyInfo>):
         when(item.type) {
             COMPANY_COMPANY -> {
                 item as Company
-                mBinding as ListCompanyInfoCompanyBinding
-                mBinding.txtCompanyName.text = item.name
-                mBinding.imgCompany.setImageResource(item.img)
-                mBinding.txtCompanyAddress.text = item.address
-                mBinding.txtCompanyTarget.text = item.target
-                mBinding.txtCompanyDistance.text = item.distance
-                if(item.shuttle) {
-                    mBinding.txtCompanyShuttle.text = "셔틀버스 있음"
-                    mBinding.txtCompanyShuttle.setTextColor(context.resources.getColor(R.color.blue))
-                }else {
-                    mBinding.txtCompanyShuttle.text = "셔틀버스 없음"
-                    mBinding.txtCompanyShuttle.setTextColor(context.resources.getColor(R.color.red))
-                }
-                if(item.lesson) {
-                    mBinding.txtCompanyLesson.text = "비대면 강의 있음"
-                    mBinding.txtCompanyLesson.setTextColor(context.resources.getColor(R.color.blue))
-                }else {
-                    mBinding.txtCompanyLesson.text = "비대면 강의 없음"
-                    mBinding.txtCompanyLesson.setTextColor(context.resources.getColor(R.color.red))
+                (mBinding as ListCompanyInfoCompanyBinding).apply {
+                    txtCompanyName.text = item.name
+                    imgCompany.setImageResource(item.img)
+                    txtCompanyAddress.text = item.address
+                    txtCompanyTarget.text = item.target
+                    txtCompanyDistance.text = item.distance
+                    if(item.shuttle) {
+                        txtCompanyShuttle.text = "셔틀버스 있음"
+                        txtCompanyShuttle.setTextColor(context.resources.getColor(R.color.blue))
+                    }else {
+                        txtCompanyShuttle.text = "셔틀버스 없음"
+                        txtCompanyShuttle.setTextColor(context.resources.getColor(R.color.red))
+                    }
+                    if(item.lesson) {
+                        txtCompanyLesson.text = "비대면 강의 있음"
+                        txtCompanyLesson.setTextColor(context.resources.getColor(R.color.blue))
+                    }else {
+                        txtCompanyLesson.text = "비대면 강의 없음"
+                        txtCompanyLesson.setTextColor(context.resources.getColor(R.color.red))
+                    }
                 }
             }
             COMPANY_TEXT -> {
                 item as CompanyInfoText
-                mBinding as ListCompanyInfoTextBinding
-                mBinding.txtCompanyInfoTxt.text = item.name
-                mBinding.txtCompanyInfo.text = item.desc
+                (mBinding as ListCompanyInfoTextBinding).apply {
+                    txtCompanyInfoTxt.text = item.name
+                    txtCompanyInfo.text = item.desc
+                }
             }
             COMPANY_IMG -> {
                 item as CompanyInfoImg
-                mBinding as ListCompanyInfoImgBinding
-                mBinding.txtCompanyInfoName.text = item.name
-                mBinding.imgCompanyInfo.setImageResource(item.img)
+                (mBinding as ListCompanyInfoImgBinding).apply {
+                    txtCompanyInfoName.text = item.name
+                    imgCompanyInfo.setImageResource(item.img)
+                }
             }
             COMPANY_CAREER -> {
                 item as CompanyInfoCareer
-                mBinding as ListCompanyInfoCareerBinding
-                mBinding.txtCareerName.text = item.name
-                mBinding.imgCareer.setImageResource(item.img)
-                mBinding.txtCareerRank.text = item.rank
-                mBinding.txtCareerDetail.text = item.desc
+                (mBinding as ListCompanyInfoCareerBinding).apply {
+                    txtCareerName.text = item.name
+                    imgCareer.setImageResource(item.img)
+                    txtCareerRank.text = item.rank
+                    txtCareerDetail.text = item.desc
+                }
             }
             COMPANY_REVIEW_AVG -> {
                 item as CompanyInfoReviewAvg
-                mBinding as ListCompanyInfoReviewAvgBinding
-                mBinding.txtCompanyInfoReviewCnt.text = item.name
-                mBinding.txtCompanyReviewAvg.text = DecimalFormat("#.##").format(item.rating).toString()
-                mBinding.ratingCompanyInfoReviewAvg.rating = item.rating
+                (mBinding as ListCompanyInfoReviewAvgBinding).apply {
+                    txtCompanyInfoReviewCnt.text = item.name
+                    txtCompanyReviewAvg.text = DecimalFormat("#.##").format(item.rating).toString()
+                    ratingCompanyInfoReviewAvg.rating = item.rating
+                }
             }
             COMPANY_REVIEW -> {
                 item as CompanyInfoReview
-                mBinding as ListCompanyInfoReviewBinding
-                mBinding.txtCompanyInfoReviewTitle.text = item.name
-                mBinding.imgCompanyInfoReview.setImageResource(item.img)
-                mBinding.ratingCompanyInfoReview.rating = item.rating
-                mBinding.txtCompanyInfoReviewBody.text = item.desc
-                mBinding.txtCompanyInfoReviewDate.text = item.date
+                (mBinding as ListCompanyInfoReviewBinding).apply {
+                    txtCompanyInfoReviewTitle.text = item.name
+                    imgCompanyInfoReview.setImageResource(item.img)
+                    ratingCompanyInfoReview.rating = item.rating
+                    txtCompanyInfoReviewBody.text = item.desc
+                    txtCompanyInfoReviewDate.text = item.date
+                }
             }
             COMPANY_CATEGORY -> {
                 item as CompanyInfoCategory
-                mBinding as ListCompanyInfoCategoryBinding
-                mBinding.btnCategory1.text = item.name
-                mBinding.btnCategory2.text = item.name2
-                mBinding.btnCategory3.text = item.name3
+                (mBinding as ListCompanyInfoCategoryBinding).apply {
+                    btnCategory1.text = item.name
+                    btnCategory2.text = item.name2
+                    btnCategory3.text = item.name3
+                }
             }
             COMPANY_MAP -> {
                 item as CompanyInfoMap
-                mBinding as ListCompanyInfoMapBinding
-                mBinding.imgCompanyMap.setImageResource(item.img)
+                (mBinding as ListCompanyInfoMapBinding).apply {
+                    imgCompanyMap.setImageResource(item.img)
+
+                }
             }
         }
     }
@@ -122,8 +131,4 @@ class CompanyInfoRecyclerAdapter(data: ArrayList<CompanyInfo>):
     override fun getItemViewType(p: Int): Int = mData[p].type
 
     override fun getItemCount(): Int = mData.size
-
-    inner class CompanyInfoViewHolder(val mBinding: ViewBinding):
-        RecyclerView.ViewHolder(mBinding.root) {
-    }
 }

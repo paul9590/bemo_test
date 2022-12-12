@@ -34,6 +34,7 @@ class MyFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
+
         mBinding = FragmentMyBinding.inflate(inflater, container, false)
 
         setTab()

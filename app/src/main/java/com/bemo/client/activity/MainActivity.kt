@@ -31,22 +31,28 @@ class MainActivity : AppCompatActivity() {
 
     private fun setTab() {
         val adapter = ViewAdapter(supportFragmentManager)
-        adapter.addList(HomeFragment())
-        adapter.addList(ResultFragment())
-        adapter.addList(MyFragment())
-        mBinding.pagerMain.adapter = adapter
-        mBinding.tabMain.setupWithViewPager(mBinding.pagerMain)
+        adapter.apply {
+            addList(HomeFragment())
+            addList(ResultFragment())
+            addList(MyFragment())
+        }
 
         val texts = arrayOf("홈", "검색 결과", "마이")
         val icons = arrayOf(R.drawable.icon_home, R.drawable.icon_result, R.drawable.icon_my)
 
-        for(i in texts.indices) {
-            val tab = mBinding.tabMain.getTabAt(i)!!
-            tab.text = texts[i]
-            tab.setIcon(icons[i])
-            tab.icon?.setColorFilter(resources.getColor(R.color.gray), PorterDuff.Mode.SRC_IN)
+        mBinding.apply {
+            pagerMain.adapter = adapter
+            tabMain.setupWithViewPager(mBinding.pagerMain)
+
+            for(i in texts.indices) {
+                val tab = tabMain.getTabAt(i)!!
+                tab.text = texts[i]
+                tab.setIcon(icons[i])
+                tab.icon?.setColorFilter(resources.getColor(R.color.gray), PorterDuff.Mode.SRC_IN)
+            }
+
+            tabMain.getTabAt(0)!!.icon?.setColorFilter(resources.getColor(R.color.blue), PorterDuff.Mode.SRC_IN)
         }
-        mBinding.tabMain.getTabAt(0)!!.icon?.setColorFilter(resources.getColor(R.color.blue), PorterDuff.Mode.SRC_IN)
 
         mBinding.tabMain.addOnTabSelectedListener(object : TabLayout.OnTabSelectedListener{
             override fun onTabSelected(p0: TabLayout.Tab?) {

@@ -21,12 +21,12 @@ class LawActivity: AppCompatActivity() {
         super.onCreate(savedInstanceState)
         mBinding = ActivityInfoBinding.inflate(layoutInflater)
         setContentView(mBinding.root)
-        mBinding.txtTitle.text = getString(R.string.law_title)
 
-
-
-        mBinding.viewNotice.adapter = mAdapter
-        mBinding.viewNotice.layoutManager = LinearLayoutManager(applicationContext, RecyclerView.VERTICAL, false)
+        mBinding.apply {
+            txtTitle.text = getString(R.string.law_title)
+            viewNotice.adapter = mAdapter
+            viewNotice.layoutManager = LinearLayoutManager(applicationContext, RecyclerView.VERTICAL, false)
+        }
 
         mBinding.imbBack.setOnClickListener {
             finish()

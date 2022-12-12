@@ -19,7 +19,6 @@ class FavoriteFragment : Fragment() {
     private var param1: String? = null
     private var param2: String? = null
 
-    private lateinit var mBinding: RecyclerviewBinding
     private val mList = ArrayList<Company>()
     private val mAdapter = CompanyRecyclerAdapter(mList)
 
@@ -36,17 +35,15 @@ class FavoriteFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        mBinding = RecyclerviewBinding.inflate(inflater, container, false)
 
-        setAdapter()
+        val mBinding = RecyclerviewBinding.inflate(inflater, container, false).apply {
+            viewRecycler.adapter = mAdapter
+            viewRecycler.layoutManager = LinearLayoutManager(activity, RecyclerView.VERTICAL, false)
+        }
 
         return mBinding.root
     }
 
-    private fun setAdapter() {
-        mBinding.viewRecycler.adapter = mAdapter
-        mBinding.viewRecycler.layoutManager = LinearLayoutManager(activity, RecyclerView.VERTICAL, false)
-    }
 
     private fun addList() {
 

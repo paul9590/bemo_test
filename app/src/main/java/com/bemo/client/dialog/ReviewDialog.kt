@@ -1,48 +1,30 @@
 package com.bemo.client.dialog
 
-import android.app.Dialog
 import android.content.Context
-import android.graphics.Color
-import android.graphics.drawable.ColorDrawable
 import android.view.LayoutInflater
-import android.view.Window
 import com.bemo.client.CompanyInfoReview
 import com.bemo.client.databinding.DialReviewBinding
 
-class ReviewDialog(val context: Context) {
-    private val dial = Dialog(context)
-    private val mBinding: DialReviewBinding = DialReviewBinding.inflate(LayoutInflater.from(context))
+class ReviewDialog(context: Context): CustomDialog(context) {
+
+    init {
+        mBinding = DialReviewBinding.inflate(LayoutInflater.from(context)).apply {
+            btnExit.setOnClickListener {
+                dismiss()
+            }
+
+            btnOk.setOnClickListener {
+                // TODO: 리뷰 API 호출
+            }
+        }
+        setSize(width = (context.resources.displayMetrics.widthPixels * 0.8).toInt(),
+            height = (context.resources.displayMetrics.heightPixels * 0.6).toInt())
+    }
 
     constructor(context: Context, item: CompanyInfoReview) : this(context) {
-        mBinding.ratingReview.rating = item.rating
-        mBinding.editReview.setText(item.desc)
-
-        mBinding.btnExit.setOnClickListener {
-            dial.dismiss()
+        (mBinding as DialReviewBinding).apply {
+            ratingReview.rating = item.rating
+            editReview.setText(item.desc)
         }
-
-        mBinding.btnOk.setOnClickListener {
-            // TODO: 리뷰 API 호출
-        }
-    }
-
-    fun show() {
-        initDial()
-        dial.show()
-    }
-
-    private fun initDial() {
-        dial.requestWindowFeature(Window.FEATURE_NO_TITLE)
-        dial.setContentView(mBinding.root)
-        setSize()
-    }
-
-    private fun setSize() {
-        val x = (context.resources.displayMetrics.widthPixels * 0.8).toInt()
-        val y = (context.resources.displayMetrics.heightPixels * 0.6).toInt()
-
-        dial.window?.setLayout(x, y)
-
-        dial.window!!.setBackgroundDrawable(ColorDrawable(Color.TRANSPARENT))
     }
 }

@@ -18,7 +18,6 @@ class CompanyInfoFragment : Fragment() {
     private var param1: String? = null
     private var param2: String? = null
 
-    private lateinit var mBinding: RecyclerviewBinding
     private val mList = ArrayList<CompanyInfo>()
     private val mAdapter = CompanyInfoRecyclerAdapter(mList)
 
@@ -34,10 +33,11 @@ class CompanyInfoFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        mBinding = RecyclerviewBinding.inflate(inflater, container, false)
 
-        mBinding.viewRecycler.adapter = mAdapter
-        mBinding.viewRecycler.layoutManager = LinearLayoutManager(activity, RecyclerView.VERTICAL, false)
+        val mBinding = RecyclerviewBinding.inflate(inflater, container, false).apply {
+            viewRecycler.adapter = mAdapter
+            viewRecycler.layoutManager = LinearLayoutManager(activity, RecyclerView.VERTICAL, false)
+        }
 
         return mBinding.root
     }

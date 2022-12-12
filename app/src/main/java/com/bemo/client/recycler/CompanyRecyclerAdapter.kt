@@ -11,7 +11,7 @@ import com.bemo.client.activity.CompanyActivity
 import com.bemo.client.databinding.ListCompanyBinding
 
 class CompanyRecyclerAdapter(data: ArrayList<Company>) :
-    RecyclerView.Adapter<CompanyRecyclerAdapter.CompanyViewHolder>(){
+    RecyclerView.Adapter<CustomViewHolder>(){
     private val mData: ArrayList<Company>
     private lateinit var context : Context
 
@@ -19,40 +19,39 @@ class CompanyRecyclerAdapter(data: ArrayList<Company>) :
         mData = data
     }
 
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): CompanyViewHolder {
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): CustomViewHolder {
 
         context = parent.context
 
-        return CompanyViewHolder(ListCompanyBinding.inflate(LayoutInflater.from(context), parent, false))
+        return CustomViewHolder(ListCompanyBinding.inflate(LayoutInflater.from(context), parent, false))
     }
 
-    override fun onBindViewHolder(holder: CompanyViewHolder, position: Int) {
+    override fun onBindViewHolder(holder: CustomViewHolder, position: Int) {
         val item: Company = mData[position]
-        holder.mBinding.chkFavorite.isChecked = item.favorite
-        holder.mBinding.imgThumbs.setImageResource(0)
-        if(item.isPremium) {
-            holder.mBinding.imgThumbs.setImageResource(R.drawable.img_thumbs)
-        }
-        holder.mBinding.chkFavorite.setOnClickListener {
-            // TODO: 찜 목록 등록 API 호출
-            item.favorite = !holder.mBinding.chkFavorite.isChecked
-        }
-        holder.mBinding.imgCompany.setImageResource(item.img)
-        holder.mBinding.txtCompany1.text = item.name
-        holder.mBinding.txtCompanyAddress.text = item.address
-        holder.mBinding.txtCompanyTarget.text = item.target
-        holder.mBinding.txtCompanyDistance.text = item.distance
+        (holder.mBinding as ListCompanyBinding).apply {
+            chkFavorite.isChecked = item.favorite
+            imgThumbs.setImageResource(0)
+            if(item.isPremium) {
+                imgThumbs.setImageResource(R.drawable.img_thumbs)
+            }
+            chkFavorite.setOnClickListener {
+                // TODO: 찜 목록 등록 API 호출
+                item.favorite = !chkFavorite.isChecked
+            }
+            imgCompany.setImageResource(item.img)
+            txtCompany1.text = item.name
+            txtCompanyAddress.text = item.address
+            txtCompanyTarget.text = item.target
+            txtCompanyDistance.text = item.distance
 
-        // 업체 상세 페이지로 이동
-        holder.mBinding.root.setOnClickListener {
-            val intent = Intent(context, CompanyActivity::class.java)
-            intent.putExtra("company", item)
-            context.startActivity(intent)
+            // 업체 상세 페이지로 이동
+            root.setOnClickListener {
+                val intent = Intent(context, CompanyActivity::class.java)
+                intent.putExtra("company", item)
+                context.startActivity(intent)
+            }
         }
     }
 
     override fun getItemCount(): Int = mData.size
-
-    inner class CompanyViewHolder internal constructor(val mBinding: ListCompanyBinding) :
-        RecyclerView.ViewHolder(mBinding.root)
 }

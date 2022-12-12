@@ -19,15 +19,17 @@ class SettingActivity : AppCompatActivity(){
         mBinding = ActivitySettingBinding.inflate(layoutInflater)
         setContentView(mBinding.root)
 
-        mBinding.viewSetting.adapter = mAdapter
-        mBinding.viewSetting.layoutManager = LinearLayoutManager(applicationContext, RecyclerView.VERTICAL, false)
+        mBinding.apply {
+            txtVersion.text = "Version ${packageManager.getPackageInfo(packageName, 0).versionName}"
+            viewSetting.adapter = mAdapter
+            viewSetting.layoutManager = LinearLayoutManager(applicationContext, RecyclerView.VERTICAL, false)
+        }
+
         mBinding.imbBack.setOnClickListener {
             finish()
         }
 
         addList()
-        mBinding.txtVersion.text = "Version ${packageManager.getPackageInfo(packageName, 0).versionName}"
-
     }
 
     private fun addList() {

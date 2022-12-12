@@ -12,7 +12,7 @@ import com.bemo.client.dialog.DeleteDialog
 import com.bemo.client.dialog.LogOutDialog
 
 class InfoRecyclerAdapter(data: ArrayList<InfoIntent>) :
-    RecyclerView.Adapter<InfoRecyclerAdapter.InfoViewHolder>() {
+    RecyclerView.Adapter<CustomViewHolder>() {
     private val mData: ArrayList<InfoIntent>
     private lateinit var context: Context
 
@@ -20,26 +20,28 @@ class InfoRecyclerAdapter(data: ArrayList<InfoIntent>) :
         mData = data
     }
 
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): InfoViewHolder {
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): CustomViewHolder {
         context = parent.context
-        return InfoViewHolder(ListTextBinding.inflate(LayoutInflater.from(parent.context), parent, false))
+        return CustomViewHolder(ListTextBinding.inflate(LayoutInflater.from(parent.context), parent, false))
     }
 
-    override fun onBindViewHolder(holder: InfoViewHolder, position: Int) {
+    override fun onBindViewHolder(holder: CustomViewHolder, position: Int) {
         val item: InfoIntent = mData[position]
-        holder.mBinding.text.text = item.name
-        holder.mBinding.root.setOnClickListener {
-            when(item.flag) {
-                INTENT_LOGOUT -> {
-                    LogOutDialog(context, item).show()
-                }
+        (holder.mBinding as ListTextBinding).apply {
+            text.text = item.name
+            root.setOnClickListener {
+                when(item.flag) {
+                    INTENT_LOGOUT -> {
+                        LogOutDialog(context, item).show()
+                    }
 
-                INTENT_DELETE -> {
-                    DeleteDialog(context, item).show()
-                }
+                    INTENT_DELETE -> {
+                        DeleteDialog(context, item).show()
+                    }
 
-                else -> {
-                    context.startActivity(item.intent)
+                    else -> {
+                        context.startActivity(item.intent)
+                    }
                 }
             }
         }
@@ -48,7 +50,4 @@ class InfoRecyclerAdapter(data: ArrayList<InfoIntent>) :
     override fun getItemCount(): Int {
         return mData.size
     }
-
-    inner class InfoViewHolder internal constructor(val mBinding: ListTextBinding) :
-        RecyclerView.ViewHolder(mBinding.root)
 }

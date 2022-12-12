@@ -18,7 +18,6 @@ class PointFragment : Fragment() {
     private var param1: String? = null
     private var param2: String? = null
 
-    private lateinit var mBinding: RecyclerListBinding
     private val mList = ArrayList<PointInfo>()
     private val mAdapter = PointRecyclerAdapter(mList)
 
@@ -34,14 +33,13 @@ class PointFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        mBinding = RecyclerListBinding.inflate(inflater, container, false)
-        setAdapter()
-        return mBinding.root
-    }
 
-    private fun setAdapter() {
-        mBinding.viewList.adapter = mAdapter
-        mBinding.viewList.layoutManager = LinearLayoutManager(activity, RecyclerView.VERTICAL, false)
+        val mBinding = RecyclerListBinding.inflate(inflater, container, false).apply {
+            viewList.adapter = mAdapter
+            viewList.layoutManager = LinearLayoutManager(activity, RecyclerView.VERTICAL, false)
+        }
+
+        return mBinding.root
     }
 
     fun setList(newList: ArrayList<PointInfo>) {

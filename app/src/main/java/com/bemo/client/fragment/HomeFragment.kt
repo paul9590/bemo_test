@@ -18,8 +18,6 @@ class HomeFragment : Fragment() {
     private var param1: String? = null
     private var param2: String? = null
 
-    private lateinit var mBinding: FragmentHomeBinding
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         arguments?.let {
@@ -32,35 +30,39 @@ class HomeFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        mBinding = FragmentHomeBinding.inflate(inflater, container, false)
 
-        setCategoryTab()
+        val mBinding = FragmentHomeBinding.inflate(inflater, container, false).apply {
+
+            // TODO: 카테고리 목록 API 호출
+            viewCategory1.adapter = CategoryRecyclerAdapter(getCategoryLesson())
+            viewCategory2.adapter = CategoryRecyclerAdapter(getCategoryPlace())
+            viewCategory1.layoutManager = GridLayoutManager(activity, 4)
+            viewCategory2.layoutManager = GridLayoutManager(activity, 4)
+        }
 
         return mBinding.root
     }
 
-    private fun setCategoryTab() {
+    private fun getCategoryLesson(): ArrayList<HomeCategory> {
+        return ArrayList<HomeCategory>().apply {
+            add(HomeCategory(R.drawable.img_lesson1, "교과목"))
+            add(HomeCategory(R.drawable.img_lesson2, "예술"))
+            add(HomeCategory(R.drawable.img_lesson3, "운동"))
+            add(HomeCategory(R.drawable.img_lesson4, "자격증"))
+            add(HomeCategory(R.drawable.img_lesson5, "취미"))
+            add(HomeCategory(R.drawable.img_lesson6, "유학"))
+            add(HomeCategory(R.drawable.img_lesson7, "입시"))
+        }
+    }
 
-        // TODO: 카테고리 목록 API 호출
-        val lessonList = ArrayList<HomeCategory>()
-        lessonList.add(HomeCategory(R.drawable.img_lesson1, "교과목"))
-        lessonList.add(HomeCategory(R.drawable.img_lesson2, "예술"))
-        lessonList.add(HomeCategory(R.drawable.img_lesson3, "운동"))
-        lessonList.add(HomeCategory(R.drawable.img_lesson4, "자격증"))
-        lessonList.add(HomeCategory(R.drawable.img_lesson5, "취미"))
-        lessonList.add(HomeCategory(R.drawable.img_lesson6, "유학"))
-        lessonList.add(HomeCategory(R.drawable.img_lesson7, "입시"))
-        mBinding.viewCategory1.adapter = CategoryRecyclerAdapter(lessonList)
-        mBinding.viewCategory1.layoutManager = GridLayoutManager(activity, 4)
-
-        val placeList = ArrayList<HomeCategory>()
-        placeList.add(HomeCategory(R.drawable.img_place1, "독서실"))
-        placeList.add(HomeCategory(R.drawable.img_place2, "유치원"))
-        placeList.add(HomeCategory(R.drawable.img_place3, "휘트니스"))
-        placeList.add(HomeCategory(R.drawable.img_place4, "레저"))
-        placeList.add(HomeCategory(R.drawable.img_place5, "도서관"))
-        mBinding.viewCategory2.adapter = CategoryRecyclerAdapter(placeList)
-        mBinding.viewCategory2.layoutManager = GridLayoutManager(activity, 4)
+    private fun getCategoryPlace(): ArrayList<HomeCategory> {
+        return ArrayList<HomeCategory>().apply {
+            add(HomeCategory(R.drawable.img_place1, "독서실"))
+            add(HomeCategory(R.drawable.img_place2, "유치원"))
+            add(HomeCategory(R.drawable.img_place3, "휘트니스"))
+            add(HomeCategory(R.drawable.img_place4, "레저"))
+            add(HomeCategory(R.drawable.img_place5, "도서관"))
+        }
     }
 
     companion object {

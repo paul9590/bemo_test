@@ -20,7 +20,6 @@ class ResultFragment : Fragment() {
     private var param1: String? = null
     private var param2: String? = null
 
-    private lateinit var mBinding: FragmentResultBinding
     private val mList = ArrayList<Company>()
     private val mAdapter = CompanyRecyclerAdapter(mList)
 
@@ -37,20 +36,17 @@ class ResultFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        mBinding = FragmentResultBinding.inflate(inflater, container, false)
 
-        setAdapter()
+        val mBinding = FragmentResultBinding.inflate(inflater, container, false).apply {
+            viewCompany.adapter = mAdapter
+            viewCompany.layoutManager = LinearLayoutManager(activity, RecyclerView.VERTICAL, false)
+        }
 
         mBinding.imbBack.setOnClickListener {
             (activity as MainActivity).viewHome()
         }
 
         return mBinding.root
-    }
-
-    private fun setAdapter() {
-        mBinding.viewCompany.adapter = mAdapter
-        mBinding.viewCompany.layoutManager = LinearLayoutManager(activity, RecyclerView.VERTICAL, false)
     }
 
     private fun addList() {

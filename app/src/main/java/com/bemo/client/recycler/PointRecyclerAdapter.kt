@@ -8,7 +8,7 @@ import com.bemo.client.PointInfo
 import com.bemo.client.databinding.ListPointBinding
 
 class PointRecyclerAdapter(data: ArrayList<PointInfo>) :
-    RecyclerView.Adapter<PointRecyclerAdapter.PointViewHolder>() {
+    RecyclerView.Adapter<CustomViewHolder>() {
     private val mData: ArrayList<PointInfo>
     private lateinit var context: Context
 
@@ -16,25 +16,24 @@ class PointRecyclerAdapter(data: ArrayList<PointInfo>) :
         mData = data
     }
 
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): PointViewHolder {
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): CustomViewHolder {
         context = parent.context
-        return PointViewHolder(ListPointBinding.inflate(LayoutInflater.from(parent.context), parent, false))
+        return CustomViewHolder(ListPointBinding.inflate(LayoutInflater.from(parent.context), parent, false))
     }
 
-    override fun onBindViewHolder(holder: PointViewHolder, position: Int) {
+    override fun onBindViewHolder(holder: CustomViewHolder, position: Int) {
         val item: PointInfo = mData[position]
-        holder.mBinding.txtPointTitle.text = item.title
-        holder.mBinding.txtPointBody.text = item.body
-        holder.mBinding.imgPoint.setImageResource(item.img)
-        holder.mBinding.btnPoint.setOnClickListener{
-            // TODO: 포인트 상점 구매 신청 API 호출
+        (holder.mBinding as ListPointBinding).apply {
+            txtPointTitle.text = item.title
+            txtPointBody.text = item.body
+            imgPoint.setImageResource(item.img)
+            btnPoint.setOnClickListener{
+                // TODO: 포인트 상점 구매 신청 API 호출
+            }
         }
     }
 
     override fun getItemCount(): Int {
         return mData.size
     }
-
-    inner class PointViewHolder internal constructor(val mBinding: ListPointBinding) :
-        RecyclerView.ViewHolder(mBinding.root)
 }

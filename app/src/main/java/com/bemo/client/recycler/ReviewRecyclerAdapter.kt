@@ -10,7 +10,7 @@ import com.bemo.client.databinding.*
 import com.bemo.client.dialog.ReviewDialog
 
 class ReviewRecyclerAdapter(data: ArrayList<CompanyInfo>):
-    RecyclerView.Adapter<ReviewRecyclerAdapter.ReviewViewHolder>(){
+    RecyclerView.Adapter<CustomViewHolder>(){
     private val mData: ArrayList<CompanyInfo>
     private lateinit var context: Context
 
@@ -18,19 +18,19 @@ class ReviewRecyclerAdapter(data: ArrayList<CompanyInfo>):
         mData = data
     }
 
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ReviewViewHolder {
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): CustomViewHolder {
 
         context = parent.context
         // create a new view-
         return when(viewType) {
-            COMPANY_COMPANY -> ReviewViewHolder(ListMyReviewNeedFillBinding.inflate(LayoutInflater.from(parent.context), parent, false))
-            COMPANY_REVIEW -> ReviewViewHolder(ListMyReviewFilledBinding.inflate(LayoutInflater.from(parent.context), parent, false))
+            COMPANY_COMPANY -> CustomViewHolder(ListMyReviewNeedFillBinding.inflate(LayoutInflater.from(parent.context), parent, false))
+            COMPANY_REVIEW -> CustomViewHolder(ListMyReviewFilledBinding.inflate(LayoutInflater.from(parent.context), parent, false))
 
-            else -> ReviewViewHolder(ListMyReviewNeedFillBinding.inflate(LayoutInflater.from(parent.context), parent, false))
+            else -> CustomViewHolder(ListMyReviewNeedFillBinding.inflate(LayoutInflater.from(parent.context), parent, false))
         }
     }
 
-    override fun onBindViewHolder(holder: ReviewViewHolder, position: Int) {
+    override fun onBindViewHolder(holder: CustomViewHolder, position: Int) {
 
         val item: CompanyInfo = mData[position]
         val mBinding = holder.mBinding
@@ -41,25 +41,27 @@ class ReviewRecyclerAdapter(data: ArrayList<CompanyInfo>):
         when(item.type) {
             COMPANY_COMPANY -> {
                 item as Company
-                mBinding as ListMyReviewNeedFillBinding
-                mBinding.txtCompany1.text = item.name
-                mBinding.imgCompany.setImageResource(item.img)
-                mBinding.txtCompanyAddress.text = item.address
-                mBinding.txtCompanyTarget.text = item.target
-                mBinding.txtCompanyDistance.text = item.distance
-                mBinding.btnReview.setOnClickListener {
-                    ReviewDialog(context).show()
+                (mBinding as ListMyReviewNeedFillBinding).apply {
+                    txtCompany1.text = item.name
+                    imgCompany.setImageResource(item.img)
+                    txtCompanyAddress.text = item.address
+                    txtCompanyTarget.text = item.target
+                    txtCompanyDistance.text = item.distance
+                    btnReview.setOnClickListener {
+                        ReviewDialog(context).show()
+                    }
                 }
             }
             COMPANY_REVIEW -> {
                 item as CompanyInfoReview
-                mBinding as ListMyReviewFilledBinding
-                mBinding.txtMyReviewCompany.text = item.name
-                mBinding.ratingMyReview.rating = item.rating
-                mBinding.txtMyReviewDate.text = item.date
-                mBinding.txtMyReview.text = item.desc
-                mBinding.btnEdit.setOnClickListener {
-                    ReviewDialog(context, item).show()
+                (mBinding as ListMyReviewFilledBinding).apply {
+                    txtMyReviewCompany.text = item.name
+                    ratingMyReview.rating = item.rating
+                    txtMyReviewDate.text = item.date
+                    txtMyReview.text = item.desc
+                    btnEdit.setOnClickListener {
+                        ReviewDialog(context, item).show()
+                    }
                 }
             }
         }
@@ -68,8 +70,4 @@ class ReviewRecyclerAdapter(data: ArrayList<CompanyInfo>):
     override fun getItemViewType(p: Int): Int = mData[p].type
 
     override fun getItemCount(): Int = mData.size
-
-    inner class ReviewViewHolder(val mBinding: ViewBinding):
-        RecyclerView.ViewHolder(mBinding.root){
-    }
 }
