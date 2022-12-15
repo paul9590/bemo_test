@@ -43,8 +43,9 @@ data class Company(
     val address: String = "",
     val target: String = "",
     val distance: String = "",
-    val shuttle: Boolean = false,
-    val lesson: Boolean = false
+    val utility: ArrayList<String> = ArrayList(),
+    var phone: String = "",
+    var mail: String = ""
 ) :
     Serializable, CompanyInfo {
     override val type = COMPANY_COMPANY

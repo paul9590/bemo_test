@@ -41,7 +41,6 @@ class ReviewViewAdapter(fm: FragmentManager?) : FragmentPagerAdapter(fm!!,
                     address = "경기도 남양주시 도농동",
                     target = "10대",
                     distance = "1km",
-                    shuttle = true
                 )
             )
         }

@@ -1,55 +1,42 @@
 package com.bemo.client.recycler
 
+import android.content.Context
 import android.view.LayoutInflater
-import android.view.View
 import android.view.ViewGroup
-import android.widget.ImageView
-import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.bemo.client.HomeCategory
-import com.bemo.client.R
+import com.bemo.client.databinding.ListCategoryBinding
 
 class CategoryRecyclerAdapter(data: ArrayList<HomeCategory>) :
-    RecyclerView.Adapter<CategoryRecyclerAdapter.CategoryViewHolder>() {
+    RecyclerView.Adapter<CustomViewHolder>() {
     private val mData: ArrayList<HomeCategory>
+    private lateinit var context: Context
 
     init {
         mData = data
     }
 
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): CategoryViewHolder {
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): CustomViewHolder {
+        context = parent.context
 
-        val view = LayoutInflater.from(parent.context)
-            .inflate(R.layout.list_category, parent, false)
-
-        return CategoryViewHolder(view)
+        return CustomViewHolder(ListCategoryBinding.inflate(LayoutInflater.from(context), parent, false))
     }
 
-    override fun onBindViewHolder(holder: CategoryViewHolder, position: Int) {
+    override fun onBindViewHolder(holder: CustomViewHolder, position: Int) {
         val item: HomeCategory = mData[position]
-        holder.txtCategory.text = item.txt
-        holder.imgCategory.setImageResource(item.img)
+        val mBinding = holder.mBinding
+        (mBinding as ListCategoryBinding).apply {
+            txtCategory.text = item.txt
+            imgCategory.setImageResource(item.img)
+
+            imgCategory.setOnClickListener {
+                // TODO: 카테고리 클릭 시
+            }
+        }
     }
 
     override fun getItemCount(): Int {
         return mData.size
     }
 
-    inner class CategoryViewHolder internal constructor(itemView: View) :
-        RecyclerView.ViewHolder(itemView) {
-        var imgCategory: ImageView
-        var txtCategory: TextView
-
-        init {
-            imgCategory = itemView.findViewById(R.id.imgCategory)
-            txtCategory = itemView.findViewById(R.id.txtCategory)
-            imgCategory.setOnClickListener {
-                val pos = adapterPosition
-                if (pos != RecyclerView.NO_POSITION) {
-                    val item = mData[pos]
-                    // TODO: 카테고리 클릭 시
-                }
-            }
-        }
-    }
 }

@@ -53,20 +53,10 @@ class CompanyInfoRecyclerAdapter(data: ArrayList<CompanyInfo>):
                     txtCompanyAddress.text = item.address
                     txtCompanyTarget.text = item.target
                     txtCompanyDistance.text = item.distance
-                    if(item.shuttle) {
-                        txtCompanyShuttle.text = "셔틀버스 있음"
-                        txtCompanyShuttle.setTextColor(context.resources.getColor(R.color.blue))
-                    }else {
-                        txtCompanyShuttle.text = "셔틀버스 없음"
-                        txtCompanyShuttle.setTextColor(context.resources.getColor(R.color.red))
-                    }
-                    if(item.lesson) {
-                        txtCompanyLesson.text = "비대면 강의 있음"
-                        txtCompanyLesson.setTextColor(context.resources.getColor(R.color.blue))
-                    }else {
-                        txtCompanyLesson.text = "비대면 강의 없음"
-                        txtCompanyLesson.setTextColor(context.resources.getColor(R.color.red))
-                    }
+                    
+                    // TODO: 하이
+                    txtCompanyUtility.text = "셔틀버스 있음\n셔틀버스 있음\n셔틀버스 있음\n셔틀버스 있음\n셔틀버스 있음\n"
+                    txtCompanyUtility.collapse()
                 }
             }
             COMPANY_TEXT -> {

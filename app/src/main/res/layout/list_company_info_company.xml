@@ -2,7 +2,7 @@
 <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="158dp"
+    android:layout_height="wrap_content"
     android:layout_marginTop="@dimen/margin_top_2">
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -90,9 +90,9 @@
             app:layout_constraintLeft_toLeftOf="@id/txtCompanyAddress"
             app:layout_constraintTop_toTopOf="@id/txtCompany4" />
 
-        <TextView
-            android:id="@+id/txtCompanyShuttle"
-            android:layout_width="wrap_content"
+        <kr.co.prnd.readmore.ReadMoreTextView
+            android:id="@+id/txtCompanyUtility"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/margin_top_13"
             android:background="@drawable/shape_round"
@@ -101,26 +101,17 @@
             android:paddingTop="4dp"
             android:paddingRight="10dp"
             android:paddingBottom="4dp"
+            android:layout_marginEnd="@dimen/margin_left_24"
+            android:layout_marginBottom="@dimen/margin_top_28"
+            android:textColor="@color/blue"
             android:textSize="@dimen/font_size_12"
+            app:readMoreColor="@color/blue"
+            app:readMoreMaxLine="2"
+            app:readMoreText=" ..."
             app:layout_constraintLeft_toLeftOf="@id/txtCompany1"
-            app:layout_constraintTop_toBottomOf="@id/txtCompanyDistance" />
-
-        <TextView
-            android:id="@+id/txtCompanyLesson"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="@dimen/margin_left_12"
-            android:layout_marginTop="@dimen/margin_top_13"
-            android:background="@drawable/shape_round"
-            android:fontFamily="@font/title_font"
-            android:paddingLeft="10dp"
-            android:paddingTop="4dp"
-            android:paddingRight="10dp"
-            android:paddingBottom="4dp"
-            android:textSize="@dimen/font_size_12"
-            app:layout_constraintLeft_toRightOf="@id/txtCompanyShuttle"
             app:layout_constraintRight_toLeftOf="@id/btnCompanyPhone"
-            app:layout_constraintTop_toBottomOf="@id/txtCompanyDistance" />
+            app:layout_constraintTop_toBottomOf="@id/txtCompanyDistance"
+            app:layout_constraintBottom_toBottomOf="parent"/>
 
         <Button
             android:id="@+id/btnCompanyMsg"
