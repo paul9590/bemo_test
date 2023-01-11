@@ -8,8 +8,8 @@ import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.bemo.client.CompanyInfo
+import com.bemo.client.databinding.RecyclerViewBinding
 import com.bemo.client.recycler.CompanyInfoRecyclerAdapter
-import com.bemo.client.databinding.RecyclerviewBinding
 
 private const val ARG_PARAM1 = "param1"
 private const val ARG_PARAM2 = "param2"
@@ -34,7 +34,7 @@ class CompanyInfoFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View {
 
-        val mBinding = RecyclerviewBinding.inflate(inflater, container, false).apply {
+        val mBinding = RecyclerViewBinding.inflate(inflater, container, false).apply {
             viewRecycler.adapter = mAdapter
             viewRecycler.layoutManager = LinearLayoutManager(activity, RecyclerView.VERTICAL, false)
         }
