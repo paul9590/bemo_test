@@ -7,10 +7,10 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.bemo.client.Company
-import com.bemo.client.R
-import com.bemo.client.databinding.RecyclerviewBinding
+import com.bemo.client.databinding.RecyclerViewBinding
 import com.bemo.client.recycler.CompanyRecyclerAdapter
+import com.bemo.client.viewmodel.CompanyViewModel
+import com.bemo.client.viewmodel.Request
 
 private const val ARG_PARAM1 = "param1"
 private const val ARG_PARAM2 = "param2"
@@ -19,8 +19,8 @@ class LatestFragment : Fragment() {
     private var param1: String? = null
     private var param2: String? = null
 
-    private val mList = ArrayList<Company>()
-    private val mAdapter = CompanyRecyclerAdapter(mList)
+    private val mAdapter = CompanyRecyclerAdapter()
+    private val viewModel = CompanyViewModel(Request.COMPANY_RECENT)
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -28,7 +28,6 @@ class LatestFragment : Fragment() {
             param1 = it.getString(ARG_PARAM1)
             param2 = it.getString(ARG_PARAM2)
         }
-        addList()
     }
 
     override fun onCreateView(
@@ -36,37 +35,18 @@ class LatestFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View {
 
-        val mBinding = RecyclerviewBinding.inflate(inflater, container, false).apply {
+        val mBinding = RecyclerViewBinding.inflate(inflater, container, false).apply {
             viewRecycler.adapter = mAdapter
             viewRecycler.layoutManager = LinearLayoutManager(activity, RecyclerView.VERTICAL, false)
         }
+        mBinding.viewModel = viewModel
+        mBinding.lifecycleOwner = this
+
+        viewModel.companyList.observe(viewLifecycleOwner) {
+            viewModel.companyList.value?.let { mAdapter.setData(it) }
+        }
 
         return mBinding.root
-    }
-
-    private fun addList() {
-        val start = mList.size
-
-        // TODO: 최근 본 업체 정보 API 호출
-        mList += getLatestList()
-        mAdapter.notifyItemRangeInserted(start, mList.size)
-    }
-
-    private fun getLatestList(): ArrayList<Company> {
-        val list = ArrayList<Company>()
-        repeat(5) {
-            list.add(Company(
-                name = "업체 이름",
-                img = R.drawable.img_place1,
-                isPremium = true,
-                favorite = true,
-                address = "경기도 남양주시 도농동",
-                target = "10대",
-                distance = "1km"
-            ))
-        }
-        list.add(Company())
-        return list
     }
 
     companion object {

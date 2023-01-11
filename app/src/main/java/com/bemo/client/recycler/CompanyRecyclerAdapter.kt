@@ -10,14 +10,10 @@ import com.bemo.client.R
 import com.bemo.client.activity.CompanyActivity
 import com.bemo.client.databinding.ListCompanyBinding
 
-class CompanyRecyclerAdapter(data: ArrayList<Company>) :
+class CompanyRecyclerAdapter :
     RecyclerView.Adapter<CustomViewHolder>(){
-    private val mData: ArrayList<Company>
+    private var mData = ArrayList<Company>()
     private lateinit var context : Context
-
-    init {
-        mData = data
-    }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): CustomViewHolder {
 
@@ -51,6 +47,11 @@ class CompanyRecyclerAdapter(data: ArrayList<Company>) :
                 context.startActivity(intent)
             }
         }
+    }
+
+    internal fun setData(newItems: ArrayList<Company>) {
+        this.mData = newItems
+        notifyDataSetChanged()
     }
 
     override fun getItemCount(): Int = mData.size
