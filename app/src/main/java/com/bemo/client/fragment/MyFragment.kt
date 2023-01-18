@@ -79,7 +79,7 @@ class MyFragment : Fragment() {
         // 로그인 정보 불러오기
         mBinding.txtMy.text = "김종민님,\n안녕하세요!!"
         val adapter = ViewAdapter(childFragmentManager)
-        adapter.addList(LatestFragment())
+        adapter.addList(RecentFragment())
         adapter.addList(FavoriteFragment())
         mBinding.pagerMy.adapter = adapter
         mBinding.tabMy.setupWithViewPager(mBinding.pagerMy)

@@ -26,7 +26,7 @@ class CompanyViewModel(private val request: Request): ViewModel() {
     private fun getCompanyList(): ArrayList<Company> {
         return when(request) {
                 Request.COMPANY_RESULT -> tmpCompanyList()
-                Request.COMPANY_RECENT -> tmpCompanyList()
+                Request.COMPANY_RECENT -> tmpCompanyList2()
                 Request.COMPANY_FAVORITE -> tmpCompanyList()
             }
     }
@@ -37,6 +37,15 @@ class CompanyViewModel(private val request: Request): ViewModel() {
             add(Company("구주이베 학원", R.drawable.img_place2, true, true, "경기도 남양주시 다산동","10대", distance = "1km"))
             add(Company("윙 스피킹 강남",R.drawable.img_place3,true, true, "경기도 구리시 벌말로", "10대", distance = "1km"))
             add(Company("BIS어학원 서초 캠퍼스", R.drawable.img_place4, true, true, "경기도 남양주시 평내호평동", "10대", distance = "1km"))
+        }
+    }
+    private fun tmpCompanyList2(): ArrayList<Company> {
+        return ArrayList<Company>().apply {
+            add(Company("송수학 학원", R.drawable.img_place1, true, true, "경기도 남양주시 도농동", "10대", distance = "1km"))
+            add(Company("구주이베 학원", R.drawable.img_place2, true, true, "경기도 남양주시 다산동","10대", distance = "1km"))
+            add(Company("윙 스피킹 강남",R.drawable.img_place3,true, true, "경기도 구리시 벌말로", "10대", distance = "1km"))
+            add(Company("BIS어학원 서초 캠퍼스", R.drawable.img_place4, true, true, "경기도 남양주시 평내호평동", "10대", distance = "1km"))
+            add(Company())
         }
     }
 }
